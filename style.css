@@ -28,26 +28,38 @@ html {
   /* Ghost White */ }
 
 .team {
-  background-color: orangered;
+  background-color: var(--ghost-white);
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .team {
-      flex-direction: column; } }
+      flex-direction: column;
+      align-items: center; } }
   .team .left {
-    background-color: green;
     width: 50%;
     display: flex;
     align-items: center; }
-    .team .left .content {
-      background-color: red; }
+    @media only screen and (max-width: 56.25em) {
+      .team .left {
+        width: 80%; } }
   .team .right {
-    background-color: yellow;
     width: 50%;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .team .right {
+        width: 80%; } }
     .team .right img {
-      width: 430px;
-      height: 430px; }
+      width: 43rem;
+      height: 43rem; }
+      @media only screen and (max-width: 56.25em) {
+        .team .right img {
+          width: 30rem;
+          height: 30rem; } }
 
 .page {
   background-color: var(--ivory-mist);
@@ -59,25 +71,33 @@ html {
   max-width: 1140px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold; }
+  font-weight: 600;
+  font-family: 'Lora', serif; }
 
 h1 {
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin-bottom: 1.5rem; }
 
 h2 {
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  margin-bottom: 1.25rem; }
 
 h3 {
-  font-size: 2.8rem; }
+  font-size: 2.8rem;
+  margin-bottom: 1rem; }
 
 h4 {
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  margin-bottom: .75rem; }
 
 h5 {
-  font-size: 2.0rem; }
+  font-size: 2.0rem;
+  margin-bottom: 0.5rem; }
 
 h6 {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  margin-bottom: .25rem; }
 
 p {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  font-family: 'Lora', serif; }

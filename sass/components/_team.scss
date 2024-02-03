@@ -1,26 +1,45 @@
 .team {
-    background-color: orangered;
+    background-color: var(--ghost-white);
     display: flex;
     flex-direction: row;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+    
+    border-radius: $border-radius;
+
     @media only screen and (max-width:$bp-medium) {
 		flex-direction: column;
+        align-items: center;
+        //background-color: teal;
 	}
     .left {
-        background-color: green;
+        //background-color: green;
         width: 50%;
         display: flex;
         align-items: center;
+        @media only screen and (max-width:$bp-medium) {
+            width: 80%;
+        }
         .content {
-            background-color: red;
+            //background-color: red;
         }
     }
     .right {
-        background-color: yellow;
+        //background-color: yellow;
         width: 50%;
         text-align: center;
+        @media only screen and (max-width:$bp-medium) {
+            width: 80%;
+        }
         img {
-            width: 430px;
-            height: 430px;
+            width: 43rem;
+            height: 43rem;
+            @media only screen and (max-width:$bp-medium) {
+                width: 30rem;
+                height: 30rem;
+            }
         }
     }
 }

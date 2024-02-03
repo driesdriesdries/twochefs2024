@@ -1,0 +1,1 @@
+<div class="hero">Hero Section</div>
