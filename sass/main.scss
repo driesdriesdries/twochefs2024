@@ -1,3 +1,4 @@
+//Components
 @import "components/blog";
 @import "components/callout";
 @import "components/faq";
@@ -8,3 +9,8 @@
 @import "components/team";
 @import "components/testimonial";
 
+//Layouts
+@import "layouts/global";
+
+//Typography
+@import "typography/headings";

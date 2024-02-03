@@ -1,3 +1,23 @@
-* {
-    color: green;
+.team {
+    background-color: orangered;
+    display: flex;
+    flex-direction: row;
+    .left {
+        background-color: green;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        .content {
+            background-color: red;
+        }
+    }
+    .right {
+        background-color: yellow;
+        width: 50%;
+        text-align: center;
+        img {
+            width: 430px;
+            height: 430px;
+        }
+    }
 }
