@@ -1,3 +1,8 @@
+//Base
+@import "base/variables";
+@import "base/base";
+@import "base/colors";
+
 //Components
 @import "components/blog";
 @import "components/callout";
@@ -14,3 +19,4 @@
 
 //Typography
 @import "typography/headings";
+@import "typography/body";

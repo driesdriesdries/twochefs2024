@@ -1,7 +1,32 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+:root {
+  --color-primary: #BE431B;
+  --color-secondary: #F5F4E2;
+  --color-tertiary: #BDD6C7;
+  --color-dark-grey: #2f2f2f;
+  --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  --main-space: 5rem;
+  --border-radius: 2rem; }
+
 .team {
   background-color: orangered;
   display: flex;
   flex-direction: row; }
+  @media only screen and (max-width: 56.25em) {
+    .team {
+      flex-direction: column; } }
   .team .left {
     background-color: green;
     width: 50%;
@@ -18,7 +43,34 @@
       height: 430px; }
 
 .page {
-  background-color: #F4F0E6; }
+  background-color: #F4F0E6;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.content-container {
+  max-width: 1140px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 4rem; }
 
 h2 {
-  font-size: 50px; }
+  font-size: 3.2rem; }
+
+h3 {
+  font-size: 2.8rem; }
+
+h4 {
+  font-size: 2.4rem; }
+
+h5 {
+  font-size: 2.0rem; }
+
+h6 {
+  font-size: 1.6rem; }
+
+p {
+  font-size: 1.6rem; }

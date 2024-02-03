@@ -2,6 +2,9 @@
     background-color: orangered;
     display: flex;
     flex-direction: row;
+    @media only screen and (max-width:$bp-medium) {
+		flex-direction: column;
+	}
     .left {
         background-color: green;
         width: 50%;
