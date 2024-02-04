@@ -1,45 +1,48 @@
 .team {
     background-color: var(--ghost-white);
     display: flex;
-    flex-direction: row;
-    padding-left: $padding-horizontal;
-    padding-right: $padding-horizontal;
-    padding-top: $padding-vertical;
-    padding-bottom: $padding-vertical;
-    
     border-radius: $border-radius;
-
+    border: 1px solid black;
     @media only screen and (max-width:$bp-medium) {
-		flex-direction: column;
-        align-items: center;
-        //background-color: teal;
-	}
+        flex-direction: column;
+        border-radius: 0;
+    }
     .left {
-        //background-color: green;
+        background-color: beige;
         width: 50%;
-        display: flex;
-        align-items: center;
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+        align-self: center;
         @media only screen and (max-width:$bp-medium) {
-            width: 80%;
+            width: 100%;
         }
         .content {
-            //background-color: red;
+            background-color: fuchsia;
         }
     }
     .right {
-        //background-color: yellow;
+        background-color: teal;
         width: 50%;
-        text-align: center;
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
         @media only screen and (max-width:$bp-medium) {
-            width: 80%;
+            width: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            padding-top: 0;
         }
-        img {
-            width: 43rem;
-            height: 43rem;
-            @media only screen and (max-width:$bp-medium) {
-                width: 30rem;
-                height: 30rem;
-            }
+        .image {
+            background-color: wheat;
+            height: 35rem;
+            background: url(https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg);
+            background-position: center;
+            background-size: cover;
         }
     }
 }
