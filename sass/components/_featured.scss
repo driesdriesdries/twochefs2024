@@ -1,0 +1,56 @@
+.featured {
+    // background-color: red;
+    display: flex;
+    @media only screen and (max-width:$bp-medium) {
+        flex-direction: column;        
+    }
+    .left {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        background-color: green;
+        width: 40%;
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+        @media only screen and (max-width:$bp-medium) {
+            width: 100%;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: $border-radius;
+        }
+    }
+    .right {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        background-color: darkgrey;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width:$bp-medium) {
+            width: 100%;
+        }
+        .logo-box {
+            width: 100%;
+            background-color: olivedrab;
+            display: flex;
+            justify-content: space-between;
+            padding-left: $padding-horizontal;
+            padding-right: $padding-horizontal;
+            .logo {
+                background-color: brown;
+                width: 25%;
+                height: 8rem;
+                border: 1px solid black;
+                &-1 {
+                    background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center / contain;
+                }
+                &-2 {
+                    background: url(https://www.mooitroues.co.za/wp-content/uploads/2017/09/mooitroues.jpg) no-repeat center / contain;
+                }
+                &-3 {
+                    background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center / contain;
+                }
+            }
+        }
+    }
+}

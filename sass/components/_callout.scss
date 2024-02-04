@@ -1,0 +1,9 @@
+.callout {
+    background-color: fuchsia;
+    border-radius: $border-radius;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+    .content {
+        text-align: center;
+    }
+}

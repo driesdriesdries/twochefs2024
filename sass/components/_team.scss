@@ -2,7 +2,6 @@
     background-color: var(--ghost-white);
     display: flex;
     border-radius: $border-radius;
-    border: 1px solid black;
     @media only screen and (max-width:$bp-medium) {
         flex-direction: column;
         border-radius: 0;

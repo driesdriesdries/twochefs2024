@@ -1,0 +1,34 @@
+a {
+  color: var(--brick-red);
+  font-size: 1.6rem;
+  transition: color 0.3s ease; // Transition effect for color change
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--charcoal-dust);
+    outline: none; // Reminder to provide a visual cue for accessibility if removing outline.
+  }
+}
+
+a.button {
+  display: inline-block;
+  padding: 2rem;
+  border-radius: $border-radius;
+  border: 1px solid black;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; // Added transition for background-color here as well for consistency
+}
+
+a.button-primary {
+  background-color: var(--brick-red);
+  border: 1px solid var(--brick-red);
+  color: var(--ghost-white);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; // Ensure smooth transition for background and border color
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--brick-red);
+    color: var(--brick-red);
+  }
+}
