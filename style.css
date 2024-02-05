@@ -152,6 +152,61 @@ a.button-primary {
       background-position: center;
       background-size: cover; }
 
+.testimonial {
+  border-radius: 2rem;
+  background-color: lightblue;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  .testimonial-inner {
+    background-color: white; }
+    .testimonial-inner .section-heading-box {
+      background-color: darkorange;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem; }
+    .testimonial-inner .testimonial-box {
+      background-color: purple;
+      display: flex;
+      justify-content: space-around;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .testimonial-inner .testimonial-box {
+          flex-direction: column;
+          align-items: center; } }
+      .testimonial-inner .testimonial-box .testimonial-instance {
+        background-color: wheat;
+        width: 45%;
+        padding: 3rem;
+        border-radius: 2rem; }
+        @media only screen and (max-width: 56.25em) {
+          .testimonial-inner .testimonial-box .testimonial-instance {
+            margin-top: 1rem;
+            width: 65%; } }
+        .testimonial-inner .testimonial-box .testimonial-instance .heading-block {
+          background-color: olivedrab;
+          display: flex; }
+          .testimonial-inner .testimonial-box .testimonial-instance .heading-block .portrait {
+            background-color: palegreen;
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            background: url("https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg") center/cover no-repeat; }
+          .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description {
+            background-color: indianred;
+            flex-grow: 1;
+            align-self: center;
+            font-style: italic; }
+        .testimonial-inner .testimonial-box .testimonial-instance .content-block {
+          font-style: italic;
+          padding-top: 1rem;
+          padding-bottom: 1rem; }
+
 .page {
   background-color: var(--ivory-mist);
   display: flex;
