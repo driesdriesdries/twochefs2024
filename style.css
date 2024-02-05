@@ -109,6 +109,41 @@ a.button-primary {
         .featured .right .logo-box .logo-3 {
           background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center/contain; }
 
+.services {
+  background-color: lightpink;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 2rem; }
+  .services-heading-block {
+    background-color: aqua;
+    text-align: center; }
+  .services-card-group {
+    background-color: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .services-card-group .card {
+      background-color: lightcoral;
+      margin: 1rem;
+      border-radius: 2rem;
+      overflow: hidden;
+      width: 48%;
+      cursor: pointer; }
+      @media only screen and (max-width: 56.25em) {
+        .services-card-group .card {
+          width: 65%; } }
+      .services-card-group .card-top {
+        height: 20rem;
+        background: url("https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg") center/cover no-repeat; }
+        @media only screen and (max-width: 56.25em) {
+          .services-card-group .card-top {
+            height: 15rem; } }
+      .services-card-group .card-bottom {
+        background-color: lightgoldenrodyellow;
+        padding: 1rem; }
+
 .team {
   background-color: var(--ghost-white);
   display: flex;
