@@ -53,6 +53,32 @@ a.button-primary {
     border: 1px solid var(--brick-red);
     color: var(--brick-red); }
 
+.blog .instance-group {
+  background-color: red;
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 56.25em) {
+    .blog .instance-group {
+      flex-direction: column; } }
+  .blog .instance-group .post-instance {
+    width: 32%;
+    height: 45rem;
+    background-color: pink;
+    color: white;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg") center/cover no-repeat; }
+    @media only screen and (max-width: 56.25em) {
+      .blog .instance-group .post-instance {
+        width: 100%;
+        margin-bottom: 1rem; } }
+    .blog .instance-group .post-instance:last-child {
+      margin-bottom: 0; }
+
 .callout {
   background-color: fuchsia;
   border-radius: 2rem;
@@ -108,6 +134,27 @@ a.button-primary {
           background: url(https://www.mooitroues.co.za/wp-content/uploads/2017/09/mooitroues.jpg) no-repeat center/contain; }
         .featured .right .logo-box .logo-3 {
           background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center/contain; }
+
+@keyframes slide {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-100%); } }
+
+.logo-reel {
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2rem; }
+  .logo-reel .logo-container {
+    display: flex;
+    animation: slide 15s infinite linear; }
+    .logo-reel .logo-container .logo {
+      flex: 0 0 25%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 7.5rem; }
 
 .services {
   background-color: lightpink;
@@ -183,9 +230,7 @@ a.button-primary {
     .team .right .image {
       background-color: wheat;
       height: 35rem;
-      background: url(https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg);
-      background-position: center;
-      background-size: cover; }
+      background: url("https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg") center/cover no-repeat; }
 
 .testimonial {
   border-radius: 2rem;

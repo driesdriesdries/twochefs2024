@@ -1,0 +1,34 @@
+.blog {
+    .instance-group {
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width:$bp-medium) {
+            flex-direction: column;
+        }
+        .post-instance {
+            width: 32%;
+            height: 45rem;
+            background-color: pink;
+            color: white;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg') center / cover no-repeat;
+          
+            // Media query for responsiveness
+            @media only screen and (max-width:$bp-medium) {
+              width: 100%;
+              margin-bottom: 1rem; // default bottom margin for all but the last item
+            }
+          
+            // Target the last .post-instance element
+            &:last-child {
+              margin-bottom: 0; // Remove the bottom margin for the last item
+            }
+          }          
+    }
+}
