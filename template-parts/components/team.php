@@ -1,4 +1,4 @@
-<div class="team">
+<div id="team" class="team">
 	<div class="left">
 		<div class="content">
 			<h2>About the team</h2>

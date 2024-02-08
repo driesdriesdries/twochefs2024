@@ -35,6 +35,14 @@ a {
     color: var(--charcoal-dust);
     outline: none; }
 
+a.navigation {
+  color: var(--charcoal-dust);
+  font-size: 1.6rem;
+  transition: color 0.3s ease; }
+  a.navigation:hover, a.navigation:focus, a.navigation:active {
+    color: var(--brick-red);
+    outline: none; }
+
 a.button {
   text-transform: uppercase;
   display: inline-block;
@@ -188,6 +196,9 @@ a.button-primary {
       background-color: honeydew; }
     .footer .top .center ul {
       display: flex; }
+      @media only screen and (max-width: 56.25em) {
+        .footer .top .center ul {
+          flex-direction: column; } }
       .footer .top .center ul li {
         list-style-type: none;
         margin-right: 20px; }

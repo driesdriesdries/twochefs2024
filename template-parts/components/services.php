@@ -1,4 +1,4 @@
-<div class="services">
+<div id="services" class="services">
     <div class="services-heading-block">
         <h2>Services</h2>
         <p>Explore our comprehensive range of tailored solutions designed to meet your unique needs</p>

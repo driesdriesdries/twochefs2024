@@ -11,6 +11,19 @@ a {
   }
 }
 
+a.navigation {
+  color: var(--charcoal-dust);
+  font-size: 1.6rem;
+  transition: color 0.3s ease; // Transition effect for color change
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--brick-red);
+    outline: none; // Reminder to provide a visual cue for accessibility if removing outline.
+  }
+}
+
 a.button {
   text-transform: uppercase;
   display: inline-block;

@@ -16,6 +16,9 @@
             ul {
                 //background-color: red;
                 display: flex;
+                @media only screen and (max-width:$bp-medium) {
+                    flex-direction: column;
+                }
                 li {
                   list-style-type: none;
                   margin-right: 20px; // Apply margin to all li
@@ -42,5 +45,6 @@
         background-color: saddlebrown;
         text-align: center;
         font-style: italic;
+
     }
 }

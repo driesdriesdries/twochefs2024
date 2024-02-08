@@ -19,11 +19,46 @@
 
 		<div class="center">
 			<ul>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
+				<li><a class="navigation" href="<?php echo site_url(); ?>">Home</a></li>
+				<li>
+				<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#services">Services</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#services')) . '">Services</a>';
+					}
+					?>
+				</li>
+
+				<li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#blog">Blog</a>';
+					} else {
+						// For the blog, it might be better to link directly to the blog page instead of a section.
+						// Assuming your blog page is the main posts page, you can link directly to it.
+						echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
+					}
+					?>
+					</li>
+				<li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#team">Team</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#team')) . '">Team</a>';
+					}
+					?>
+				</li>
+
+				<li><a id="servicesLink" class="navigation" href="#services">Contact</a></li>
+
+
 			</ul>
 		</div>
 
