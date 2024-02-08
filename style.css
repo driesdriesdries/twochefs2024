@@ -63,31 +63,37 @@ a.button-primary {
     color: var(--brick-red); }
 
 .blog .instance-group {
-  background-color: red;
   display: flex;
   justify-content: space-between; }
-  @media only screen and (max-width: 56.25em) {
-    .blog .instance-group {
-      flex-direction: column; } }
   .blog .instance-group .post-instance {
     width: 32%;
     height: 45rem;
-    background-color: pink;
-    color: white;
     margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg") center/cover no-repeat;
-    transition: background-size 0.5s ease; }
-    @media only screen and (max-width: 56.25em) {
+    color: white;
+    position: relative;
+    padding: 2rem; }
+    .blog .instance-group .post-instance:hover .background {
+      filter: blur(3px); }
+    .blog .instance-group .post-instance .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .blog .instance-group .post-instance h5 {
+      position: relative;
+      z-index: 1; }
+  @media only screen and (max-width: 56.25em) {
+    .blog .instance-group {
+      flex-direction: column; }
       .blog .instance-group .post-instance {
         width: 100%;
-        margin-bottom: 1rem; } }
-    .blog .instance-group .post-instance:last-child {
-      margin-bottom: 0; }
+        margin-bottom: 1rem; }
+        .blog .instance-group .post-instance:last-child {
+          margin-bottom: 0; } }
 
 .callout {
   background-color: fuchsia;
