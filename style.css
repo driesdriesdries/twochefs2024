@@ -71,7 +71,8 @@ a.button-primary {
     justify-content: flex-end;
     padding-left: 1rem;
     padding-bottom: 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg") center/cover no-repeat; }
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://culturedvultures.com/wp-content/uploads/2022/09/Dragon-Ball-Z-803x452.jpeg") center/cover no-repeat;
+    transition: background-size 0.5s ease; }
     @media only screen and (max-width: 56.25em) {
       .blog .instance-group .post-instance {
         width: 100%;
@@ -214,7 +215,11 @@ a.button-primary {
       border-radius: 2rem;
       overflow: hidden;
       width: 48%;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: box-shadow 0.5s ease;
+      box-shadow: none; }
+      .services-card-group .card:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
       @media only screen and (max-width: 56.25em) {
         .services-card-group .card {
           width: 65%; } }

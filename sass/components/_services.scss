@@ -5,15 +5,18 @@
     padding-top: $padding-vertical;
     padding-bottom: $padding-vertical;
     border-radius: $border-radius;
+
     &-heading-block {
         background-color: aqua;
         text-align: center;
     }
+
     &-card-group {
         background-color: lightgreen;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
         .card {
             background-color: lightcoral;
             margin: 1rem;
@@ -21,17 +24,26 @@
             overflow: hidden;
             width: 48%;
             cursor: pointer;
+            transition: box-shadow 0.5s ease; // Add this line for the shadow animation
+            box-shadow: none; // Ensure there's a default state for the box-shadow
+
+            &:hover {
+                box-shadow: $box-shadow; // Apply your predefined shadow variable on hover
+            }
+
             @media only screen and (max-width:$bp-medium) {
                 width: 65%;
             }
+
             &-top {
-                //background-color: honeydew;
                 height: 20rem;
                 background: url('https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg') center / cover no-repeat;
+
                 @media only screen and (max-width:$bp-medium) {
                     height: 15rem;
                 }
             }
+
             &-bottom {
                 background-color: lightgoldenrodyellow;
                 padding: 1rem;
