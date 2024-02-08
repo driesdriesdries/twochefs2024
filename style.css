@@ -87,6 +87,43 @@ a.button-primary {
   .callout .content {
     text-align: center; }
 
+.faq {
+  background-color: white;
+  border-radius: 2rem; }
+  .faq .accordion-item {
+    margin-bottom: 1rem;
+    overflow: hidden; }
+    .faq .accordion-item .heading {
+      background-color: transparent;
+      color: var(--charcoal-dust);
+      padding: 0.5rem 3rem;
+      padding-top: 2rem;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      transition: background-color 0.3s; }
+      .faq .accordion-item .heading h3 {
+        color: inherit; }
+      .faq .accordion-item .heading:hover {
+        opacity: .5; }
+      .faq .accordion-item .heading::after {
+        content: "+";
+        position: absolute;
+        right: 3rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        font-size: 3rem;
+        color: var(--brick-red);
+        transition: transform 0.3s; }
+      .faq .accordion-item .heading.active::after {
+        transform: translateY(-50%) rotate(45deg); }
+    .faq .accordion-item .body {
+      max-height: 0;
+      padding: 0 3rem;
+      background-color: white;
+      color: var(--charcoal-dust);
+      transition: max-height 0.5s ease, padding 0.5s ease; }
+
 .featured {
   display: flex; }
   @media only screen and (max-width: 56.25em) {
