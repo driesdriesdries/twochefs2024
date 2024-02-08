@@ -274,8 +274,7 @@ a.button-primary {
         .services-card-group .card {
           width: 65%; } }
       .services-card-group .card-top {
-        height: 20rem;
-        background: url("https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg") center/cover no-repeat; }
+        height: 20rem; }
         @media only screen and (max-width: 56.25em) {
           .services-card-group .card-top {
             height: 15rem; } }

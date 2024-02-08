@@ -37,8 +37,6 @@
 
             &-top {
                 height: 20rem;
-                background: url('https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg') center / cover no-repeat;
-
                 @media only screen and (max-width:$bp-medium) {
                     height: 15rem;
                 }
