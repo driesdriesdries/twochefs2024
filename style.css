@@ -36,6 +36,7 @@ a {
     outline: none; }
 
 a.button {
+  text-transform: uppercase;
   display: inline-block;
   padding: 2rem;
   border-radius: 2rem;
@@ -172,6 +173,38 @@ a.button-primary {
           background: url(https://www.mooitroues.co.za/wp-content/uploads/2017/09/mooitroues.jpg) no-repeat center/contain; }
         .featured .right .logo-box .logo-3 {
           background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center/contain; }
+
+.footer {
+  background-color: salmon;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  .footer .top {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between; }
+    .footer .top .left {
+      background-color: honeydew; }
+    .footer .top .center ul {
+      display: flex; }
+      .footer .top .center ul li {
+        list-style-type: none;
+        margin-right: 20px; }
+        .footer .top .center ul li:last-child {
+          margin-right: 0; }
+        .footer .top .center ul li a {
+          display: inline-block;
+          padding: 2rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none; }
+    .footer .top .right {
+      background-color: lawngreen; }
+  .footer .bottom {
+    background-color: saddlebrown;
+    text-align: center;
+    font-style: italic; }
 
 @keyframes slide {
   from {

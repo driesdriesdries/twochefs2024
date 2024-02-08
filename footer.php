@@ -11,21 +11,29 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twochefs2024' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'twochefs2024' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'twochefs2024' ), 'twochefs2024', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<div class="footer">
+	<div class="top">
+		<div class="left">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo">
+		</div>
+
+		<div class="center">
+			<ul>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</div>
+
+		<div class="right">right</div>
+	</div>
+	<div class="bottom">
+		<p>© <?php echo date("Y"); ?> Two Chefs. All rights reserved.</p>
+	</div>
+	
+</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

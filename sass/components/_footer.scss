@@ -1,0 +1,46 @@
+.footer {
+    background-color: salmon;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .top {
+        background-color: yellow;
+        display: flex;
+        justify-content: space-between;
+        .left {
+            background-color: honeydew;
+        }
+        .center {
+            //background-color: salmon;
+            ul {
+                //background-color: red;
+                display: flex;
+                li {
+                  list-style-type: none;
+                  margin-right: 20px; // Apply margin to all li
+                  
+                  &:last-child {
+                    margin-right: 0; // Remove margin for the last li
+                  }
+                  a {
+                    //color: green;
+                    display: inline-block;
+                    padding: 2rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                  }
+                }
+              }              
+        }
+        .right {
+            background-color: lawngreen;
+        }
+    }
+    .bottom {
+        background-color: saddlebrown;
+        text-align: center;
+        font-style: italic;
+    }
+}
