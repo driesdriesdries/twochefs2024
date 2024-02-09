@@ -1,5 +1,6 @@
 .services {
-    background-color: lightpink;
+    // background-color: lightpink;
+    background-color: white;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
     padding-top: $padding-vertical;
@@ -7,44 +8,65 @@
     border-radius: $border-radius;
 
     &-heading-block {
-        background-color: aqua;
+        //background-color: aqua;
         text-align: center;
+        p {
+            margin-bottom: 2rem;
+        }
     }
 
     &-card-group {
-        background-color: lightgreen;
+        //background-color: lightgreen;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-
+        justify-content: space-between;
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+        }
+        
         .card {
-            background-color: lightcoral;
-            margin: 1rem;
             border-radius: $border-radius;
             overflow: hidden;
-            width: 48%;
+            width: calc(25% - 2rem); // Adjusted for 4 cards in a row, accounting for margin
             cursor: pointer;
             transition: box-shadow 0.5s ease; // Add this line for the shadow animation
             box-shadow: none; // Ensure there's a default state for the box-shadow
-
+            color: white;
             &:hover {
                 box-shadow: $box-shadow; // Apply your predefined shadow variable on hover
             }
 
-            @media only screen and (max-width:$bp-medium) {
-                width: 65%;
+            @media only screen and (max-width: $bp-medium) {
+                width: 75%; // Adjusted for responsiveness, one column on smaller screens
+                margin: 1rem 0; // Adjust margin for vertical stacking on smaller screens
             }
 
             &-top {
                 height: 20rem;
-                @media only screen and (max-width:$bp-medium) {
+                @media only screen and (max-width: $bp-medium) {
                     height: 15rem;
                 }
             }
 
             &-bottom {
-                background-color: lightgoldenrodyellow;
-                padding: 1rem;
+                padding: 3rem 1rem;
+                h5 {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            
+            // Assigning different background colors to each card
+            &:nth-child(1) {
+                background-color: var(--ocean-depths);
+            }
+            &:nth-child(2) {
+                background-color: var(--sagebrush-green);
+            }
+            &:nth-child(3) {
+                background-color: var(--brick-red); 
+            }
+            &:nth-child(4) {
+                background-color: var(--sandy-beige);
             }
         }
     }

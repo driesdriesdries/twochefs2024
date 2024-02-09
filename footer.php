@@ -62,7 +62,16 @@
 			</ul>
 		</div>
 
-		<div class="right">right</div>
+		<div class="right">
+			<div class="social-icons">
+				<div class="facebook">
+					<a href="https://www.facebook.com/TwoChefs1"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Logo"></a>
+				</div>
+				<div class="instagram">
+					<a href="https://www.instagram.com/twochefs.catering/"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Logo"></a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="bottom">
 		<p>© <?php echo date("Y"); ?> Two Chefs. All rights reserved.</p>

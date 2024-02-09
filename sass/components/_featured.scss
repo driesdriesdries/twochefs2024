@@ -1,5 +1,4 @@
 .featured {
-    // background-color: red;
     display: flex;
     @media only screen and (max-width:$bp-medium) {
         flex-direction: column;        
@@ -7,7 +6,7 @@
     .left {
         border-top-left-radius: $border-radius;
         border-bottom-left-radius: $border-radius;
-        background-color: green;
+        background-color: white;
         width: 40%;
         padding-left: $padding-horizontal;
         padding-right: $padding-horizontal;

@@ -1,15 +1,17 @@
 .footer {
-    background-color: salmon;
+    background-color: white;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    border-radius: $border-radius;
     .top {
-        background-color: yellow;
+        //background-color: yellow;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .left {
-            background-color: honeydew;
+            //background-color: honeydew;
         }
         .center {
             //background-color: salmon;
@@ -38,13 +40,25 @@
               }              
         }
         .right {
-            background-color: lawngreen;
-        }
+          //background-color: lawngreen;
+      
+          .social-icons {
+              display: flex;
+              > *:not(:first-child) {
+                  margin-left: 1rem;
+              }
+          }
+      }
+      
     }
     .bottom {
-        background-color: saddlebrown;
+        //background-color: saddlebrown;
         text-align: center;
         font-style: italic;
+        p {
+          font-size: 1.2rem;
+        }
+        
 
     }
 }

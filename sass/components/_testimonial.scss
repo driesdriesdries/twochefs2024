@@ -1,6 +1,6 @@
 .testimonial {
     border-radius: $border-radius;
-    background-color: lightblue;
+    background-color: white;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
     padding-top: $padding-vertical;
@@ -8,7 +8,7 @@
     &-inner {
         background-color: white;
         .section-heading-box {
-            background-color: darkorange;
+            background-color: var(--ghost-white);
             text-align: center;
             padding-top: $padding-horizontal;
             padding-bottom: $padding-horizontal;
@@ -16,26 +16,28 @@
             border-top-right-radius: $border-radius;
         }
         .testimonial-box {
-            background-color: purple;
+            background-color: var(--ghost-white);
             display: flex;
             justify-content: space-around;
             border-bottom-left-radius: $border-radius;
             border-bottom-right-radius: $border-radius;
+            padding-bottom: $padding-vertical;
             @media only screen and (max-width:$bp-medium) {
                 flex-direction: column;
                 align-items: center;
             }
             .testimonial-instance {
-                background-color: wheat;
+                background-color: white;
                 width: 45%;
                 padding: $padding-horizontal;
                 border-radius: $border-radius;
+                box-shadow: $box-shadow;
                 @media only screen and (max-width:$bp-medium) {
                     margin-top: 1rem;
                     width: 65%;
                 }
                 .heading-block {
-                    background-color: olivedrab;
+                    //background-color: olivedrab;
                     display: flex;
                     .portrait {
                         background-color: palegreen;
@@ -46,10 +48,13 @@
                         background: url('https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg') center / cover no-repeat;
                     }
                     .description {
-                        background-color: indianred;
+                        //background-color: indianred;
                         flex-grow: 1;
                         align-self: center;
                         font-style: italic;
+                        p {
+                            color: #ACACAC;
+                        }
                     }
                 }
                 .content-block {

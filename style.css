@@ -45,6 +45,7 @@ a.navigation {
 
 a.button {
   text-transform: uppercase;
+  font-weight: bold;
   display: inline-block;
   padding: 2rem;
   border-radius: 2rem;
@@ -54,12 +55,12 @@ a.button {
 
 a.button-primary {
   background-color: var(--brick-red);
-  border: 1px solid var(--brick-red);
+  border: 3px solid var(--brick-red);
   color: var(--ghost-white);
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
   a.button-primary:hover {
     background-color: transparent;
-    border: 1px solid var(--brick-red);
+    border: 3px solid var(--brick-red);
     color: var(--brick-red); }
 
 .blog .instance-group {
@@ -96,7 +97,7 @@ a.button-primary {
           margin-bottom: 0; } }
 
 .callout {
-  background-color: fuchsia;
+  background-color: white;
   border-radius: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem; }
@@ -148,7 +149,7 @@ a.button-primary {
   .featured .left {
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    background-color: green;
+    background-color: white;
     width: 40%;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -189,17 +190,16 @@ a.button-primary {
           background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center/contain; }
 
 .footer {
-  background-color: salmon;
+  background-color: white;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  border-radius: 2rem; }
   .footer .top {
-    background-color: yellow;
     display: flex;
-    justify-content: space-between; }
-    .footer .top .left {
-      background-color: honeydew; }
+    justify-content: space-between;
+    align-items: center; }
     .footer .top .center ul {
       display: flex; }
       @media only screen and (max-width: 56.25em) {
@@ -216,12 +216,15 @@ a.button-primary {
           text-transform: uppercase;
           font-weight: bold;
           text-decoration: none; }
-    .footer .top .right {
-      background-color: lawngreen; }
+    .footer .top .right .social-icons {
+      display: flex; }
+      .footer .top .right .social-icons > *:not(:first-child) {
+        margin-left: 1rem; }
   .footer .bottom {
-    background-color: saddlebrown;
     text-align: center;
     font-style: italic; }
+    .footer .bottom p {
+      font-size: 1.2rem; }
 
 @keyframes slide {
   from {
@@ -245,42 +248,54 @@ a.button-primary {
       height: 7.5rem; }
 
 .services {
-  background-color: lightpink;
+  background-color: white;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   border-radius: 2rem; }
   .services-heading-block {
-    background-color: aqua;
     text-align: center; }
+    .services-heading-block p {
+      margin-bottom: 2rem; }
   .services-card-group {
-    background-color: lightgreen;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .services-card-group {
+        justify-content: center; } }
     .services-card-group .card {
-      background-color: lightcoral;
-      margin: 1rem;
       border-radius: 2rem;
       overflow: hidden;
-      width: 48%;
+      width: calc(25% - 2rem);
       cursor: pointer;
       transition: box-shadow 0.5s ease;
-      box-shadow: none; }
+      box-shadow: none;
+      color: white; }
       .services-card-group .card:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
       @media only screen and (max-width: 56.25em) {
         .services-card-group .card {
-          width: 65%; } }
+          width: 75%;
+          margin: 1rem 0; } }
       .services-card-group .card-top {
         height: 20rem; }
         @media only screen and (max-width: 56.25em) {
           .services-card-group .card-top {
             height: 15rem; } }
       .services-card-group .card-bottom {
-        background-color: lightgoldenrodyellow;
-        padding: 1rem; }
+        padding: 3rem 1rem; }
+        .services-card-group .card-bottom h5 {
+          margin-bottom: 1.5rem; }
+      .services-card-group .card:nth-child(1) {
+        background-color: var(--ocean-depths); }
+      .services-card-group .card:nth-child(2) {
+        background-color: var(--sagebrush-green); }
+      .services-card-group .card:nth-child(3) {
+        background-color: var(--brick-red); }
+      .services-card-group .card:nth-child(4) {
+        background-color: var(--sandy-beige); }
 
 .team {
   background-color: var(--ghost-white);
@@ -291,7 +306,6 @@ a.button-primary {
       flex-direction: column;
       border-radius: 0; } }
   .team .left {
-    background-color: beige;
     width: 50%;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -301,10 +315,7 @@ a.button-primary {
     @media only screen and (max-width: 56.25em) {
       .team .left {
         width: 100%; } }
-    .team .left .content {
-      background-color: fuchsia; }
   .team .right {
-    background-color: teal;
     width: 50%;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -324,7 +335,7 @@ a.button-primary {
 
 .testimonial {
   border-radius: 2rem;
-  background-color: lightblue;
+  background-color: white;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 5rem;
@@ -332,33 +343,34 @@ a.button-primary {
   .testimonial-inner {
     background-color: white; }
     .testimonial-inner .section-heading-box {
-      background-color: darkorange;
+      background-color: var(--ghost-white);
       text-align: center;
       padding-top: 3rem;
       padding-bottom: 3rem;
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem; }
     .testimonial-inner .testimonial-box {
-      background-color: purple;
+      background-color: var(--ghost-white);
       display: flex;
       justify-content: space-around;
       border-bottom-left-radius: 2rem;
-      border-bottom-right-radius: 2rem; }
+      border-bottom-right-radius: 2rem;
+      padding-bottom: 5rem; }
       @media only screen and (max-width: 56.25em) {
         .testimonial-inner .testimonial-box {
           flex-direction: column;
           align-items: center; } }
       .testimonial-inner .testimonial-box .testimonial-instance {
-        background-color: wheat;
+        background-color: white;
         width: 45%;
         padding: 3rem;
-        border-radius: 2rem; }
+        border-radius: 2rem;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
         @media only screen and (max-width: 56.25em) {
           .testimonial-inner .testimonial-box .testimonial-instance {
             margin-top: 1rem;
             width: 65%; } }
         .testimonial-inner .testimonial-box .testimonial-instance .heading-block {
-          background-color: olivedrab;
           display: flex; }
           .testimonial-inner .testimonial-box .testimonial-instance .heading-block .portrait {
             background-color: palegreen;
@@ -368,10 +380,11 @@ a.button-primary {
             margin-right: 1rem;
             background: url("https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg") center/cover no-repeat; }
           .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description {
-            background-color: indianred;
             flex-grow: 1;
             align-self: center;
             font-style: italic; }
+            .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description p {
+              color: #ACACAC; }
         .testimonial-inner .testimonial-box .testimonial-instance .content-block {
           font-style: italic;
           padding-top: 1rem;
@@ -390,8 +403,7 @@ a.button-primary {
   margin-bottom: 2rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  font-family: 'Lora', serif; }
+  font-weight: 600; }
 
 h1 {
   font-size: 4rem;
@@ -417,6 +429,9 @@ h6 {
   font-size: 1.6rem;
   margin-bottom: .25rem; }
 
+* {
+  font-family: 'Open Sans', sans-serif; }
+
 p {
   font-size: 1.6rem;
-  font-family: 'Lora', serif; }
+  line-height: 2.6rem; }

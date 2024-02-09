@@ -26,6 +26,7 @@ a.navigation {
 
 a.button {
   text-transform: uppercase;
+  font-weight: bold;
   display: inline-block;
   padding: 2rem;
   border-radius: $border-radius;
@@ -36,13 +37,13 @@ a.button {
 
 a.button-primary {
   background-color: var(--brick-red);
-  border: 1px solid var(--brick-red);
+  border: 3px solid var(--brick-red);
   color: var(--ghost-white);
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; // Ensure smooth transition for background and border color
 
   &:hover {
     background-color: transparent;
-    border: 1px solid var(--brick-red);
+    border: 3px solid var(--brick-red);
     color: var(--brick-red);
   }
 }
