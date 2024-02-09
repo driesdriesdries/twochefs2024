@@ -179,3 +179,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//Remove Gutenburg for the Home Page
+function disable_gutenberg_for_specific_page($is_enabled, $post) {
+    if ($post->ID == 8) { // Replace YOUR_PAGE_ID with the actual ID of your page
+        return false;
+    }
+    return $is_enabled;
+}
+add_filter('use_block_editor_for_post', 'disable_gutenberg_for_specific_page', 10, 2);

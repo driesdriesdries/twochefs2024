@@ -7,3 +7,7 @@
 .content-container {
     max-width: 1140px;
 }
+.content-container > * {
+    margin-bottom: 2rem;
+  }
+  
