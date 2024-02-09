@@ -103,6 +103,9 @@ a.button-primary {
   padding-bottom: 5rem; }
   .callout .content {
     text-align: center; }
+    .callout .content h2 {
+      margin-bottom: 3rem;
+      text-transform: capitalize; }
 
 .faq {
   background-color: white;
@@ -120,7 +123,8 @@ a.button-primary {
       position: relative;
       transition: background-color 0.3s; }
       .faq .accordion-item .heading h3 {
-        color: inherit; }
+        color: inherit;
+        text-transform: capitalize; }
       .faq .accordion-item .heading:hover {
         opacity: .5; }
       .faq .accordion-item .heading::after {
@@ -202,9 +206,6 @@ a.button-primary {
     align-items: center; }
     .footer .top .center ul {
       display: flex; }
-      @media only screen and (max-width: 56.25em) {
-        .footer .top .center ul {
-          flex-direction: column; } }
       .footer .top .center ul li {
         list-style-type: none;
         margin-right: 20px; }
@@ -216,10 +217,17 @@ a.button-primary {
           text-transform: uppercase;
           font-weight: bold;
           text-decoration: none; }
+      @media only screen and (max-width: 56.25em) {
+        .footer .top .center ul {
+          flex-direction: column; } }
     .footer .top .right .social-icons {
       display: flex; }
-      .footer .top .right .social-icons > *:not(:first-child) {
-        margin-left: 1rem; }
+      .footer .top .right .social-icons > * {
+        transition: transform 0.3s ease; }
+        .footer .top .right .social-icons > *:not(:first-child) {
+          margin-left: 1rem; }
+        .footer .top .right .social-icons > *:hover {
+          transform: translateY(-2px); }
   .footer .bottom {
     text-align: center;
     font-style: italic; }

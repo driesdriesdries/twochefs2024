@@ -1,15 +1,22 @@
 <div class="faq">
-    <div class="accordion-item">
-        <div class="heading"><h3>Question 1</h3></div>
-        <div class="body"><p>This is the answer to question 1</p></div>
-    </div>
-    <div class="accordion-item">
-    <div class="heading"><h3>Question 2</h3></div>
-    <div class="body"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum expedita voluptates sunt dolorem impedit doloribus ipsa officia eaque in illo iste libero possimus deserunt enim, minima totam ducimus facilis earum! This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2This is the answer to question 2</p></div>
-    </div>
-    <div class="accordion-item">
-    <div class="heading"><h3>Question 3</h3></div>
-    <div class="body"><p>This is the answer to question 3</p></div>
-    </div>
+    <?php
+    // Check if there are any FAQ instances
+    if (have_rows('faq_instance')) :
+        // Loop through all FAQ instances
+        while (have_rows('faq_instance')) : the_row();
+            // Get the sub field values for this row
+            $faq_question = get_sub_field('faq_question');
+            $faq_answer = get_sub_field('faq_answer');
+    ?>
+        <div class="accordion-item">
+            <div class="heading"><h3><?php echo esc_html($faq_question); ?></h3></div>
+            <div class="body"><p><?php echo esc_html($faq_answer); ?></p></div>
+        </div>
+    <?php
+        endwhile;
+    else :
+        // No FAQ instances found
+        echo '<p>No FAQs available.</p>';
+    endif;
+    ?>
 </div>
-

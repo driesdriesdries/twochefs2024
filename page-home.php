@@ -9,8 +9,8 @@ get_header();
 		<?php get_template_part( 'template-parts/components/featured' ); ?>
 		<?php get_template_part( 'template-parts/components/blog' ); ?>
 		<?php get_template_part( 'template-parts/components/team' ); ?>
-		<?php get_template_part( 'template-parts/components/testimonial' ); ?>
 		<?php get_template_part( 'template-parts/components/faq' ); ?>
+		<?php get_template_part( 'template-parts/components/testimonial' ); ?>
 		<?php get_template_part( 'template-parts/components/callout' ); ?>
 	</div>
 

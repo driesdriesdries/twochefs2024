@@ -1,64 +1,65 @@
 .footer {
-    background-color: white;
-    padding-left: $padding-horizontal;
-    padding-right: $padding-horizontal;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    border-radius: $border-radius;
-    .top {
-        //background-color: yellow;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .left {
-            //background-color: honeydew;
-        }
-        .center {
-            //background-color: salmon;
-            ul {
-                //background-color: red;
-                display: flex;
-                @media only screen and (max-width:$bp-medium) {
-                    flex-direction: column;
-                }
-                li {
+  background-color: white;
+  padding-left: $padding-horizontal;
+  padding-right: $padding-horizontal;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: $border-radius;
+
+  .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+          // Styling for the left section of the footer top
+      }
+
+      .center {
+          ul {
+              display: flex;
+              li {
                   list-style-type: none;
                   margin-right: 20px; // Apply margin to all li
                   
                   &:last-child {
-                    margin-right: 0; // Remove margin for the last li
+                      margin-right: 0; // Remove margin for the last li
                   }
                   a {
-                    //color: green;
-                    display: inline-block;
-                    padding: 2rem;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    text-decoration: none;
+                      display: inline-block;
+                      padding: 2rem;
+                      text-transform: uppercase;
+                      font-weight: bold;
+                      text-decoration: none;
                   }
-                }
-              }              
-        }
-        .right {
-          //background-color: lawngreen;
-      
+              }
+              @media only screen and (max-width:$bp-medium) {
+                  flex-direction: column;
+              }
+          }              
+      }
+
+      .right {
           .social-icons {
               display: flex;
-              > *:not(:first-child) {
-                  margin-left: 1rem;
+              > * {
+                  transition: transform 0.3s ease;
+                  &:not(:first-child) {
+                      margin-left: 1rem;
+                  }
+                  &:hover {
+                      transform: translateY(-2px);
+                  }
               }
           }
       }
-      
-    }
-    .bottom {
-        //background-color: saddlebrown;
-        text-align: center;
-        font-style: italic;
-        p {
-          font-size: 1.2rem;
-        }
-        
+  }
 
-    }
+  .bottom {
+      text-align: center;
+      font-style: italic;
+      p {
+          font-size: 1.2rem;
+      }
+  }
 }

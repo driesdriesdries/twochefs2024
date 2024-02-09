@@ -16,6 +16,7 @@
       
       h3 { // Ensure the heading <h3> also has the hotpink color
         color: inherit;
+        text-transform: capitalize;
       }
 
       &:hover {
