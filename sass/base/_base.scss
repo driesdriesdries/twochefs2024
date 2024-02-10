@@ -12,3 +12,14 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
+
+/* Keyframes for fade-in effect */
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Class to apply the fade-in animation */
+.fadein {
+  animation: fadein .1s ease-in forwards;
+}

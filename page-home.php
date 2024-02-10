@@ -2,7 +2,7 @@
 
 get_header();
 ?>
-	<div class="content-container">
+	<div class="content-container fadein">
 		<?php get_template_part( 'template-parts/components/hero' ); ?>
 		<?php get_template_part( 'template-parts/components/logo-reel' ); ?>
 		<?php get_template_part( 'template-parts/components/services' ); ?>

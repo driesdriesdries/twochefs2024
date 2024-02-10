@@ -21,7 +21,7 @@
     .right {
         border-top-right-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
-        background-color: darkgrey;
+        background-color: white;
         width: 60%;
         display: flex;
         align-items: center;
@@ -30,25 +30,15 @@
         }
         .logo-box {
             width: 100%;
-            background-color: olivedrab;
+            //background-color: olivedrab;
             display: flex;
             justify-content: space-between;
             padding-left: $padding-horizontal;
             padding-right: $padding-horizontal;
             .logo {
-                background-color: brown;
-                width: 25%;
+                width: 33%;
                 height: 8rem;
                 border: 1px solid black;
-                &-1 {
-                    background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center / contain;
-                }
-                &-2 {
-                    background: url(https://www.mooitroues.co.za/wp-content/uploads/2017/09/mooitroues.jpg) no-repeat center / contain;
-                }
-                &-3 {
-                    background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center / contain;
-                }
             }
         }
     }

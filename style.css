@@ -11,6 +11,17 @@ html {
   padding: 0;
   box-sizing: inherit; }
 
+/* Keyframes for fade-in effect */
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Class to apply the fade-in animation */
+.fadein {
+  animation: fadein .1s ease-in forwards; }
+
 :root {
   --brick-red: #a35252;
   /* Brick Red */
@@ -167,7 +178,7 @@ a.button-primary {
   .featured .right {
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    background-color: darkgrey;
+    background-color: white;
     width: 60%;
     display: flex;
     align-items: center; }
@@ -176,22 +187,14 @@ a.button-primary {
         width: 100%; } }
     .featured .right .logo-box {
       width: 100%;
-      background-color: olivedrab;
       display: flex;
       justify-content: space-between;
       padding-left: 3rem;
       padding-right: 3rem; }
       .featured .right .logo-box .logo {
-        background-color: brown;
-        width: 25%;
+        width: 33%;
         height: 8rem;
         border: 1px solid black; }
-        .featured .right .logo-box .logo-1 {
-          background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center/contain; }
-        .featured .right .logo-box .logo-2 {
-          background: url(https://www.mooitroues.co.za/wp-content/uploads/2017/09/mooitroues.jpg) no-repeat center/contain; }
-        .featured .right .logo-box .logo-3 {
-          background: url(https://d289joq8xyfcjk.cloudfront.net/channels/kyknet/logo.png) no-repeat center/contain; }
 
 .footer {
   background-color: white;
