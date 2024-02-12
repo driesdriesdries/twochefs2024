@@ -262,9 +262,8 @@ a.button-primary {
   border-radius: 2rem; }
   .logo-reel .logo-container {
     display: flex;
-    animation: slide 15s infinite linear; }
+    animation: slide 30s infinite linear; }
     .logo-reel .logo-container .logo {
-      flex: 0 0 25%;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

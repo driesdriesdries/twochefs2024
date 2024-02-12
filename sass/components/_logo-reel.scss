@@ -15,10 +15,9 @@
   
     .logo-container {
       display: flex;
-      animation: slide 15s infinite linear; // Adjust duration as needed
+      animation: slide 30s infinite linear; // Adjust duration as needed
   
       .logo {
-        flex: 0 0 25%; // Adjust this based on the actual number of logos to avoid gaps
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
