@@ -12,18 +12,18 @@
             <div class="logo-box">
                 <?php while (have_rows('featured_instance')) : the_row();
                     $logo = get_sub_field('featured_logo');
-                    $link = get_sub_field('featured_logo_link'); // Get the link URL from the subfield
-                    // Only proceed if there is a logo image available
-                    if (!empty($logo)):
-                        // If there is a link, wrap the image in an anchor tag
-                        if (!empty($link)): ?>
-                            <a href="<?php echo esc_url($link); ?>"> <!-- Echo the link URL in the href attribute -->
-                                <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ?? 'Featured Logo'); ?>">
-                            </a>
-                        <?php else: ?>
-                            <!-- If there is no link, just display the image without wrapping it in an anchor tag -->
-                            <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ?? 'Featured Logo'); ?>">
-                        <?php endif;
+                    $link = get_sub_field('featured_logo_link');
+                    if ($logo): // Check if there is a logo
+                        // Get the medium size URL from the sizes array
+                        $logo_url = esc_url($logo['sizes']['medium'] ?? $logo['url']); // Fallback to the full size if medium is not set
+                        $logo_alt = esc_attr($logo['alt']); // Get the alternative text
+                        // Access the 'url' key of the $link array
+                        $link_url = !empty($link) ? esc_url($link['url']) : ''; // Get the link URL or empty string if it's not set
+                ?>
+                        <a href="<?php echo $link_url; ?>" target="<?php echo esc_attr($link['target']); ?>">
+                            <img src="<?php echo $logo_url; ?>" alt="<?php echo $logo_alt; ?>">
+                        </a>
+                <?php 
                     endif;
                 endwhile; ?>
             </div>

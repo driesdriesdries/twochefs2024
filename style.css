@@ -185,7 +185,9 @@ a.button-primary {
     justify-content: center; }
     @media only screen and (max-width: 56.25em) {
       .featured .right {
-        width: 100%; } }
+        width: 100%;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px; } }
     .featured .right .logo-box {
       width: 80%;
       display: flex;
@@ -195,9 +197,9 @@ a.button-primary {
       padding-right: 3rem; }
       @media only screen and (max-width: 56.25em) {
         .featured .right .logo-box {
-          width: 100%; } }
+          width: 100%;
+          padding-bottom: 3rem; } }
       .featured .right .logo-box img {
-        border: 1px solid black;
         max-height: 8rem;
         margin-left: 2rem; }
         @media only screen and (max-width: 56.25em) {
