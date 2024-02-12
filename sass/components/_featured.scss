@@ -25,20 +25,31 @@
         width: 60%;
         display: flex;
         align-items: center;
+        justify-content: center;
         @media only screen and (max-width:$bp-medium) {
             width: 100%;
         }
         .logo-box {
-            width: 100%;
+            width: 80%;
             //background-color: olivedrab;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            flex-wrap: wrap; // Allow items to wrap to the next line
             padding-left: $padding-horizontal;
             padding-right: $padding-horizontal;
-            .logo {
-                width: 33%;
-                height: 8rem;
-                border: 1px solid black;
+            @media only screen and (max-width:$bp-medium) {
+                width: 100%;
+            }
+            img {
+            border: 1px solid black;  
+            max-height: 8rem;
+            margin-left: 2rem;
+            @media only screen and (max-width:$bp-medium) {
+                max-height: 6rem;
+                &:first-child {
+                    margin-left: 0;
+                    }
+                }
             }
         }
     }

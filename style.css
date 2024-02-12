@@ -181,20 +181,30 @@ a.button-primary {
     background-color: white;
     width: 60%;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     @media only screen and (max-width: 56.25em) {
       .featured .right {
         width: 100%; } }
     .featured .right .logo-box {
-      width: 100%;
+      width: 80%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
       padding-left: 3rem;
       padding-right: 3rem; }
-      .featured .right .logo-box .logo {
-        width: 33%;
-        height: 8rem;
-        border: 1px solid black; }
+      @media only screen and (max-width: 56.25em) {
+        .featured .right .logo-box {
+          width: 100%; } }
+      .featured .right .logo-box img {
+        border: 1px solid black;
+        max-height: 8rem;
+        margin-left: 2rem; }
+        @media only screen and (max-width: 56.25em) {
+          .featured .right .logo-box img {
+            max-height: 6rem; }
+            .featured .right .logo-box img:first-child {
+              margin-left: 0; } }
 
 .footer {
   background-color: white;

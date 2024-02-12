@@ -8,18 +8,24 @@
         </div>
     </div>
     <div class="right">
-        <?php if( have_rows('featured_instance') ): ?>
+        <?php if (have_rows('featured_instance')): ?>
             <div class="logo-box">
-                <?php while( have_rows('featured_instance') ): the_row(); 
+                <?php while (have_rows('featured_instance')) : the_row();
                     $logo = get_sub_field('featured_logo');
-                    $logo_url = $logo['sizes']['thumbnail'] ?? $logo['url']; // Fallback to full image if thumbnail size isn't available
-                    $link = get_sub_field('featured_logo_link');
-                ?>
-                    <div class="logo" style="background: url('<?php echo esc_url($logo_url); ?>') no-repeat center; background-size: 100% auto;">
-                        <a href="<?php echo esc_url($link); ?>"></a>
-                    </div>
-
-                <?php endwhile; ?>
+                    $link = get_sub_field('featured_logo_link'); // Get the link URL from the subfield
+                    // Only proceed if there is a logo image available
+                    if (!empty($logo)):
+                        // If there is a link, wrap the image in an anchor tag
+                        if (!empty($link)): ?>
+                            <a href="<?php echo esc_url($link); ?>"> <!-- Echo the link URL in the href attribute -->
+                                <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ?? 'Featured Logo'); ?>">
+                            </a>
+                        <?php else: ?>
+                            <!-- If there is no link, just display the image without wrapping it in an anchor tag -->
+                            <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt'] ?? 'Featured Logo'); ?>">
+                        <?php endif;
+                    endif;
+                endwhile; ?>
             </div>
         <?php endif; ?>
     </div>
