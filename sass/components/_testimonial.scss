@@ -5,6 +5,9 @@
     padding-right: $padding-horizontal;
     padding-top: $padding-vertical;
     padding-bottom: $padding-vertical;
+    @media only screen and (max-width:$bp-small) {
+        padding: 1rem 0;
+    }
     &-inner {
         background-color: white;
         .section-heading-box {
@@ -34,7 +37,11 @@
                 box-shadow: $box-shadow;
                 @media only screen and (max-width:$bp-medium) {
                     margin-top: 1rem;
-                    width: 65%;
+                    width: 75%;
+                }
+                @media only screen and (max-width:$bp-small) {
+                    margin-top: 1rem;
+                    width: 100%;
                 }
                 .heading-block {
                     //background-color: olivedrab;

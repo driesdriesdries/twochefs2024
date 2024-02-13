@@ -1,28 +1,7 @@
-@keyframes slide {
-    from { 
-      transform: translateX(0); 
-    }
-    to { 
-      transform: translateX(-100%); // This ensures the whole container moves
-    }
-  }
-  
-  .logo-reel {
-    background-color: white;
-    overflow: hidden;
-    position: relative;
-    border-radius: $border-radius;
-  
-    .logo-container {
-      display: flex;
-      animation: slide 30s infinite linear; // Adjust duration as needed
-  
-      .logo {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 7.5rem; // Fixed height for logos
-      }
-    }
-  }
+.logo-reel {
+  background-color: orangered;   
+  @media only screen and (max-width:$bp-small) {
+    background-color: green;
+}
+}
   

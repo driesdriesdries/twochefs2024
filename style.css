@@ -249,25 +249,11 @@ a.button-primary {
     .footer .bottom p {
       font-size: 1.2rem; }
 
-@keyframes slide {
-  from {
-    transform: translateX(0); }
-  to {
-    transform: translateX(-100%); } }
-
 .logo-reel {
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-  border-radius: 2rem; }
-  .logo-reel .logo-container {
-    display: flex;
-    animation: slide 30s infinite linear; }
-    .logo-reel .logo-container .logo {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 7.5rem; }
+  background-color: orangered; }
+  @media only screen and (max-width: 25em) {
+    .logo-reel {
+      background-color: green; } }
 
 .services {
   background-color: white;
@@ -276,6 +262,9 @@ a.button-primary {
   padding-top: 5rem;
   padding-bottom: 5rem;
   border-radius: 2rem; }
+  @media only screen and (max-width: 25em) {
+    .services {
+      padding: 1rem 0; } }
   .services-heading-block {
     text-align: center; }
     .services-heading-block p {
@@ -362,6 +351,9 @@ a.button-primary {
   padding-right: 3rem;
   padding-top: 5rem;
   padding-bottom: 5rem; }
+  @media only screen and (max-width: 25em) {
+    .testimonial {
+      padding: 1rem 0; } }
   .testimonial-inner {
     background-color: white; }
     .testimonial-inner .section-heading-box {
@@ -391,7 +383,11 @@ a.button-primary {
         @media only screen and (max-width: 56.25em) {
           .testimonial-inner .testimonial-box .testimonial-instance {
             margin-top: 1rem;
-            width: 65%; } }
+            width: 75%; } }
+        @media only screen and (max-width: 25em) {
+          .testimonial-inner .testimonial-box .testimonial-instance {
+            margin-top: 1rem;
+            width: 100%; } }
         .testimonial-inner .testimonial-box .testimonial-instance .heading-block {
           display: flex; }
           .testimonial-inner .testimonial-box .testimonial-instance .heading-block .portrait {
