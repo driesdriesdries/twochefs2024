@@ -259,12 +259,6 @@ a.button-primary {
     .footer .bottom p {
       font-size: 1.2rem; }
 
-.logo-reel {
-  background-color: orangered; }
-  @media only screen and (max-width: 25em) {
-    .logo-reel {
-      background-color: green; } }
-
 .services {
   background-color: white;
   padding-left: 3rem;
@@ -412,8 +406,7 @@ a.button-primary {
             background: url("https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg") center/cover no-repeat; }
           .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description {
             flex-grow: 1;
-            align-self: center;
-            font-style: italic; }
+            align-self: center; }
             .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description p {
               color: #ACACAC; }
         .testimonial-inner .testimonial-box .testimonial-instance .content-block {

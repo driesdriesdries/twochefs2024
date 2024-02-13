@@ -44,7 +44,6 @@
                     width: 100%;
                 }
                 .heading-block {
-                    //background-color: olivedrab;
                     display: flex;
                     .portrait {
                         background-color: palegreen;
@@ -55,10 +54,8 @@
                         background: url('https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg') center / cover no-repeat;
                     }
                     .description {
-                        //background-color: indianred;
                         flex-grow: 1;
                         align-self: center;
-                        font-style: italic;
                         p {
                             color: #ACACAC;
                         }
