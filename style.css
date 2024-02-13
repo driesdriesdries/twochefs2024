@@ -3,6 +3,9 @@ html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 50%; } }
 
 *,
 *::before,
@@ -112,6 +115,10 @@ a.button-primary {
   border-radius: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem; }
+  @media only screen and (max-width: 25em) {
+    .callout {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
   .callout .content {
     text-align: center; }
     .callout .content h2 {
@@ -207,6 +214,9 @@ a.button-primary {
             max-height: 6rem; }
             .featured .right .logo-box img:first-child {
               margin-left: 0; } }
+        @media only screen and (max-width: 25em) {
+          .featured .right .logo-box img {
+            max-height: 4rem; } }
 
 .footer {
   background-color: white;
@@ -264,7 +274,7 @@ a.button-primary {
   border-radius: 2rem; }
   @media only screen and (max-width: 25em) {
     .services {
-      padding: 1rem 0; } }
+      padding: 1rem 1rem; } }
   .services-heading-block {
     text-align: center; }
     .services-heading-block p {
@@ -290,6 +300,9 @@ a.button-primary {
         .services-card-group .card {
           width: 75%;
           margin: 1rem 0; } }
+      @media only screen and (max-width: 25em) {
+        .services-card-group .card {
+          width: 85%; } }
       .services-card-group .card-top {
         height: 20rem; }
         @media only screen and (max-width: 56.25em) {
@@ -353,7 +366,7 @@ a.button-primary {
   padding-bottom: 5rem; }
   @media only screen and (max-width: 25em) {
     .testimonial {
-      padding: 1rem 0; } }
+      padding: 1rem 1rem; } }
   .testimonial-inner {
     background-color: white; }
     .testimonial-inner .section-heading-box {

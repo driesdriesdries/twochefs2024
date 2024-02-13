@@ -6,7 +6,7 @@
     padding-top: $padding-vertical;
     padding-bottom: $padding-vertical;
     @media only screen and (max-width:$bp-small) {
-        padding: 1rem 0;
+        padding: 1rem 1rem;
     }
     &-inner {
         background-color: white;

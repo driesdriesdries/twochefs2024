@@ -3,6 +3,10 @@
     border-radius: $border-radius;
     padding-top: $padding-vertical;
     padding-bottom: $padding-vertical;
+    @media only screen and (max-width:$bp-small) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .content {
         text-align: center;
         h2 {

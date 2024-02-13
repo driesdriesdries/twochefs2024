@@ -1,5 +1,4 @@
 .services {
-    // background-color: lightpink;
     background-color: white;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
@@ -7,11 +6,10 @@
     padding-bottom: $padding-vertical;
     border-radius: $border-radius;
     @media only screen and (max-width:$bp-small) {
-        padding: 1rem 0;
+        padding: 1rem 1rem;
     }
 
     &-heading-block {
-        //background-color: aqua;
         text-align: center;
         p {
             margin-bottom: 2rem;
@@ -19,7 +17,6 @@
     }
 
     &-card-group {
-        //background-color: lightgreen;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -30,18 +27,21 @@
         .card {
             border-radius: $border-radius;
             overflow: hidden;
-            width: calc(25% - 2rem); // Adjusted for 4 cards in a row, accounting for margin
+            width: calc(25% - 2rem);
             cursor: pointer;
-            transition: box-shadow 0.5s ease; // Add this line for the shadow animation
-            box-shadow: none; // Ensure there's a default state for the box-shadow
+            transition: box-shadow 0.5s ease;
+            box-shadow: none;
             color: white;
             &:hover {
-                box-shadow: $box-shadow; // Apply your predefined shadow variable on hover
+                box-shadow: $box-shadow;
             }
 
             @media only screen and (max-width: $bp-medium) {
-                width: 75%; // Adjusted for responsiveness, one column on smaller screens
-                margin: 1rem 0; // Adjust margin for vertical stacking on smaller screens
+                width: 75%;
+                margin: 1rem 0;
+            }
+            @media only screen and (max-width: $bp-small) {
+                width: 85%;
             }
 
             &-top {
@@ -58,7 +58,6 @@
                 }
             }
             
-            // Assigning different background colors to each card
             &:nth-child(1) {
                 background-color: var(--ocean-depths);
             }
