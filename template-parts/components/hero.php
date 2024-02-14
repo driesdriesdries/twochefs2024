@@ -12,6 +12,6 @@ $hero_image_url = $hero_image['sizes']['large']; // Replace 'large' with your cu
   <div class="hero-content">
     <h1><?php echo esc_html($hero_heading); ?></h1>
     <p><?php echo esc_html($hero_description); ?></p>
-    <a href="#" class="button button-hero">Contact</a>
+    <a href="#" class="button button-hero openContactModal">Contact</a>
   </div>
 </div>

@@ -1,0 +1,49 @@
+/* Add this to your existing CSS */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* Prevents scrolling by setting the height to the viewport height */
+  width: 100vw; /* Optional: Ensures the width is also locked to the viewport width */
+}
+
+.contact-modal {
+  background-color: red;
+  display: none;
+  //styling the close button
+  .closeContactModal {
+    cursor: pointer;
+  }
+  &.active {
+    //opacity: .5;
+    background-color: greenyellow;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inherit;
+    justify-content: center;
+    .form-area {
+      background-color: teal;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      @media only screen and (max-width: $bp-medium) {
+        width: 75%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        width: 90%;
+      }
+      .pre-form {
+        display: flex;
+        justify-content: space-between;
+      }
+      form {
+        input, textarea {
+          width: 100%;
+        }
+        input[type="submit"] {
+          width: 50%;
+          margin-left: 25%;
+      }
+      }
+    }
+  }
+}

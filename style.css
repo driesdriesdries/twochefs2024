@@ -153,6 +153,46 @@ a.button-hero {
       margin-bottom: 3rem;
       text-transform: capitalize; }
 
+/* Add this to your existing CSS */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  /* Prevents scrolling by setting the height to the viewport height */
+  width: 100vw;
+  /* Optional: Ensures the width is also locked to the viewport width */ }
+
+.contact-modal {
+  background-color: red;
+  display: none; }
+  .contact-modal .closeContactModal {
+    cursor: pointer; }
+  .contact-modal.active {
+    background-color: greenyellow;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inherit;
+    justify-content: center; }
+    .contact-modal.active .form-area {
+      background-color: teal;
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      @media only screen and (max-width: 56.25em) {
+        .contact-modal.active .form-area {
+          width: 75%; } }
+      @media only screen and (max-width: 25em) {
+        .contact-modal.active .form-area {
+          width: 90%; } }
+      .contact-modal.active .form-area .pre-form {
+        display: flex;
+        justify-content: space-between; }
+      .contact-modal.active .form-area form input, .contact-modal.active .form-area form textarea {
+        width: 100%; }
+      .contact-modal.active .form-area form input[type="submit"] {
+        width: 50%;
+        margin-left: 25%; }
+
 .faq {
   background-color: white;
   border-radius: 2rem; }

@@ -79,7 +79,7 @@
 	
 </div>
 </div><!-- #page -->
-
+<?php get_template_part( 'template-parts/components/contact-modal' ); ?>
 <?php wp_footer(); ?>
 
 </body>
