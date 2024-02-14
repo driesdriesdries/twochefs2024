@@ -1,0 +1,37 @@
+.navbar {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $padding-horizontal;
+  padding-right: $padding-horizontal;
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+  .left {
+    margin-bottom: 0;
+    img {
+      height: 8rem;
+    }
+  }
+  .right {
+    margin-bottom: 0;
+    ul {
+      display: flex;
+      @media only screen and (max-width: $bp-medium) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      li {
+        list-style: none;
+        margin-left: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

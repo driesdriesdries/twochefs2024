@@ -1,4 +1,4 @@
-<div class="blog">
+<div id="blog" class="blog">
   <div class="instance-group">
     <?php
     // Define the query

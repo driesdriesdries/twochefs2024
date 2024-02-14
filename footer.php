@@ -56,7 +56,7 @@
 					?>
 				</li>
 
-				<li><a id="servicesLink" class="navigation" href="#services">Contact</a></li>
+				<li><a class="navigation openContactModal" href="#">Contact</a></li>
 
 
 			</ul>
