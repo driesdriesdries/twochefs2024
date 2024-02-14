@@ -472,7 +472,8 @@ a.button-primary {
             flex-grow: 1;
             align-self: center; }
             .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description p {
-              color: #ACACAC; }
+              color: #ACACAC;
+              font-style: italic; }
         .testimonial-inner .testimonial-box .testimonial-instance .content-block {
           font-style: italic;
           padding-top: 1rem;
