@@ -14,7 +14,7 @@
   }
   &.active {
     //opacity: .5;
-    background-color: var(--brick-red);
+    background-color: white;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -28,6 +28,7 @@
       height: 60vh;
       margin-top: 10%;
       padding: 3rem;
+      border: 3px solid var(--brick-red);
       @media only screen and (max-width: $bp-medium) {
         width: 75%;
       }
@@ -45,9 +46,7 @@
           padding: 1rem;
         }
         input[type="submit"] {
-          width: 20rem;
-          //margin-left: 30%;
-          padding: 1.5rem;
+          padding: 1.5rem .5rem;
           background-color: var(--brick-red);
           color: white;
           border: none;

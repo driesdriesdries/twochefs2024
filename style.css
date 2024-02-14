@@ -167,7 +167,7 @@ a.button-hero {
   .contact-modal .closeContactModal {
     cursor: pointer; }
   .contact-modal.active {
-    background-color: var(--brick-red);
+    background-color: white;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -180,7 +180,8 @@ a.button-hero {
       width: 50%;
       height: 60vh;
       margin-top: 10%;
-      padding: 3rem; }
+      padding: 3rem;
+      border: 3px solid var(--brick-red); }
       @media only screen and (max-width: 56.25em) {
         .contact-modal.active .form-area {
           width: 75%; } }
@@ -195,8 +196,7 @@ a.button-hero {
         width: 100%;
         padding: 1rem; }
       .contact-modal.active .form-area form input[type="submit"] {
-        width: 20rem;
-        padding: 1.5rem;
+        padding: 1.5rem .5rem;
         background-color: var(--brick-red);
         color: white;
         border: none;
@@ -431,9 +431,11 @@ a.button-hero {
           padding-bottom: 1rem; } }
       .navbar .right ul li {
         list-style: none;
-        margin-left: 2rem;
+        margin-left: 3rem;
         font-weight: bold;
         text-transform: uppercase; }
+        .navbar .right ul li:first-child {
+          margin-left: 0; }
         .navbar .right ul li a {
           text-decoration: none; }
 

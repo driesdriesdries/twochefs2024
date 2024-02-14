@@ -9,9 +9,8 @@
 
 get_header();
 ?>
-<div class="page">
-	<div class="content-container">
-	</div>
+<div class="page content-container">
+	<h1>Archive.php</h1>
 </div>
 
 <?php
