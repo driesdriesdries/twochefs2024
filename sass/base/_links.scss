@@ -47,3 +47,44 @@ a.button-primary {
     color: var(--brick-red);
   }
 }
+
+a.button-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; // Clear background to show the fill effect
+  color: #ffffff; // Black text color
+  border: 3px solid #ffffff; // Dark grey border color
+
+  // Initial background gradient setup: transparent, matching the button's background
+  background-image: linear-gradient(to right, #ffffff 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease, color 0.3s ease;
+
+  &:hover {
+    background-position: left bottom; // Moves the gradient to fill the button
+    color: var(--brick-red); // White text color on hover
+  }
+
+  // Ensures the text and potential icon do not change color on hover if not desired
+  &:hover::before {
+    border-color: #007bff; // Change to a solid color on hover
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: border-color 0.3s ease;
+  }
+
+  // Ensure content (text/icon) is above the pseudo-element
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
