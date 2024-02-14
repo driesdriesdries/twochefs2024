@@ -48,8 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contact-modal">
     <div class="form-area">
         <div class="pre-form">
-            <h1>Contact Modal</h1>
-            <h2 class="closeContactModal">X</h1>
+            <div class="form-positioning">
+                <h2>Get in Touch with Us</h2>
+                <p>Whether you have a question, feedback, or just want to say hello, we're here to listen.</p>
+            </div>
+            <h3 class="closeContactModal">X</h3>
         </div>
         <form action="">
             <?php echo do_shortcode('[contact-form-7 id="6b8e1e8" title="Contact form 1"]'); ?>

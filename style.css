@@ -167,17 +167,20 @@ a.button-hero {
   .contact-modal .closeContactModal {
     cursor: pointer; }
   .contact-modal.active {
-    background-color: greenyellow;
+    background-color: var(--brick-red);
     width: 100vw;
     height: 100vh;
     position: fixed;
     display: inherit;
     justify-content: center; }
     .contact-modal.active .form-area {
-      background-color: teal;
+      background-color: white;
       display: flex;
       flex-direction: column;
-      width: 50%; }
+      width: 50%;
+      height: 60vh;
+      margin-top: 10%;
+      padding: 3rem; }
       @media only screen and (max-width: 56.25em) {
         .contact-modal.active .form-area {
           width: 75%; } }
@@ -186,12 +189,24 @@ a.button-hero {
           width: 90%; } }
       .contact-modal.active .form-area .pre-form {
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        margin-bottom: 1rem; }
       .contact-modal.active .form-area form input, .contact-modal.active .form-area form textarea {
-        width: 100%; }
+        width: 100%;
+        padding: 1rem; }
       .contact-modal.active .form-area form input[type="submit"] {
-        width: 50%;
-        margin-left: 25%; }
+        width: 20rem;
+        padding: 1.5rem;
+        background-color: var(--brick-red);
+        color: white;
+        border: none;
+        border-radius: 2rem;
+        font-size: 2rem;
+        text-transform: uppercase; }
+      .contact-modal.active .form-area form label {
+        font-weight: bold; }
+      .contact-modal.active .form-area form p {
+        margin-top: 2rem; }
 
 .faq {
   background-color: white;
