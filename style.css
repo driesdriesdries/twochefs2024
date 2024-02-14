@@ -226,16 +226,24 @@ a.button-primary {
   padding-right: 3rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  width: 100%; }
   .footer .top {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .footer .top {
+        flex-direction: column;
+        text-align: center; } }
     .footer .top .center ul {
       display: flex; }
       .footer .top .center ul li {
         list-style-type: none;
-        margin-right: 20px; }
+        margin-right: 2rem; }
+        @media only screen and (max-width: 56.25em) {
+          .footer .top .center ul li {
+            margin-right: 0; } }
         .footer .top .center ul li:last-child {
           margin-right: 0; }
         .footer .top .center ul li a {
@@ -294,12 +302,12 @@ a.button-primary {
       .hero .hero-content {
         padding-right: 35%; } }
   .hero h1 {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     animation: fadeIn 0.7s ease-out 0.1s forwards;
     opacity: 0; }
   .hero p {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     animation: fadeIn 0.7s ease-out 0.8s forwards;
     opacity: 0; }
   .hero .button {
@@ -310,7 +318,7 @@ a.button-primary {
       padding: 7rem 3rem; } }
   @media only screen and (max-width: 25em) {
     .hero {
-      padding: 3rem 2rem; } }
+      padding: 5rem 2rem; } }
 
 .logo-reel {
   margin-top: -2rem; }

@@ -11,7 +11,7 @@
 
 ?>
 
-<div class="footer">
+<div class="footer content-container">
 	<div class="top">
 		<div class="left">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo">
