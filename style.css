@@ -623,7 +623,7 @@ a.button-hero {
         text-align: center; } }
   .archive-main {
     background-color: green;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -659,17 +659,22 @@ a.button-hero {
           .archive-main .bottom-right {
             width: 100%; } }
         .archive-main .bottom-right .category-roll-item {
-          background-color: yellow;
-          margin-bottom: 1rem;
-          display: flex; }
+          background-color: aqua;
+          margin-bottom: .5rem;
+          display: flex;
+          align-items: center; }
           .archive-main .bottom-right .category-roll-item .left {
             background-color: tomato;
-            width: 30%;
+            width: 40%;
             height: 10rem; }
           .archive-main .bottom-right .category-roll-item .right {
             background-color: aliceblue;
-            width: 70%;
+            width: 60%;
             padding: 1rem; }
+            .archive-main .bottom-right .category-roll-item .right a {
+              text-decoration: none; }
+            .archive-main .bottom-right .category-roll-item .right p {
+              font-size: 1.4rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }

@@ -17,7 +17,7 @@
     }
     &-main {
         background-color: green;
-        width: 80%;
+        width: 90%;
         @media only screen and (max-width:$bp-medium) {
             width: 100%;
         }
@@ -57,18 +57,25 @@
                     width: 100%;
                 }
                 .category-roll-item {
-                    background-color: yellow;
-                    margin-bottom: 1rem;
+                    background-color: aqua;
+                    margin-bottom: .5rem;
                     display: flex;
+                    align-items: center;
                     .left {
                         background-color: tomato;
-                        width: 30%;
+                        width: 40%;
                         height: 10rem;
                     }
                     .right {
                         background-color: aliceblue;
-                        width: 70%;
+                        width: 60%;
                         padding: 1rem;
+                        a {
+                            text-decoration: none;
+                        }
+                        p {
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
