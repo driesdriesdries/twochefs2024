@@ -56,6 +56,21 @@
                 @media only screen and (max-width:$bp-medium) {
                     width: 100%;
                 }
+                .category-roll-item {
+                    background-color: yellow;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    .left {
+                        background-color: tomato;
+                        width: 30%;
+                        height: 10rem;
+                    }
+                    .right {
+                        background-color: aliceblue;
+                        width: 70%;
+                        padding: 1rem;
+                    }
+                }
             }
         }
     }

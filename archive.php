@@ -7,8 +7,7 @@
  * @package twochefs2024
  */
 
-get_header();
-?>
+get_header(); ?>
 
 <div class="content-container archive">
     <div class="archive-banner">
@@ -36,18 +35,45 @@ get_header();
 		</div>
 		<div class="bottom">
 			<div class="bottom-left">
-				<div class="featured-item">
-					<div class="featured-item-image">
-
+				<?php
+                $featured_posts = new WP_Query(array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                    'tag' => 'featured',
+                    'category_name' => single_cat_title("", false),
+                ));
+                if ($featured_posts->have_posts()) : while ($featured_posts->have_posts()) : $featured_posts->the_post(); ?>
+					<div class="featured-item">
+						<div class="featured-item-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+						<div class="featured-item-meta">
+							<h4 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p class="author"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></p>
+							<p class="post-intro"><?php echo wp_trim_words(get_the_excerpt(), 14, '...'); ?></p>
+						</div>
 					</div>
-					<div class="featured-item-meta">
-						<h4 class="article-title">Article Title</h4>
-						<p class="author">Dries</p>
-						<p class="post-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae distinctio fugit ducimus quas,</p>
-					</div>
+				<?php endwhile; endif; ?>
+			</div>
+			<div class="bottom-right">
+				<div class="category-roll">
+					<?php
+                    $args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                        'category_name' => single_cat_title("", false),
+                        'post__not_in' => array(get_the_ID()),
+                    );
+                    $latest_posts = new WP_Query($args);
+                    if ($latest_posts->have_posts()) : while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
+						<div class="category-roll-item">
+							<div class="left" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+							<div class="right">
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+								<p><?php echo wp_trim_words(get_the_excerpt(), 14, '...'); ?></p>
+							</div>
+						</div>
+					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 			</div>
-			<div class="bottom-right">Bottom Right</div>
 		</div>
 	</div>
 </div>

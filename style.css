@@ -658,6 +658,18 @@ a.button-hero {
         @media only screen and (max-width: 56.25em) {
           .archive-main .bottom-right {
             width: 100%; } }
+        .archive-main .bottom-right .category-roll-item {
+          background-color: yellow;
+          margin-bottom: 1rem;
+          display: flex; }
+          .archive-main .bottom-right .category-roll-item .left {
+            background-color: tomato;
+            width: 30%;
+            height: 10rem; }
+          .archive-main .bottom-right .category-roll-item .right {
+            background-color: aliceblue;
+            width: 70%;
+            padding: 1rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }
