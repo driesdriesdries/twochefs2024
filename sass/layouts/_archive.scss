@@ -1,0 +1,28 @@
+.archive {
+    background-color: red;
+    width: 100%;
+    &-banner {
+        background-color: yellow;
+        width: 100%;
+        border: 1px solid black;
+    }
+    &-main {
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        .top {
+            background-color: pink;
+        }
+        .bottom {
+            display: flex;
+            &-left {
+                width: 50%;
+                background-color: yellow;
+            }
+            &-right {
+                width: 50%;
+                background-color: blue;
+            }
+        }
+    }
+}

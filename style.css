@@ -607,6 +607,28 @@ a.button-hero {
 .content-container > * {
   margin-bottom: 2rem; }
 
+.archive {
+  background-color: red;
+  width: 100%; }
+  .archive-banner {
+    background-color: yellow;
+    width: 100%;
+    border: 1px solid black; }
+  .archive-main {
+    background-color: green;
+    display: flex;
+    flex-direction: column; }
+    .archive-main .top {
+      background-color: pink; }
+    .archive-main .bottom {
+      display: flex; }
+      .archive-main .bottom-left {
+        width: 50%;
+        background-color: yellow; }
+      .archive-main .bottom-right {
+        width: 50%;
+        background-color: blue; }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }
 
