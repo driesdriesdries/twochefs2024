@@ -608,72 +608,83 @@ a.button-hero {
   margin-bottom: 2rem; }
 
 .archive {
-  background-color: red;
-  width: 100%; }
+  background-color: white;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem; }
   .archive-banner {
-    background-color: yellow;
     width: 100%;
-    border: 1px solid black;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding-left: 3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 5.5rem;
     padding-right: 3rem; }
-    @media only screen and (max-width: 56.25em) {
-      .archive-banner h1 {
-        text-align: center; } }
+    .archive-banner h1 {
+      display: inline;
+      padding: 1rem;
+      background-color: #2f2f2f;
+      border-radius: 2rem;
+      color: white; }
+      @media only screen and (max-width: 56.25em) {
+        .archive-banner h1 {
+          text-align: center; } }
   .archive-main {
-    background-color: green;
     width: 90%;
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: -5rem; }
+    margin-top: -5rem;
+    padding-bottom: 2rem; }
     @media only screen and (max-width: 56.25em) {
       .archive-main {
         width: 100%; } }
     .archive-main .top {
-      background-color: pink;
+      background-color: white;
       padding: 3rem; }
     .archive-main .bottom {
       display: flex; }
       @media only screen and (max-width: 56.25em) {
         .archive-main .bottom {
           flex-direction: column; } }
-      .archive-main .bottom-left {
+      .archive-main .bottom-left, .archive-main .bottom-right {
         width: 50%;
-        background-color: yellow;
-        border-radius: 2rem;
-        padding: 1rem; }
+        padding: 1rem;
+        border-radius: 2rem; }
         @media only screen and (max-width: 56.25em) {
-          .archive-main .bottom-left {
+          .archive-main .bottom-left, .archive-main .bottom-right {
             width: 100%; } }
-        .archive-main .bottom-left .featured-item {
-          background-color: tomato; }
-          .archive-main .bottom-left .featured-item-image {
-            height: 20rem;
-            background-color: hotpink; }
-      .archive-main .bottom-right {
-        width: 50%;
-        background-color: blue; }
-        @media only screen and (max-width: 56.25em) {
-          .archive-main .bottom-right {
-            width: 100%; } }
-        .archive-main .bottom-right .category-roll-item {
-          background-color: aqua;
-          margin-bottom: .5rem;
+      .archive-main .bottom-left .featured-item {
+        background-color: white;
+        transition: box-shadow 0.3s ease; }
+        .archive-main .bottom-left .featured-item:hover {
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
+        .archive-main .bottom-left .featured-item-image {
+          height: 20rem;
+          background-color: hotpink; }
+        .archive-main .bottom-left .featured-item-meta {
+          padding: 2rem; }
+      .archive-main .bottom-right .category-roll {
+        display: flex;
+        flex-direction: column; }
+        .archive-main .bottom-right .category-roll .category-roll-item {
+          background-color: white;
           display: flex;
-          align-items: center; }
-          .archive-main .bottom-right .category-roll-item .left {
+          align-items: center;
+          transition: box-shadow 0.3s ease; }
+          .archive-main .bottom-right .category-roll .category-roll-item:not(:last-child) {
+            margin-bottom: .5rem; }
+          .archive-main .bottom-right .category-roll .category-roll-item:hover {
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
+          .archive-main .bottom-right .category-roll .category-roll-item .left {
             background-color: tomato;
             width: 40%;
             height: 10rem; }
-          .archive-main .bottom-right .category-roll-item .right {
-            background-color: aliceblue;
+          .archive-main .bottom-right .category-roll .category-roll-item .right {
             width: 60%;
             padding: 1rem; }
-            .archive-main .bottom-right .category-roll-item .right a {
+            .archive-main .bottom-right .category-roll .category-roll-item .right a {
               text-decoration: none; }
-            .archive-main .bottom-right .category-roll-item .right p {
+            .archive-main .bottom-right .category-roll .category-roll-item .right p {
               font-size: 1.4rem; }
 
 h1, h2, h3, h4, h5, h6 {

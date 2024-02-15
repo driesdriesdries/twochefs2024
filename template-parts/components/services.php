@@ -18,13 +18,15 @@
             
             // Use a default image if no ACF image is set
             $image_url = $category_image ? $category_image['url'] : 'https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg';
+            // Trim the category description to 14 words
+            $trimmed_description = wp_trim_words($category->description, 14, '...');
             ?>
             <div class="card" onclick="location.href='<?php echo esc_url($category_link); ?>';" style="cursor: pointer;">
                 <div class="card-top" style="background: url('<?php echo esc_url($image_url); ?>') center / cover no-repeat;">
                 </div>
                 <div class="card-bottom">
                     <h5><?php echo esc_html($category->name); ?></h5>
-                    <p><?php echo esc_html($category->description); ?></p>
+                    <p><?php echo esc_html($trimmed_description); ?></p>
                 </div>
             </div>
             <?php

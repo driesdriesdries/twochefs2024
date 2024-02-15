@@ -1,84 +1,125 @@
 .archive {
-    background-color: red;
+    background-color: white;
     width: 100%;
+    margin-bottom: 2rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  
     &-banner {
-        background-color: yellow;
-        width: 100%;
-        border: 1px solid black;
-        padding-top: $padding-vertical;
-        padding-bottom: $padding-vertical;
-        padding-left: $padding-horizontal;
-        padding-right: $padding-horizontal;
-        @media only screen and (max-width:$bp-medium) {
-            h1 {
-                text-align: center;
-            }
+      width: 100%;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      padding-left: 5.5rem;
+      padding-right: $padding-horizontal;
+  
+      h1 {
+        display: inline;
+        padding: 1rem;
+        background-color: #2f2f2f;
+        border-radius: $border-radius;
+        color: white;
+  
+        @media only screen and (max-width: $bp-medium) {
+          text-align: center;
         }
+      }
     }
+  
     &-main {
-        background-color: green;
-        width: 90%;
-        @media only screen and (max-width:$bp-medium) {
-            width: 100%;
-        }
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: -5rem;
+      padding-bottom: 2rem;
+  
+      @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+      }
+  
+      .top {
+        background-color: white;
+        padding: $padding-horizontal;
+      }
+  
+      .bottom {
         display: flex;
-        flex-direction: column;
-        margin: auto;
-        margin-top: -5rem;
-        .top {
-            background-color: pink;
-            padding: $padding-horizontal;
+  
+        @media only screen and (max-width: $bp-medium) {
+          flex-direction: column;
         }
-        .bottom {
+  
+        &-left, &-right {
+          width: 50%;
+          padding: 1rem;
+          border-radius: $border-radius;
+  
+          @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+          }
+        }
+  
+        &-left {
+          .featured-item {
+            background-color: white;
+            transition: box-shadow 0.3s ease;
+  
+            &:hover {
+              box-shadow: $box-shadow;
+            }
+  
+            &-image {
+              height: 20rem;
+              background-color: hotpink;
+            }
+  
+            &-meta {
+              padding: 2rem;
+            }
+          }
+        }
+  
+        &-right {
+          .category-roll {
             display: flex;
-            @media only screen and (max-width:$bp-medium) {
-                flex-direction: column;
-            }
-            &-left {
-                width: 50%;
-                background-color: yellow;
-                border-radius: $border-radius;
+            flex-direction: column;
+  
+            .category-roll-item {
+              background-color: white;
+              display: flex;
+              align-items: center;
+              transition: box-shadow 0.3s ease;
+  
+              &:not(:last-child) {
+                margin-bottom: .5rem;
+              }
+  
+              &:hover {
+                box-shadow: $box-shadow;
+              }
+  
+              .left {
+                background-color: tomato;
+                width: 40%;
+                height: 10rem;
+              }
+  
+              .right {
+                width: 60%;
                 padding: 1rem;
-                @media only screen and (max-width:$bp-medium) {
-                    width: 100%;
+  
+                a {
+                  text-decoration: none;
                 }
-                .featured-item {
-                    background-color: tomato;
-                    &-image {
-                        height: 20rem;
-                        background-color: hotpink;
-                    }
+  
+                p {
+                  font-size: 1.4rem;
                 }
+              }
             }
-            &-right {
-                width: 50%;
-                background-color: blue;
-                @media only screen and (max-width:$bp-medium) {
-                    width: 100%;
-                }
-                .category-roll-item {
-                    background-color: aqua;
-                    margin-bottom: .5rem;
-                    display: flex;
-                    align-items: center;
-                    .left {
-                        background-color: tomato;
-                        width: 40%;
-                        height: 10rem;
-                    }
-                    .right {
-                        background-color: aliceblue;
-                        width: 60%;
-                        padding: 1rem;
-                        a {
-                            text-decoration: none;
-                        }
-                        p {
-                            font-size: 1.4rem;
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
-}
+  }
+  
