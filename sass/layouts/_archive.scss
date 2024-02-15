@@ -5,23 +5,57 @@
         background-color: yellow;
         width: 100%;
         border: 1px solid black;
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+        @media only screen and (max-width:$bp-medium) {
+            h1 {
+                text-align: center;
+            }
+        }
     }
     &-main {
         background-color: green;
+        width: 80%;
+        @media only screen and (max-width:$bp-medium) {
+            width: 100%;
+        }
         display: flex;
         flex-direction: column;
+        margin: auto;
+        margin-top: -5rem;
         .top {
             background-color: pink;
+            padding: $padding-horizontal;
         }
         .bottom {
             display: flex;
+            @media only screen and (max-width:$bp-medium) {
+                flex-direction: column;
+            }
             &-left {
                 width: 50%;
                 background-color: yellow;
+                border-radius: $border-radius;
+                padding: 1rem;
+                @media only screen and (max-width:$bp-medium) {
+                    width: 100%;
+                }
+                .featured-item {
+                    background-color: tomato;
+                    &-image {
+                        height: 20rem;
+                        background-color: hotpink;
+                    }
+                }
             }
             &-right {
                 width: 50%;
                 background-color: blue;
+                @media only screen and (max-width:$bp-medium) {
+                    width: 100%;
+                }
             }
         }
     }

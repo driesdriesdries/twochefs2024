@@ -613,21 +613,51 @@ a.button-hero {
   .archive-banner {
     background-color: yellow;
     width: 100%;
-    border: 1px solid black; }
+    border: 1px solid black;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .archive-banner h1 {
+        text-align: center; } }
   .archive-main {
     background-color: green;
+    width: 80%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin: auto;
+    margin-top: -5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .archive-main {
+        width: 100%; } }
     .archive-main .top {
-      background-color: pink; }
+      background-color: pink;
+      padding: 3rem; }
     .archive-main .bottom {
       display: flex; }
+      @media only screen and (max-width: 56.25em) {
+        .archive-main .bottom {
+          flex-direction: column; } }
       .archive-main .bottom-left {
         width: 50%;
-        background-color: yellow; }
+        background-color: yellow;
+        border-radius: 2rem;
+        padding: 1rem; }
+        @media only screen and (max-width: 56.25em) {
+          .archive-main .bottom-left {
+            width: 100%; } }
+        .archive-main .bottom-left .featured-item {
+          background-color: tomato; }
+          .archive-main .bottom-left .featured-item-image {
+            height: 20rem;
+            background-color: hotpink; }
       .archive-main .bottom-right {
         width: 50%;
         background-color: blue; }
+        @media only screen and (max-width: 56.25em) {
+          .archive-main .bottom-right {
+            width: 100%; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }

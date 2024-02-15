@@ -35,7 +35,18 @@ get_header();
             </div>
 		</div>
 		<div class="bottom">
-			<div class="bottom-left">Bottom left</div>
+			<div class="bottom-left">
+				<div class="featured-item">
+					<div class="featured-item-image">
+
+					</div>
+					<div class="featured-item-meta">
+						<h4 class="article-title">Article Title</h4>
+						<p class="author">Dries</p>
+						<p class="post-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae distinctio fugit ducimus quas,</p>
+					</div>
+				</div>
+			</div>
 			<div class="bottom-right">Bottom Right</div>
 		</div>
 	</div>
