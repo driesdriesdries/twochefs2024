@@ -24,10 +24,10 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site page">
+<div id="page" class="site page fadein">
 	<nav class="navbar content-container">
 		<div class="left">
-			<img src="<?php echo get_theme_file_uri('/images/logo.svg'); ?>" alt="">
+			<a href="<?php echo site_url();?>"><img src="<?php echo get_theme_file_uri('/images/logo.svg'); ?>" alt=""></a>
 		</div>
 		<div class="right">
 			<ul>

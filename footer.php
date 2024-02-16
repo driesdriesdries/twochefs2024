@@ -14,7 +14,7 @@
 <div class="footer content-container">
 	<div class="top">
 		<div class="left">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo">
+		<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo"></a>
 		</div>
 
 		<div class="center">
@@ -79,8 +79,7 @@
 	
 </div>
 </div><!-- #page -->
-<?php get_template_part( 'template-parts/components/contact-modal' ); ?>
 <?php wp_footer(); ?>
-
+<?php get_template_part( 'template-parts/components/contact-modal' ); ?>
 </body>
 </html>

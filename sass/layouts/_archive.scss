@@ -1,125 +1,67 @@
 .archive {
-    background-color: white;
+  width: 100%;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  &-banner {
     width: 100%;
-    margin-bottom: 2rem;
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-  
-    &-banner {
-      width: 100%;
-      padding-top: 8rem;
-      padding-bottom: 8rem;
-      padding-left: 5.5rem;
-      padding-right: $padding-horizontal;
-  
-      h1 {
-        display: inline;
-        padding: 1rem;
-        background-color: #2f2f2f;
-        border-radius: $border-radius;
-        color: white;
-  
-        @media only screen and (max-width: $bp-medium) {
-          text-align: center;
-        }
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+
+    h1 {
+      display: inline;
+      padding: 1rem;
+      background-color: #2f2f2f;
+      border-radius: $border-radius;
+      color: white;
+
+      @media only screen and (max-width: $bp-medium) {
+        text-align: center;
       }
     }
-  
-    &-main {
-      width: 90%;
+  }
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: -5rem;
+    padding-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+
+    .top {
+      background-color: white;
+      padding: $padding-horizontal;
+    }
+
+    .bottom {
       display: flex;
-      flex-direction: column;
-      margin: auto;
-      margin-top: -5rem;
-      padding-bottom: 2rem;
-  
+      justify-content: space-between;
+      margin-top: 2rem;
+      background-color: transparent;
       @media only screen and (max-width: $bp-medium) {
-        width: 100%;
+        flex-direction: column;
       }
-  
-      .top {
+      .left {
+        width: 49%;
         background-color: white;
-        padding: $padding-horizontal;
-      }
-  
-      .bottom {
-        display: flex;
-  
         @media only screen and (max-width: $bp-medium) {
-          flex-direction: column;
+          width: 100%;
         }
-  
-        &-left, &-right {
-          width: 50%;
-          padding: 1rem;
-          border-radius: $border-radius;
-  
-          @media only screen and (max-width: $bp-medium) {
-            width: 100%;
-          }
-        }
-  
-        &-left {
-          .featured-item {
-            background-color: white;
-            transition: box-shadow 0.3s ease;
-  
-            &:hover {
-              box-shadow: $box-shadow;
-            }
-  
-            &-image {
-              height: 20rem;
-              background-color: hotpink;
-            }
-  
-            &-meta {
-              padding: 2rem;
-            }
-          }
-        }
-  
-        &-right {
-          .category-roll {
-            display: flex;
-            flex-direction: column;
-  
-            .category-roll-item {
-              background-color: white;
-              display: flex;
-              align-items: center;
-              transition: box-shadow 0.3s ease;
-  
-              &:not(:last-child) {
-                margin-bottom: .5rem;
-              }
-  
-              &:hover {
-                box-shadow: $box-shadow;
-              }
-  
-              .left {
-                background-color: tomato;
-                width: 40%;
-                height: 10rem;
-              }
-  
-              .right {
-                width: 60%;
-                padding: 1rem;
-  
-                a {
-                  text-decoration: none;
-                }
-  
-                p {
-                  font-size: 1.4rem;
-                }
-              }
-            }
-          }
+      }
+      .right {
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (max-width: $bp-medium) {
+          width: 100%;
         }
       }
     }
   }
-  
+}

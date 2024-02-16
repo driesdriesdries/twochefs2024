@@ -1,0 +1,35 @@
+.card {
+  background-color: white;
+  display: flex;
+  margin-bottom: 1rem;
+  min-height: 15rem;
+  transition: box-shadow 0.3s ease-in-out; // Apply transition to the box-shadow
+  cursor: pointer; // Change cursor to indicate it's clickable
+
+  &:hover {
+    box-shadow: $box-shadow; // Apply the box-shadow on hover
+  }
+
+  &:last-child {
+    margin-bottom: 0; // Removes the margin from the last .card
+  }
+
+  &-left {
+    background-color: lavenderblush;
+    width: 40%;
+    background: url('http://localhost:8888/twochefs/wp-content/uploads/2024/02/Screenshot-2024-02-14-at-16.22.31.png') center / cover no-repeat;
+  }
+
+  &-right {
+    padding: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -23,7 +23,7 @@ html {
 
 /* Class to apply the fade-in animation */
 .fadein {
-  animation: fadein .1s ease-in forwards; }
+  animation: fadein .5s ease-in forwards; }
 
 :root {
   --brick-red: #a35252;
@@ -152,6 +152,49 @@ a.button-hero {
     .callout .content h2 {
       margin-bottom: 3rem;
       text-transform: capitalize; }
+
+.card {
+  background-color: white;
+  display: flex;
+  margin-bottom: 1rem;
+  min-height: 15rem;
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer; }
+  .card:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
+  .card:last-child {
+    margin-bottom: 0; }
+  .card-left {
+    background-color: lavenderblush;
+    width: 40%;
+    background: url("http://localhost:8888/twochefs/wp-content/uploads/2024/02/Screenshot-2024-02-14-at-16.22.31.png") center/cover no-repeat; }
+  .card-right {
+    padding: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .card-right a {
+      text-decoration: none;
+      text-transform: uppercase; }
+
+.card-featured {
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer; }
+  .card-featured:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
+  @media only screen and (max-width: 56.25em) {
+    .card-featured {
+      margin-bottom: 2rem; } }
+  .card-featured-image {
+    height: 32rem; }
+  .card-featured-meta {
+    background-color: white;
+    padding: 2rem; }
+    .card-featured-meta a {
+      text-decoration: none;
+      color: inherit;
+      text-transform: uppercase; }
 
 .no-scroll {
   overflow: hidden;
@@ -607,16 +650,14 @@ a.button-hero {
   margin-bottom: 2rem; }
 
 .archive {
-  background-color: white;
   width: 100%;
-  margin-bottom: 2rem;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem; }
   .archive-banner {
     width: 100%;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    padding-left: 5.5rem;
+    padding-left: 3rem;
     padding-right: 3rem; }
     .archive-banner h1 {
       display: inline;
@@ -628,7 +669,6 @@ a.button-hero {
         .archive-banner h1 {
           text-align: center; } }
   .archive-main {
-    width: 90%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -641,50 +681,26 @@ a.button-hero {
       background-color: white;
       padding: 3rem; }
     .archive-main .bottom {
-      display: flex; }
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      background-color: transparent; }
       @media only screen and (max-width: 56.25em) {
         .archive-main .bottom {
           flex-direction: column; } }
-      .archive-main .bottom-left, .archive-main .bottom-right {
-        width: 50%;
-        padding: 1rem;
-        border-radius: 2rem; }
+      .archive-main .bottom .left {
+        width: 49%;
+        background-color: white; }
         @media only screen and (max-width: 56.25em) {
-          .archive-main .bottom-left, .archive-main .bottom-right {
+          .archive-main .bottom .left {
             width: 100%; } }
-      .archive-main .bottom-left .featured-item {
-        background-color: white;
-        transition: box-shadow 0.3s ease; }
-        .archive-main .bottom-left .featured-item:hover {
-          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
-        .archive-main .bottom-left .featured-item-image {
-          height: 20rem;
-          background-color: hotpink; }
-        .archive-main .bottom-left .featured-item-meta {
-          padding: 2rem; }
-      .archive-main .bottom-right .category-roll {
+      .archive-main .bottom .right {
+        width: 49%;
         display: flex;
         flex-direction: column; }
-        .archive-main .bottom-right .category-roll .category-roll-item {
-          background-color: white;
-          display: flex;
-          align-items: center;
-          transition: box-shadow 0.3s ease; }
-          .archive-main .bottom-right .category-roll .category-roll-item:not(:last-child) {
-            margin-bottom: .5rem; }
-          .archive-main .bottom-right .category-roll .category-roll-item:hover {
-            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
-          .archive-main .bottom-right .category-roll .category-roll-item .left {
-            background-color: tomato;
-            width: 40%;
-            height: 10rem; }
-          .archive-main .bottom-right .category-roll .category-roll-item .right {
-            width: 60%;
-            padding: 1rem; }
-            .archive-main .bottom-right .category-roll .category-roll-item .right a {
-              text-decoration: none; }
-            .archive-main .bottom-right .category-roll .category-roll-item .right p {
-              font-size: 1.4rem; }
+        @media only screen and (max-width: 56.25em) {
+          .archive-main .bottom .right {
+            width: 100%; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }

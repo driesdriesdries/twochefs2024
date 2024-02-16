@@ -7,52 +7,24 @@
  * @package twochefs2024
  */
 
-get_header(); ?>
+get_header();
+
+// Determine the term ID based on the type of archive
+$term_id = get_queried_object_id();
+$category_image = $term_id ? get_field('category_image', 'category_' . $term_id) : null;
+$background_image = $category_image ? $category_image['url'] : 'default-image-url.jpg';
+?>
 
 <div class="content-container archive">
-	<div class="archive-banner" style="
-		<?php
-		// Determine the term ID based on the type of archive
-		$term_id = 0;
-		if (is_category()) {
-			$term_id = get_queried_object_id();
-		} elseif (is_tag()) {
-			$term_id = get_queried_object_id();
-		}
-		// Additional conditions for other taxonomies if necessary
-
-		// Get the ACF image field for the current term
-		if ($term_id) {
-			$category_image = get_field('category_image', 'category_' . $term_id);
-		} else {
-			// Default image logic goes here
-			$category_image = null; // Example placeholder, adjust as necessary
-		}
-
-		if ($category_image) {
-			echo "background-image: url('{$category_image['url']}');";
-		} else {
-			// Fallback or default background image
-			echo "background-image: url('default-image-url.jpg');";
-		}
-		echo "background-size: cover; background-position: center;";
-		?>">
-		<h1>
-			<?php if (is_category()) : ?>
-				<?php single_cat_title(); ?>
-			<?php elseif (is_tag()) : ?>
-				Tag Archive for: "<?php single_tag_title(); ?>"
-			<?php elseif (is_day()) : ?>
-				Daily Archive for: "<?php echo get_the_date(); ?>"
-			<?php elseif (is_month()) : ?>
-				Monthly Archive for: "<?php echo get_the_date('F Y'); ?>"
-			<?php elseif (is_year()) : ?>
-				Yearly Archive for: "<?php echo get_the_date('Y'); ?>"
-			<?php else : ?>
-				Corporate Events
-			<?php endif; ?>
-		</h1>
-	</div>
+    <div class="archive-banner" style="background-image: url('<?php echo esc_url($background_image); ?>'); background-size: cover; background-position: center;">
+        <h1>
+            <?php 
+            if (is_category()) {
+                single_cat_title();
+            }
+            ?>
+        </h1>
+    </div>
 
     <div class="archive-main">
         <div class="top">
@@ -61,52 +33,93 @@ get_header(); ?>
             </div>
         </div>
         <div class="bottom">
-            <?php
-            $featured_posts = new WP_Query(array(
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'tag' => 'featured',
-                'category_name' => single_cat_title("", false),
-            ));
-            if ($featured_posts->have_posts()) : ?>
-            <div class="bottom-left">
-                <?php while ($featured_posts->have_posts()) : $featured_posts->the_post(); ?>
-                    <div class="featured-item" onclick="location.href='<?php the_permalink(); ?>';" style="cursor:pointer;">
-                        <div class="featured-item-image" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>'); background-size: cover; background-position:center;"></div>
-                        <div class="featured-item-meta">
-                            <h4 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                            <p class="post-intro"><?php echo wp_trim_words(get_the_excerpt(), 14, '...'); ?></p>
-                        </div>
-                    </div>
-                <?php endwhile; ?>
-            </div>
-            <?php endif; ?>
+            <div class="left">
+                <?php
+                // Query for featured post in the current category
+                $featured_args = [
+                    'category__in' => [$term_id],
+                    'tag' => 'featured',
+                    'posts_per_page' => 1,
+                ];
+                $featured_post_query = new WP_Query($featured_args);
+                $featured_post_id = 0; // Default to no featured post
 
-            <?php
-            $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 3,
-                'category_name' => single_cat_title("", false),
-                'post__not_in' => array(get_the_ID()),
-            );
-            $latest_posts = new WP_Query($args);
-            if ($latest_posts->have_posts()) : ?>
-            <div class="bottom-right">
-                <div class="category-roll">
-                    <?php while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
-                        <div class="category-roll-item" onclick="location.href='<?php the_permalink(); ?>';" style="cursor:pointer;">
-                            <div class="left" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>'); background-size: cover; background-position:center;"></div>
-                            <div class="right">
-                                <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                                <p><?php echo wp_trim_words(get_the_excerpt(), 10, '...'); ?></p>
+                if ($featured_post_query->have_posts()) {
+                    while ($featured_post_query->have_posts()) : $featured_post_query->the_post();
+                        $featured_post_id = get_the_ID(); // Capture the ID to exclude later
+                        $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'full');
+                        ?>
+
+                        <div class="card-featured" onclick="location.href='<?php echo esc_url(get_permalink()); ?>';" style="cursor: pointer;">
+                            <div class="card-featured-image" style="background: url('<?php echo esc_url($featured_image_url); ?>') center / cover no-repeat;"></div>
+                            <div class="card-featured-meta">
+                                <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
                             </div>
                         </div>
-                    <?php endwhile; ?>
-                </div>
+
+                        <?php
+                    endwhile;
+                } else {
+                    // Fallback: Query for any post in the current category if no featured post is found
+                    $fallback_args = [
+                        'category__in' => [$term_id],
+                        'posts_per_page' => 1,
+                    ];
+                    $fallback_query = new WP_Query($fallback_args);
+                    if ($fallback_query->have_posts()) {
+                        while ($fallback_query->have_posts()) : $fallback_query->the_post();
+                            $featured_post_id = get_the_ID(); // This will now be the ID of the fallback post
+                            $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'full');
+                            ?>
+
+                            <div class="card-featured" onclick="location.href='<?php echo esc_url(get_permalink()); ?>';" style="cursor: pointer;">
+                                <div class="card-featured-image" style="background: url('<?php echo esc_url($featured_image_url); ?>') center / cover no-repeat;"></div>
+                                <div class="card-featured-meta">
+                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+                                </div>
+                            </div>
+
+                            <?php
+                        endwhile;
+                    }
+                }
+                wp_reset_postdata();
+                ?>
             </div>
-            <?php endif; wp_reset_postdata(); ?>
+            <div class="right">
+                <?php
+                // Query for posts in the current category, excluding the featured post
+                $args = [
+                    'category__in' => [$term_id],
+                    'posts_per_page' => 3,
+                    'post__not_in' => [$featured_post_id], // Exclude the featured post
+                ];
+                $posts_in_category = new WP_Query($args);
+
+                if ($posts_in_category->have_posts()) : 
+                    while ($posts_in_category->have_posts()) : $posts_in_category->the_post();
+                        $post_url = get_permalink();
+                        ?>
+
+                        <div class="card" onclick="location.href='<?php echo esc_url($post_url); ?>';" style="cursor: pointer;">
+                            <div class="card-left" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"></div>
+                            <div class="card-right">
+                                <h5><?php the_title(); ?></h5>
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 14, '...'); ?></p>
+                            </div>
+                        </div>
+
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+            </div>
         </div>
     </div>
+    <?php get_template_part( 'template-parts/components/callout' ); ?>
 </div>
 
 <?php get_footer(); ?>
