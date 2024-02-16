@@ -120,6 +120,7 @@ $background_image = $category_image ? $category_image['url'] : 'default-image-ur
         </div>
     </div>
     <?php get_template_part( 'template-parts/components/callout' ); ?>
+    
 </div>
 
 <?php get_footer(); ?>

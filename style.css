@@ -410,7 +410,11 @@ a.button-hero {
   align-items: center;
   justify-content: flex-start;
   padding: 15rem 5rem;
-  position: relative; }
+  position: relative;
+  margin-top: 8rem; }
+  @media only screen and (max-width: 56.25em) {
+    .hero {
+      justify-content: center; } }
   .hero:before {
     content: "";
     position: absolute;
@@ -426,6 +430,9 @@ a.button-hero {
     background-color: rgba(47, 47, 47, 0.9);
     padding: 3rem;
     border-radius: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .hero .hero-content {
+        width: 80%; } }
   .hero h1 {
     margin-bottom: 2rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
@@ -455,7 +462,9 @@ a.button-hero {
   justify-content: space-between;
   align-items: center;
   padding-left: 3rem;
-  padding-right: 3rem; }
+  padding-right: 3rem;
+  position: fixed;
+  z-index: 1; }
   @media only screen and (max-width: 56.25em) {
     .navbar {
       flex-direction: column; } }
@@ -646,7 +655,8 @@ a.button-hero {
     padding-top: 8rem;
     padding-bottom: 8rem;
     padding-left: 3rem;
-    padding-right: 3rem; }
+    padding-right: 3rem;
+    margin-top: 8rem; }
     .archive-banner h1 {
       display: inline;
       padding: 1rem;

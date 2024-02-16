@@ -2,14 +2,13 @@
   width: 100%;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
-
   &-banner {
     width: 100%;
     padding-top: 8rem;
     padding-bottom: 8rem;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
-
+    margin-top: 8rem;
     h1 {
       display: inline;
       padding: 1rem;
