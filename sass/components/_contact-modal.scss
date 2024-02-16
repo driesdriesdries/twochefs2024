@@ -1,52 +1,70 @@
-/* Add this to your existing CSS */
+// Prevents scrolling by setting the height to the viewport height and locks the width to the viewport width
 .no-scroll {
   overflow: hidden;
-  height: 100vh; /* Prevents scrolling by setting the height to the viewport height */
-  width: 100vw; /* Optional: Ensures the width is also locked to the viewport width */
+  height: 100vh;
+  width: 100vw;
 }
 
 .contact-modal {
   background-color: red;
   display: none;
-  //styling the close button
+
+  // Styling the close button
   .closeContactModal {
     cursor: pointer;
   }
+
   &.active {
-    //opacity: .5;
     background-color: white;
     width: 100vw;
     height: 100vh;
     position: fixed;
-    display: inherit;
+    display: flex;
     justify-content: center;
+    align-items: center;
+
     .form-area {
       background-color: white;
       display: flex;
       flex-direction: column;
       width: 50%;
-      height: 60vh;
-      margin-top: 10%;
       padding: 3rem;
       border: 3px solid var(--brick-red);
+
       @media only screen and (max-width: $bp-medium) {
         width: 75%;
       }
+
       @media only screen and (max-width: $bp-small) {
-        width: 90%;
+        width: 80%;
       }
+
       .pre-form {
         display: flex;
         justify-content: space-between;
         margin-bottom: 1rem;
+        h3 {
+          @media only screen and (max-width: $bp-small) {
+            font-size: 2.5rem;
+          }
+        }
+        .form-positioning {
+          h2 {
+            @media only screen and (max-width: $bp-small) {
+              font-size: 2.5rem;
+            }
+          }
+        }
       }
+
       form {
         input, textarea {
           width: 100%;
           padding: 1rem;
         }
+
         input[type="submit"] {
-          padding: 1.5rem .5rem;
+          padding: 1.5rem 0.5rem;
           background-color: var(--brick-red);
           color: white;
           border: none;
@@ -54,9 +72,11 @@
           font-size: 2rem;
           text-transform: uppercase;
         }
+
         label {
           font-weight: bold;
         }
+
         p {
           margin-top: 2rem;
         }

@@ -12,7 +12,7 @@
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 15rem 5rem;
   position: relative;
 
@@ -23,23 +23,16 @@
     right: 0;
     bottom: 0;
     left: 0;
-    // Uncomment the following line if you want a dark overlay
-    // background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
 
   .hero-content {
     position: relative;
     z-index: 2;
-    padding-right: 50%;
-    
-    @media only screen and (max-width: $bp-medium) {
-      padding-right: 45%;
-    }
-    
-    @media only screen and (max-width: $bp-small) {
-      padding-right: 35%;
-    }
+    width: 50%;
+    background-color: rgba(47, 47, 47, 0.9);
+    padding: 3rem;
+    border-radius: $border-radius;
   }
   
   h1 {
