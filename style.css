@@ -483,59 +483,47 @@ a.button-hero {
 
 .services {
   background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-radius: 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 5rem;
-  padding-bottom: 5rem;
-  border-radius: 2rem; }
-  @media only screen and (max-width: 25em) {
+  padding-bottom: 5rem; }
+  @media only screen and (max-width: 56.25em) {
     .services {
-      padding: 1rem 1rem; } }
-  .services-heading-block {
-    text-align: center; }
-    .services-heading-block p {
-      margin-bottom: 2rem; }
-  .services-card-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-    @media only screen and (max-width: 56.25em) {
-      .services-card-group {
-        justify-content: center; } }
-    .services-card-group .card {
-      border-radius: 2rem;
-      overflow: hidden;
-      width: calc(25% - 2rem);
-      cursor: pointer;
-      transition: box-shadow 0.5s ease;
-      box-shadow: none;
-      color: white; }
-      .services-card-group .card:hover {
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
-      @media only screen and (max-width: 56.25em) {
-        .services-card-group .card {
-          width: 75%;
-          margin: 1rem 0; } }
-      @media only screen and (max-width: 25em) {
-        .services-card-group .card {
-          width: 85%; } }
-      .services-card-group .card-top {
-        height: 20rem; }
-        @media only screen and (max-width: 56.25em) {
-          .services-card-group .card-top {
-            height: 15rem; } }
-      .services-card-group .card-bottom {
-        padding: 3rem 1rem; }
-        .services-card-group .card-bottom h5 {
-          margin-bottom: 1.5rem; }
-      .services-card-group .card:nth-child(1) {
-        background-color: var(--ocean-depths); }
-      .services-card-group .card:nth-child(2) {
-        background-color: var(--sagebrush-green); }
-      .services-card-group .card:nth-child(3) {
-        background-color: var(--brick-red); }
-      .services-card-group .card:nth-child(4) {
-        background-color: var(--sandy-beige); }
+      justify-content: center; } }
+
+.services-card {
+  width: calc(25% - 1rem);
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid lightgray; }
+  .services-card:not(:nth-child(4n)) {
+    margin-right: 0.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .services-card {
+      width: calc(50% - 1rem);
+      margin-right: 0; }
+      .services-card:not(:nth-child(2n)) {
+        margin-right: 0.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .services-card {
+      width: 100%;
+      margin-right: 0; } }
+  .services-card:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
+  .services-card-image {
+    height: 15rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center; }
+  .services-card-details {
+    padding: 1rem; }
+    .services-card-details h5 {
+      font-size: 1.8rem; }
 
 .team {
   background-color: var(--ghost-white);

@@ -1,36 +1,31 @@
 <div id="services" class="services">
-    <div class="services-heading-block">
-        <h2>Services</h2>
-        <p>Explore our comprehensive range of tailored solutions designed to meet your unique needs.</p>
+    <?php
+    $categories = get_categories();
+    foreach($categories as $category) {
+        // Check if the category has a description to only display those
+        if(!empty($category->description)) {
+            // Split the description into an array of words
+            $words = explode(' ', $category->description);
+            // Select the first 15 words
+            $first15Words = array_slice($words, 0, 15);
+            // Combine the words back into a string
+            $trimmedDescription = implode(' ', $first15Words);
+            // Get the category link
+            $categoryLink = get_category_link($category->term_id);
+            // Get the ACF image field for the category
+            $categoryImage = get_field('category_image', 'category_' . $category->term_id);
+            // Use the medium size of the image
+            $categoryImageURL = $categoryImage['sizes']['medium'];
+    ?>
+    <div class="services-card" onclick="window.location.href='<?php echo esc_url($categoryLink); ?>';" style="cursor: pointer;">
+        <div class="services-card-image" style="background-image: url('<?php echo esc_url($categoryImageURL); ?>');"></div>
+        <div class="services-card-details">
+            <h5><?php echo esc_html($category->name); ?></h5>
+            <p><?php echo esc_html($trimmedDescription); ?>...</p>
+        </div>
     </div>
-    <div class="services-card-group">
-        <?php
-        $categories = get_categories(array(
-            'orderby' => 'name',
-            'order'   => 'ASC'
-        ));
-        foreach ($categories as $category) {
-            // Get the link to the category archive page
-            $category_link = get_category_link($category->term_id);
-
-            // Get the ACF image field for the current category
-            $category_image = get_field('category_image', 'category_' . $category->term_id); // Make sure to prepend 'category_' to the term ID
-            
-            // Use a default image if no ACF image is set
-            $image_url = $category_image ? $category_image['url'] : 'https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg';
-            // Trim the category description to 14 words
-            $trimmed_description = wp_trim_words($category->description, 14, '...');
-            ?>
-            <div class="card" onclick="location.href='<?php echo esc_url($category_link); ?>';" style="cursor: pointer;">
-                <div class="card-top" style="background: url('<?php echo esc_url($image_url); ?>') center / cover no-repeat;">
-                </div>
-                <div class="card-bottom">
-                    <h5><?php echo esc_html($category->name); ?></h5>
-                    <p><?php echo esc_html($trimmed_description); ?></p>
-                </div>
-            </div>
-            <?php
+    <?php
         }
-        ?>
-    </div>
+    }
+    ?>
 </div>

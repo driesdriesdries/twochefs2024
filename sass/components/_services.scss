@@ -1,75 +1,59 @@
 .services {
     background-color: white;
+    display: flex;
+    flex-wrap: wrap; // Allow items to wrap to the next line
+    justify-content: space-between; // Distribute space between and around items
+    gap: 0.5rem; // Use gap to handle spacing between flex items, if you prefer over margin
+    border-radius: $border-radius;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
     padding-top: $padding-vertical;
     padding-bottom: $padding-vertical;
-    border-radius: $border-radius;
-    @media only screen and (max-width:$bp-small) {
-        padding: 1rem 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        justify-content: center; // Center items when in a single column layout
+    }
+}
+
+.services-card {
+    //background-color: green;
+    width: calc(25% - 1rem); // Adjust width to account for margin or gap
+    margin-bottom: 0.5rem; // Space between rows
+    transition: box-shadow 0.3s ease; // Smooth transition for box-shadow
+    border: 1px solid lightgray;
+
+    &:not(:nth-child(4n)) {
+        margin-right: 0.5rem; // Apply right margin except for every 4th item if you don't use gap
     }
 
-    &-heading-block {
-        text-align: center;
-        p {
-            margin-bottom: 2rem;
+    @media only screen and (max-width: $bp-medium) {
+        width: calc(50% - 1rem); // Adjust to 2 items per row for medium screens
+        margin-right: 0; // Reset right margin for medium screens
+
+        &:not(:nth-child(2n)) {
+            margin-right: 0.5rem; // Apply right margin except for every 2nd item
         }
     }
 
-    &-card-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        @media only screen and (max-width: $bp-medium) {
-            justify-content: center;
-        }
-        
-        .card {
-            border-radius: $border-radius;
-            overflow: hidden;
-            width: calc(25% - 2rem);
-            cursor: pointer;
-            transition: box-shadow 0.5s ease;
-            box-shadow: none;
-            color: white;
-            &:hover {
-                box-shadow: $box-shadow;
-            }
+    @media only screen and (max-width: $bp-small) {
+        width: 100%; // Full width for small screens, effectively one item per row
+        margin-right: 0; // Reset right margin for small screens
+    }
 
-            @media only screen and (max-width: $bp-medium) {
-                width: 75%;
-                margin: 1rem 0;
-            }
-            @media only screen and (max-width: $bp-small) {
-                width: 85%;
-            }
+    &:hover {
+        box-shadow: $box-shadow;
+    }
 
-            &-top {
-                height: 20rem;
-                @media only screen and (max-width: $bp-medium) {
-                    height: 15rem;
-                }
-            }
-
-            &-bottom {
-                padding: 3rem 1rem;
-                h5 {
-                    margin-bottom: 1.5rem;
-                }
-            }
-            
-            &:nth-child(1) {
-                background-color: var(--ocean-depths);
-            }
-            &:nth-child(2) {
-                background-color: var(--sagebrush-green);
-            }
-            &:nth-child(3) {
-                background-color: var(--brick-red); 
-            }
-            &:nth-child(4) {
-                background-color: var(--sandy-beige);
-            }
+    &-image {
+        height: 15rem;
+        width: 100%; // Ensure the image covers the full width of the card
+        background-size: cover; // Ensure the background image covers the entire area
+        background-position: center; // Center the background image
+    }
+    &-details {
+        padding: 1rem;
+        h5 {
+            font-size: 1.8rem;
         }
     }
 }
