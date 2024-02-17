@@ -1,44 +1,88 @@
 .navbar {
+  font-size: 18px;
   background-color: white;
+  padding-bottom: 10px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: $padding-horizontal;
-  padding-right: $padding-horizontal;
-  // position: fixed;
-  // z-index: 1;
-  @media only screen and (max-width: $bp-medium) {
-    flex-direction: column;
+  max-width: 1140px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  //color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+#chkToggle {
+  display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
   }
-  .left {
-    margin-bottom: 0;
-    img {
-      height: 8rem;
-    }
+
+  #chkToggle:checked + ul.main-nav {
+    display: flex;
   }
-  .right {
-    margin-bottom: 0;
-    ul {
-      display: flex;
-      @media only screen and (max-width: $bp-medium) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-      li {
-        list-style: none;
-        margin-left: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-      
-        &:first-child {
-          margin-left: 0;
-        }
-      
-        a {
-          text-decoration: none;
-        }
-      }
-    }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    //color: rgba(255, 255, 255, 1);
   }
 }

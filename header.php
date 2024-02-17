@@ -34,53 +34,30 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site page fadein">
-	<nav class="navbar content-container">
-		<div class="left">
-			<a href="<?php echo site_url();?>"><img src="<?php echo get_theme_file_uri('/images/logo.svg'); ?>" alt=""></a>
-		</div>
-		<div class="right">
-			<ul>
-			<li><a class="navigation" href="<?php echo site_url(); ?>">Home</a></li>
-				<li>
-				<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#services">Services</a>';
-					} else {
-						// Use home_url() to get the home URL and append the section ID.
-						echo '<a class="navigation" href="' . esc_url(home_url('/#services')) . '">Services</a>';
-					}
-					?>
-				</li>
-
-				<li>
-					<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#blog">Blog</a>';
-					} else {
-						// For the blog, it might be better to link directly to the blog page instead of a section.
-						// Assuming your blog page is the main posts page, you can link directly to it.
-						echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
-					}
-					?>
-					</li>
-				<li>
-					<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#team">Team</a>';
-					} else {
-						// Use home_url() to get the home URL and append the section ID.
-						echo '<a class="navigation" href="' . esc_url(home_url('/#team')) . '">Team</a>';
-					}
-					?>
-				</li>
-
-				<li><a class="navigation openContactModal" href="#">Contact</a></li>
-			</ul>
-		</div>
-	</nav>
+	<nav class="navbar">
+		<label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+				<i class="fa fa-bars"></i>
+			</label>
+		<a href="#" class="logo">logo</a>
+		<input type="checkbox" id="chkToggle"></input>
+		<ul class="main-nav" id="js-menu">
+		<li>
+			<a href="#" class="nav-links">Home</a>
+		</li>
+		<li>
+			<a href="#" class="nav-links">Products</a>
+		</li>
+		<li>
+			<a href="#" class="nav-links">About Us</a>
+		</li>
+		<li>
+			<a href="#" class="nav-links">Contact Us</a>
+		</li>
+		<li>
+			<a href="#" class="nav-links">Blog</a>
+		</li>
+		</ul>
+</nav>
 
 	
 
