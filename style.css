@@ -169,7 +169,7 @@ a.button-hero {
     width: 40%;
     background: url("http://localhost:8888/twochefs/wp-content/uploads/2024/02/Screenshot-2024-02-14-at-16.22.31.png") center/cover no-repeat; }
   .card-right {
-    padding: 2rem;
+    padding: 1.2rem 2rem;
     width: 60%;
     display: flex;
     flex-direction: column;
