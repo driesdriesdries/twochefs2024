@@ -2,10 +2,10 @@
   background-color: white;
   border-radius: $border-radius;
   .accordion-item {
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
     overflow: hidden;
     .heading {
-      background-color: transparent;
+      //background-color: red;
       color: var(--charcoal-dust);
       padding: 0.5rem $padding-horizontal;
       padding-top: 2rem;
@@ -42,8 +42,9 @@
     }
     .body {
       max-height: 0;
-      padding: 0 $padding-horizontal;
-      background-color: white;
+      padding-left: $padding-horizontal;
+      padding-right: $padding-horizontal;
+      //background-color: lawngreen;
       color: var(--charcoal-dust);
       transition: max-height 0.5s ease, padding 0.5s ease;
       //border: 1px solid var(--charcoal-dust); // Body border color

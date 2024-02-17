@@ -262,10 +262,8 @@ a.button-hero {
   background-color: white;
   border-radius: 2rem; }
   .faq .accordion-item {
-    margin-bottom: 1rem;
     overflow: hidden; }
     .faq .accordion-item .heading {
-      background-color: transparent;
       color: var(--charcoal-dust);
       padding: 0.5rem 3rem;
       padding-top: 2rem;
@@ -293,8 +291,8 @@ a.button-hero {
         transform: translateY(-50%) rotate(45deg); }
     .faq .accordion-item .body {
       max-height: 0;
-      padding: 0 3rem;
-      background-color: white;
+      padding-left: 3rem;
+      padding-right: 3rem;
       color: var(--charcoal-dust);
       transition: max-height 0.5s ease, padding 0.5s ease; }
 
@@ -527,7 +525,7 @@ a.button-hero {
     background-size: cover;
     background-position: center; }
   .services-card-details {
-    padding: 1rem; }
+    padding: 1.7rem; }
     .services-card-details h5 {
       font-size: 1.8rem; }
   @media only screen and (max-width: 56.25em) {
