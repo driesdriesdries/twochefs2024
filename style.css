@@ -169,11 +169,16 @@ a.button-hero {
     width: 40%;
     background: url("http://localhost:8888/twochefs/wp-content/uploads/2024/02/Screenshot-2024-02-14-at-16.22.31.png") center/cover no-repeat; }
   .card-right {
-    padding: 1.2rem 2rem;
+    padding: 3.5rem 2rem;
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    .card-right h5 {
+      font-size: 1.6rem; }
+    .card-right p {
+      font-size: 1.4rem;
+      margin-bottom: 0px; }
     .card-right a {
       text-decoration: none;
       text-transform: uppercase; }
@@ -187,7 +192,7 @@ a.button-hero {
     .card-featured {
       margin-bottom: 2rem; } }
   .card-featured-image {
-    height: 32rem; }
+    height: 40rem; }
   .card-featured-meta {
     background-color: white;
     padding: 2rem; }
@@ -677,7 +682,10 @@ a.button-hero {
         width: 100%; } }
     .archive-main .top {
       background-color: white;
-      padding: 3rem; }
+      padding: 1.5rem 3rem; }
+      .archive-main .top p {
+        margin-bottom: 0;
+        margin-top: 0; }
     .archive-main .bottom {
       display: flex;
       justify-content: space-between;
@@ -734,6 +742,9 @@ a.button-hero {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 0px; }
+    .single-article .breadcrumbs .title {
+      font-weight: 600;
+      font-style: italic; }
     .single-article .breadcrumbs span, .single-article .breadcrumbs a {
       font-size: 1.6rem; }
   .single-article .article-content {

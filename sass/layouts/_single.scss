@@ -35,6 +35,10 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 0px;
+    .title {
+      font-weight: 600;
+      font-style: italic;
+    }
     span, a {
       font-size: 1.6rem; // Ensure all breadcrumb text is the same size
     }
