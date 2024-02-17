@@ -1,7 +1,91 @@
+// Global styles
 * {
     font-family: 'Open Sans', sans-serif;
-}
-p {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-}
+  }
+  
+  p, li {
+    font-size: 1.6rem; // Equivalent to 16px
+    margin-bottom: 1.6rem;
+  }
+  
+  p {
+    line-height: 2.6rem; // Equivalent to 26px
+  }
+  
+  // List styling
+  ul, ol {
+    padding-left: 2rem; // Equivalent to 20px
+    // margin-bottom: 1.6rem;
+    li {
+      margin-bottom: 1rem; // Equivalent to 10px
+    }
+  }
+  
+  // Table styling
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.6rem; // Equivalent to 16px
+  
+    th, td {
+      border: 0.1rem solid #ddd; // Equivalent to 1px
+      text-align: left;
+      padding: 0.8rem; // Equivalent to 8px
+    }
+  
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+  
+    tr {
+      &:hover {
+        background-color: #eaeaea;
+      }
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+  
+  // Blockquotes styling
+  blockquote {
+    padding: 2rem; // Equivalent to 20px
+    margin: 2rem 0; // Equivalent to 20px
+    font-size: 1.6rem; // Equivalent to 16px
+    line-height: 2.4rem; // Equivalent to 24px
+    border-left: 0.5rem solid #ddd; // Equivalent to 5px
+    background-color: #f9f9f9;
+    color: #333;
+  
+    p {
+      margin: 0;
+    }
+  }
+  
+  // Forms styling
+  form {
+    input, textarea, select {
+      font-size: 1.6rem; // Equivalent to 16px
+      padding: 1rem; // Equivalent to 10px
+      margin: 1rem 0; // Equivalent to 10px
+      display: block;
+      width: 95%;
+      border: 0.1rem solid #ddd; // Equivalent to 1px
+      border-radius: 0.5rem; // Equivalent to 5px
+    }
+  
+    input[type="submit"], button {
+      font-size: 1.6rem; // Equivalent to 16px
+      padding: 1rem 2rem; // Equivalent to 10px 20px
+      background-color: #f2f2f2;
+      color: #333;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+  

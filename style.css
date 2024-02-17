@@ -700,6 +700,53 @@ a.button-hero {
           .archive-main .bottom .right {
             width: 100%; } }
 
+.single-article {
+  width: 100%;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem; }
+  .single-article .single-banner {
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 8rem;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0px; }
+    .single-article .single-banner h1 {
+      margin-bottom: 0;
+      color: white;
+      background-color: #2f2f2f;
+      padding: 2rem;
+      display: inline;
+      border-radius: 2rem;
+      font-size: 3rem; }
+      @media only screen and (max-width: 56.25em) {
+        .single-article .single-banner h1 {
+          font-size: 2rem;
+          line-height: 6.4rem; } }
+  .single-article .breadcrumbs {
+    background-color: white;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0px; }
+    .single-article .breadcrumbs span, .single-article .breadcrumbs a {
+      font-size: 1.6rem; }
+  .single-article .article-content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+    border-radius: 2rem; }
+  .single-article .callout {
+    margin-top: 2rem; }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }
 
@@ -730,6 +777,60 @@ h6 {
 * {
   font-family: 'Open Sans', sans-serif; }
 
-p {
+p, li {
   font-size: 1.6rem;
+  margin-bottom: 1.6rem; }
+
+p {
   line-height: 2.6rem; }
+
+ul, ol {
+  padding-left: 2rem; }
+  ul li, ol li {
+    margin-bottom: 1rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.6rem; }
+  table th, table td {
+    border: 0.1rem solid #ddd;
+    text-align: left;
+    padding: 0.8rem; }
+  table th {
+    background-color: #f2f2f2;
+    color: #333; }
+  table tr:hover {
+    background-color: #eaeaea; }
+  table tr:nth-child(even) {
+    background-color: #f9f9f9; }
+
+blockquote {
+  padding: 2rem;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  border-left: 0.5rem solid #ddd;
+  background-color: #f9f9f9;
+  color: #333; }
+  blockquote p {
+    margin: 0; }
+
+form input, form textarea, form select {
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: block;
+  width: 95%;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.5rem; }
+
+form input[type="submit"], form button {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  cursor: pointer; }
+  form input[type="submit"]:hover, form button:hover {
+    background-color: #ddd; }
