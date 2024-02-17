@@ -459,65 +459,54 @@ a.button-hero {
   margin-top: -2rem; }
 
 .navbar {
-  font-size: 18px;
-  background-color: white;
-  padding-bottom: 10px;
+  background-color: fuchsia;
   width: 100%;
-  max-width: 1140px; }
-
-.main-nav {
-  list-style-type: none;
-  display: none; }
-
-.nav-links,
-.logo {
-  text-decoration: none; }
-
-.main-nav li {
-  text-align: center;
-  margin: 15px auto; }
-
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px; }
-
-.navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 24px; }
-
-#chkToggle {
-  display: none; }
-
-#chkToggle:checked + ul.main-nav {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .navbar {
+  display: flex; }
+  .navbar .left a {
+    margin-bottom: 0px; }
+  .navbar .right {
+    background-color: yellow;
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    align-items: center; }
-  #chkToggle:checked + ul.main-nav {
-    display: flex; }
-  .main-nav {
-    display: flex;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end; }
-  .main-nav li {
-    margin: 0; }
-  .nav-links {
-    margin-left: 40px; }
-  .logo {
-    margin-top: 0; }
-  .navbar-toggle {
-    display: none; } }
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar .right {
+        display: none; } }
+    .navbar .right ul {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0px; }
+      .navbar .right ul li {
+        background-color: firebrick;
+        list-style-type: none; }
+  .navbar .menu-button {
+    display: none; }
+
+.navbar.collapsed {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .navbar.collapsed .left {
+    background-color: lightblue; }
+  .navbar.collapsed .right {
+    background-color: lightcoral;
+    justify-content: flex-start; }
+    .navbar.collapsed .right ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-bottom: 0px;
+      padding-left: 0; }
+      .navbar.collapsed .right ul li {
+        background-color: firebrick;
+        list-style-type: none; }
+        .navbar.collapsed .right ul li a {
+          padding: 2rem;
+          display: block; }
+  .navbar.collapsed .menu-button {
+    display: inherit; }
 
 .services {
   background-color: white;

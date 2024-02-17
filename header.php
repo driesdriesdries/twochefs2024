@@ -34,30 +34,21 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site page fadein">
-	<nav class="navbar">
-		<label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-				<i class="fa fa-bars"></i>
-			</label>
-		<a href="#" class="logo">logo</a>
-		<input type="checkbox" id="chkToggle"></input>
-		<ul class="main-nav" id="js-menu">
-		<li>
-			<a href="#" class="nav-links">Home</a>
-		</li>
-		<li>
-			<a href="#" class="nav-links">Products</a>
-		</li>
-		<li>
-			<a href="#" class="nav-links">About Us</a>
-		</li>
-		<li>
-			<a href="#" class="nav-links">Contact Us</a>
-		</li>
-		<li>
-			<a href="#" class="nav-links">Blog</a>
-		</li>
-		</ul>
-</nav>
+	<nav class="navbar ">
+		<div class="left">
+			<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo"></a>
+		</div>
+		<div class="right">
+			<ul>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</div>
+		<div class="menu-button"><h1>x</h1></div>
+	</nav>
 
 	
 

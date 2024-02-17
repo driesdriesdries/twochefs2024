@@ -1,88 +1,65 @@
 .navbar {
-  font-size: 18px;
-  background-color: white;
-  padding-bottom: 10px;
+  background-color: fuchsia;
   width: 100%;
-  max-width: 1140px;
-}
-
-.main-nav {
-  list-style-type: none;
-  display: none;
-}
-
-.nav-links,
-.logo {
-  text-decoration: none;
-  //color: rgba(255, 255, 255, 0.7);
-}
-
-.main-nav li {
-  text-align: center;
-  margin: 15px auto;
-}
-
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px;
-}
-
-.navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 24px;
-}
-
-#chkToggle {
-  display: none;
-}
-
-#chkToggle:checked + ul.main-nav {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    align-items: center;
+  display: flex;
+  .left {
+    a {
+      margin-bottom: 0px;
+    }
   }
-
-  #chkToggle:checked + ul.main-nav {
+  .right {
+    background-color: yellow;
     display: flex;
-  }
-
-  .main-nav {
-    display: flex;
-    margin-right: 30px;
-    flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    @media only screen and (max-width:$bp-medium) {
+        display: none;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0px;
+      li {
+        background-color: firebrick;
+        list-style-type: none;
+      }
+    }
   }
-
-  .main-nav li {
-    margin: 0;
-  }
-
-  .nav-links {
-    margin-left: 40px;
-  }
-
-  .logo {
-    margin-top: 0;
-  }
-
-  .navbar-toggle {
+  .menu-button {
     display: none;
   }
+  
+}
 
-  .logo:hover,
-  .nav-links:hover {
-    //color: rgba(255, 255, 255, 1);
+.navbar.collapsed {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .left {
+    background-color: lightblue;
+  }
+  .right {
+    background-color: lightcoral;
+    justify-content: flex-start;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-bottom: 0px;
+      padding-left: 0;
+      li {
+        background-color: firebrick;
+        list-style-type: none;
+        a {
+          padding: 2rem;
+          display: block;
+        } 
+      }
+    }
+  }
+  .menu-button {
+    display: inherit;
   }
 }
