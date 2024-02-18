@@ -1,8 +1,19 @@
 .navbar {
+  //padding-bottom: 2rem;
   background-color: fuchsia;
   width: 100%;
   display: flex;
+  align-items: center;
+  @media only screen and (max-width:$bp-medium) {
+    justify-content: space-between;
+    margin-bottom: 0px;
+    h1 {
+      margin-bottom: 0;
+      padding-right: 2rem;
+    }
+  }
   .left {
+    margin-bottom: 0px;
     a {
       margin-bottom: 0px;
     }
@@ -13,45 +24,69 @@
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
+    margin-bottom: 0px;
     @media only screen and (max-width:$bp-medium) {
         display: none;
     }
     ul {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       margin-bottom: 0px;
+      padding-left: 0px;
       li {
-        background-color: firebrick;
+        //background-color: firebrick;
         list-style-type: none;
+        margin-bottom: 0px;
+        a {
+          padding: 2rem 4rem;
+          display: inline-block;
+          text-transform: uppercase;
+          &:hover {
+            background-color: red;
+            
+          }
+        }
       }
     }
   }
   .menu-button {
     display: none;
+    @media only screen and (max-width:$bp-medium) {
+      display: inherit;
+    }
   }
   
 }
 
 .navbar.collapsed {
-  background-color: red;
+  background-color: khaki;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .left {
     background-color: lightblue;
+    align-self: flex-start;
   }
   .right {
+    width: 100%;
     background-color: lightcoral;
     justify-content: flex-start;
+    @media only screen and (max-width:$bp-medium) {
+      display: inherit;
+    }
     ul {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       margin-bottom: 0px;
       padding-left: 0;
       li {
-        background-color: firebrick;
+        background-color: white;
         list-style-type: none;
+        width: 100%;
+        text-align: center;
         a {
           padding: 2rem;
           display: block;
@@ -61,5 +96,11 @@
   }
   .menu-button {
     display: inherit;
+    position: relative;
+    margin-bottom: 0px;
+    cursor: pointer;
+    h1 {
+
+    }
   }
 }

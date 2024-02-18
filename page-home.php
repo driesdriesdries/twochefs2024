@@ -13,6 +13,5 @@ get_header();
 		<?php get_template_part( 'template-parts/components/testimonial' ); ?>
 		<?php get_template_part( 'template-parts/components/callout' ); ?>
 	</div>
-
 <?php
 get_footer();

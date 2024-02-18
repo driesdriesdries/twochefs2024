@@ -34,7 +34,31 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site page fadein">
-	<nav class="navbar ">
+	
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    // Select the menu toggle button
+    const menuToggleButton = document.querySelector('.menu-toggle');
+
+    // Define the toggle function
+    function toggleMenu() {
+        // Select the navigation element
+        const navElement = document.querySelector('nav.navbar.content-container');
+        // Toggle the 'collapsed' class on the navigation element
+        navElement.classList.toggle('collapsed');
+    }
+
+    // Add click event listener to the menu toggle button
+    menuToggleButton.addEventListener('click', toggleMenu);
+});
+
+</script>
+
+
+
+	<nav class="navbar content-container">
 		<div class="left">
 			<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo"></a>
 		</div>
@@ -47,9 +71,5 @@
 				<li><a href="#">Link</a></li>
 			</ul>
 		</div>
-		<div class="menu-button"><h1>x</h1></div>
+		<div class="menu-button menu-toggle"><h1>x</h1></div>
 	</nav>
-
-	
-
-	

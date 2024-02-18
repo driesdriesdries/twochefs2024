@@ -461,52 +461,85 @@ a.button-hero {
 .navbar {
   background-color: fuchsia;
   width: 100%;
-  display: flex; }
-  .navbar .left a {
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .navbar {
+      justify-content: space-between;
+      margin-bottom: 0px; }
+      .navbar h1 {
+        margin-bottom: 0;
+        padding-right: 2rem; } }
+  .navbar .left {
     margin-bottom: 0px; }
+    .navbar .left a {
+      margin-bottom: 0px; }
   .navbar .right {
     background-color: yellow;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-grow: 1; }
+    flex-grow: 1;
+    margin-bottom: 0px; }
     @media only screen and (max-width: 56.25em) {
       .navbar .right {
         display: none; } }
     .navbar .right ul {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 0px; }
+      align-items: center;
+      margin-bottom: 0px;
+      padding-left: 0px; }
       .navbar .right ul li {
-        background-color: firebrick;
-        list-style-type: none; }
+        list-style-type: none;
+        margin-bottom: 0px; }
+        .navbar .right ul li a {
+          padding: 2rem 4rem;
+          display: inline-block;
+          text-transform: uppercase; }
+          .navbar .right ul li a:hover {
+            background-color: red; }
   .navbar .menu-button {
     display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar .menu-button {
+        display: inherit; } }
 
 .navbar.collapsed {
-  background-color: red;
+  background-color: khaki;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
   .navbar.collapsed .left {
-    background-color: lightblue; }
+    background-color: lightblue;
+    align-self: flex-start; }
   .navbar.collapsed .right {
+    width: 100%;
     background-color: lightcoral;
     justify-content: flex-start; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar.collapsed .right {
+        display: inherit; } }
     .navbar.collapsed .right ul {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       margin-bottom: 0px;
       padding-left: 0; }
       .navbar.collapsed .right ul li {
-        background-color: firebrick;
-        list-style-type: none; }
+        background-color: white;
+        list-style-type: none;
+        width: 100%;
+        text-align: center; }
         .navbar.collapsed .right ul li a {
           padding: 2rem;
           display: block; }
   .navbar.collapsed .menu-button {
-    display: inherit; }
+    display: inherit;
+    position: relative;
+    margin-bottom: 0px;
+    cursor: pointer; }
 
 .services {
   background-color: white;
