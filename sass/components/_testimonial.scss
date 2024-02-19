@@ -16,15 +16,15 @@
             text-align: center;
             padding-top: $padding-horizontal;
             padding-bottom: $padding-horizontal;
-            border-top-left-radius: $border-radius;
-            border-top-right-radius: $border-radius;
+            border-top-left-radius: $border-radius-inner;
+            border-top-right-radius: $border-radius-inner;
         }
         .testimonial-box {
             background-color: var(--ghost-white);
             display: flex;
             justify-content: space-around;
-            border-bottom-left-radius: $border-radius;
-            border-bottom-right-radius: $border-radius;
+            border-bottom-left-radius: $border-radius-inner;
+            border-bottom-right-radius: $border-radius-inner;
             padding-bottom: $padding-vertical;
             @media only screen and (max-width:$bp-medium) {
                 flex-direction: column;
@@ -34,7 +34,7 @@
                 background-color: white;
                 width: 45%;
                 padding: $padding-horizontal;
-                border-radius: $border-radius;
+                border-radius: $border-radius-sharp;
                 box-shadow: $box-shadow;
                 @media only screen and (max-width:$bp-medium) {
                     margin-top: 1rem;

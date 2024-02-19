@@ -5,57 +5,63 @@
     padding-bottom: $padding-vertical;
     border-radius: $border-radius;
     margin-bottom: 2rem;
-
+  
     .services-intro {
-        text-align: center;
-        margin-bottom: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-}
-
-.services-grid {
+  }
+  
+  .services-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; // Adjust this as needed for your layout
     gap: 0.5rem;
-
+  
     @media only screen and (max-width: $bp-medium) {
-        justify-content: center;
+      justify-content: center;
     }
-}
-
-.services-card {
-    //background-color: green;
+  }
+  
+  .services-card {
+    // background-color: green;
+    border-radius: $border-radius-inner;
+    overflow: hidden;
     width: calc(25% - 1rem);
     margin-bottom: 0.5rem;
-    border: 1px solid lightgray;
+    border: 1px solid #EEEEEE;
     transition: box-shadow 0.3s ease;
-    border: 1px solid lightgray;
     cursor: pointer;
-
+  
     &:hover {
-        box-shadow: $box-shadow;
+      box-shadow: $box-shadow;
     }
-
+  
     &-image {
-        height: 15rem;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
+      height: 15rem;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
     }
-
+  
     &-details {
-        padding: 1.7rem;
-
-        h5 {
-            font-size: 1.8rem;
-        }
+      padding: 1.7rem;
+    //   background-color: red;
+      p {
+        font-size: 1.4rem;
+      }
+  
+      h5 {
+        font-size: 1.8rem;
+      }
     }
-
+  
     @media only screen and (max-width: $bp-medium) {
-        width: calc(50% - 1rem); // Two items per row on medium screens
+      width: calc(50% - 1rem); // Two items per row on medium screens
     }
-
+  
     @media only screen and (max-width: $bp-small) {
-        width: 100%; // Full width on small screens, one item per row
+      width: 100%; // Full width on small screens, one item per row
     }
-}
+  }
+  

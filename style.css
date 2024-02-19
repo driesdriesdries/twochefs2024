@@ -465,8 +465,8 @@ a.button-hero {
       padding: 5rem 0rem; } }
 
 .logo-reel {
-  margin-top: -2rem;
-  margin-bottom: 2rem; }
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem; }
 
 .navbar {
   background-color: white;
@@ -544,11 +544,12 @@ a.button-hero {
       justify-content: center; } }
 
 .services-card {
+  border-radius: 1rem;
+  overflow: hidden;
   width: calc(25% - 1rem);
   margin-bottom: 0.5rem;
-  border: 1px solid lightgray;
+  border: 1px solid #EEEEEE;
   transition: box-shadow 0.3s ease;
-  border: 1px solid lightgray;
   cursor: pointer; }
   .services-card:hover {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
@@ -559,6 +560,8 @@ a.button-hero {
     background-position: center; }
   .services-card-details {
     padding: 1.7rem; }
+    .services-card-details p {
+      font-size: 1.4rem; }
     .services-card-details h5 {
       font-size: 1.8rem; }
   @media only screen and (max-width: 56.25em) {
@@ -569,7 +572,7 @@ a.button-hero {
       width: 100%; } }
 
 .team {
-  background-color: var(--ghost-white);
+  background-color: white;
   display: flex;
   border-radius: 2rem;
   margin-bottom: 2rem; }
@@ -603,7 +606,8 @@ a.button-hero {
         padding-top: 0; } }
     .team .right .image {
       background-color: wheat;
-      height: 35rem; }
+      height: 35rem;
+      border-radius: 1rem; }
 
 .testimonial {
   border-radius: 2rem;
@@ -623,14 +627,14 @@ a.button-hero {
       text-align: center;
       padding-top: 3rem;
       padding-bottom: 3rem;
-      border-top-left-radius: 2rem;
-      border-top-right-radius: 2rem; }
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem; }
     .testimonial-inner .testimonial-box {
       background-color: var(--ghost-white);
       display: flex;
       justify-content: space-around;
-      border-bottom-left-radius: 2rem;
-      border-bottom-right-radius: 2rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
       padding-bottom: 5rem; }
       @media only screen and (max-width: 56.25em) {
         .testimonial-inner .testimonial-box {
@@ -640,7 +644,7 @@ a.button-hero {
         background-color: white;
         width: 45%;
         padding: 3rem;
-        border-radius: 2rem;
+        border-radius: 0.5rem;
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
         @media only screen and (max-width: 56.25em) {
           .testimonial-inner .testimonial-box .testimonial-instance {
@@ -677,7 +681,7 @@ a.button-hero {
   align-items: center; }
 
 .content-container {
-  max-width: 1140px; }
+  max-width: 1240px; }
 
 .archive {
   width: 100%;

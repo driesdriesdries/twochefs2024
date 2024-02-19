@@ -5,6 +5,10 @@
   justify-content: space-around;
   align-items: center;
   background-color: white;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }
 
 .logo {
