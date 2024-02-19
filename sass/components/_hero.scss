@@ -38,7 +38,7 @@
     padding: 3rem;
     border-radius: $border-radius;
     @media only screen and (max-width: $bp-medium) {
-      width: 80%;
+      width: 95%;
     }
   }
   
@@ -61,10 +61,10 @@
   }
 
   @media only screen and (max-width: $bp-medium) {
-    padding: 7rem 3rem;
+    padding: 7rem 0rem;
   }
   
   @media only screen and (max-width: $bp-small) {
-    padding: 5rem 2rem;
+    padding: 5rem 0rem;
   }
 }

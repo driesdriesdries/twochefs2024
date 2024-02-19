@@ -53,7 +53,23 @@ document.addEventListener('DOMContentLoaded', function() {
             navBar.classList.toggle('active');
         });
     });
+
+    // Select all menu items within the navbar
+    var menuItems = document.querySelectorAll('.navbar.content-container a'); // Assuming menu items are <a> tags
+
+    // Add click event listener to each menu item to remove 'active' class from navbar
+    menuItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Select the nav element with class 'navbar content-container'
+            var navBar = document.querySelector('.navbar.content-container');
+            // Remove the 'active' class from the navBar
+            if (navBar.classList.contains('active')) {
+                navBar.classList.remove('active');
+            }
+        });
+    });
 });
+
 
 </script>
 	<nav class="navbar content-container">
@@ -62,11 +78,44 @@ document.addEventListener('DOMContentLoaded', function() {
 		</div>
 		<div class="right">
 			<ul>
-				<li><a href="<?php echo site_url(); ?>">Home</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
+			<li><a class="navigation" href="<?php echo site_url(); ?>">Home</a></li>
+				<li>
+				<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#services">Services</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#services')) . '">Services</a>';
+					}
+					?>
+				</li>
+
+				<li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#blog">Blog</a>';
+					} else {
+						// For the blog, it might be better to link directly to the blog page instead of a section.
+						// Assuming your blog page is the main posts page, you can link directly to it.
+						echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
+					}
+					?>
+					</li>
+				<li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#team">Team</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#team')) . '">Team</a>';
+					}
+					?>
+				</li>
+
+				<li><a class="navigation openContactModal" href="#">Contact</a></li>
 			</ul>
 		</div>
 		<div class="menu-button menu-toggle"><span>&#9776;</span></div>

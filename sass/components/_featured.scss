@@ -1,5 +1,6 @@
 .featured {
     display: flex;
+    margin-bottom: 2rem;
     @media only screen and (max-width:$bp-medium) {
         flex-direction: column;        
     }

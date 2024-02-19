@@ -301,7 +301,8 @@ a.button-hero {
       transition: max-height 0.5s ease, padding 0.5s ease; }
 
 .featured {
-  display: flex; }
+  display: flex;
+  margin-bottom: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .featured {
       flex-direction: column; } }
@@ -372,7 +373,8 @@ a.button-hero {
         flex-direction: column;
         text-align: center; } }
     .footer .top .center ul {
-      display: flex; }
+      display: flex;
+      padding-left: 0px; }
       .footer .top .center ul li {
         list-style-type: none;
         margin-right: 2rem; }
@@ -403,6 +405,9 @@ a.button-hero {
     font-style: italic; }
     .footer .bottom p {
       font-size: 1.2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .footer .bottom p {
+          margin-top: 2rem; } }
 
 @keyframes fadeIn {
   from {
@@ -439,7 +444,7 @@ a.button-hero {
     border-radius: 2rem; }
     @media only screen and (max-width: 56.25em) {
       .hero .hero-content {
-        width: 80%; } }
+        width: 95%; } }
   .hero h1 {
     margin-bottom: 2rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
@@ -454,10 +459,10 @@ a.button-hero {
     opacity: 0; }
   @media only screen and (max-width: 56.25em) {
     .hero {
-      padding: 7rem 3rem; } }
+      padding: 7rem 0rem; } }
   @media only screen and (max-width: 25em) {
     .hero {
-      padding: 5rem 2rem; } }
+      padding: 5rem 0rem; } }
 
 .logo-reel {
   margin-top: -2rem;
@@ -506,13 +511,17 @@ a.button-hero {
     background-color: white; }
     @media only screen and (max-width: 25em) {
       .navbar.active .right {
-        top: 8.2rem; } }
+        top: 8rem; } }
     .navbar.active .right ul {
       display: flex;
       flex-direction: column;
       width: 100%; }
       .navbar.active .right ul li {
-        text-align: center; }
+        text-align: center;
+        padding: 0px; }
+        .navbar.active .right ul li a {
+          display: block;
+          padding: 2rem; }
 
 .services {
   background-color: white;
@@ -688,12 +697,11 @@ a.button-hero {
       color: white; }
       @media only screen and (max-width: 56.25em) {
         .archive-banner h1 {
-          text-align: center; } }
+          font-size: 2rem; } }
   .archive-main {
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: -5rem;
     padding-bottom: 2rem; }
     @media only screen and (max-width: 56.25em) {
       .archive-main {
@@ -717,7 +725,8 @@ a.button-hero {
         background-color: white; }
         @media only screen and (max-width: 56.25em) {
           .archive-main .bottom .left {
-            width: 100%; } }
+            width: 100%;
+            margin-bottom: 2rem; } }
       .archive-main .bottom .right {
         width: 49%;
         display: flex;

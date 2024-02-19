@@ -21,6 +21,7 @@
       .center {
         ul {
           display: flex;
+          padding-left: 0px;
           li {
             list-style-type: none;
             margin-right: 2rem;
@@ -71,6 +72,9 @@
   
       p {
         font-size: 1.2rem;
+        @media only screen and (max-width:$bp-medium) {
+          margin-top: 2rem;
+        }
       }
     }
   }
