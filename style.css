@@ -105,44 +105,47 @@ a.button-hero {
     position: relative;
     z-index: 1; }
 
-.blog .instance-group {
-  display: flex;
-  justify-content: space-between; }
-  .blog .instance-group .post-instance {
-    width: 32%;
-    height: 45rem;
-    margin-top: auto;
+.blog {
+  margin-bottom: 2rem; }
+  .blog .instance-group {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-    position: relative;
-    padding: 2rem; }
-    .blog .instance-group .post-instance:hover .background {
-      filter: blur(3px); }
-    .blog .instance-group .post-instance .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-    .blog .instance-group .post-instance h5 {
+    justify-content: space-between; }
+    .blog .instance-group .post-instance {
+      width: 32%;
+      height: 45rem;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: white;
       position: relative;
-      z-index: 1; }
-  @media only screen and (max-width: 56.25em) {
-    .blog .instance-group {
-      flex-direction: column; }
-      .blog .instance-group .post-instance {
-        width: 100%;
-        margin-bottom: 1rem; }
-        .blog .instance-group .post-instance:last-child {
-          margin-bottom: 0; } }
+      padding: 2rem; }
+      .blog .instance-group .post-instance:hover .background {
+        filter: blur(3px); }
+      .blog .instance-group .post-instance .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+      .blog .instance-group .post-instance h5 {
+        position: relative;
+        z-index: 1; }
+    @media only screen and (max-width: 56.25em) {
+      .blog .instance-group {
+        flex-direction: column; }
+        .blog .instance-group .post-instance {
+          width: 100%;
+          margin-bottom: 1rem; }
+          .blog .instance-group .post-instance:last-child {
+            margin-bottom: 0; } }
 
 .callout {
   background-color: white;
   border-radius: 2rem;
   padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  margin-bottom: 2rem; }
   @media only screen and (max-width: 25em) {
     .callout {
       padding-left: 2rem;
@@ -260,7 +263,8 @@ a.button-hero {
 
 .faq {
   background-color: white;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  margin-bottom: 2rem; }
   .faq .accordion-item {
     overflow: hidden; }
     .faq .accordion-item .heading {
@@ -414,7 +418,7 @@ a.button-hero {
   justify-content: flex-start;
   padding: 15rem 5rem;
   position: relative;
-  margin-top: 8rem; }
+  margin-bottom: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .hero {
       justify-content: center; } }
@@ -456,97 +460,67 @@ a.button-hero {
       padding: 5rem 2rem; } }
 
 .logo-reel {
-  margin-top: -2rem; }
+  margin-top: -2rem;
+  margin-bottom: 2rem; }
 
 .navbar {
-  background-color: fuchsia;
+  background-color: white;
   width: 100%;
   display: flex;
-  align-items: center; }
-  @media only screen and (max-width: 56.25em) {
-    .navbar {
-      justify-content: space-between;
-      margin-bottom: 0px; }
-      .navbar h1 {
-        margin-bottom: 0;
-        padding-right: 2rem; } }
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100; }
   .navbar .left {
-    margin-bottom: 0px; }
-    .navbar .left a {
-      margin-bottom: 0px; }
-  .navbar .right {
-    background-color: yellow;
+    padding-left: 2rem; }
+    .navbar .left img {
+      height: 8rem; }
+  @media only screen and (max-width: 56.25em) {
+    .navbar .right {
+      display: none; } }
+  .navbar .right ul {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
-    margin-bottom: 0px; }
-    @media only screen and (max-width: 56.25em) {
-      .navbar .right {
-        display: none; } }
-    .navbar .right ul {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    padding: 0px; }
+    .navbar .right ul li {
+      list-style-type: none;
       margin-bottom: 0px;
-      padding-left: 0px; }
-      .navbar .right ul li {
-        list-style-type: none;
-        margin-bottom: 0px; }
-        .navbar .right ul li a {
-          padding: 2rem 4rem;
-          display: inline-block;
-          text-transform: uppercase; }
-          .navbar .right ul li a:hover {
-            background-color: red; }
+      padding: 2rem 4rem; }
+      .navbar .right ul li a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600; }
   .navbar .menu-button {
-    display: none; }
+    display: none;
+    align-self: stretch;
+    align-items: center; }
+    .navbar .menu-button span {
+      font-size: 3rem;
+      padding: 2rem; }
     @media only screen and (max-width: 56.25em) {
       .navbar .menu-button {
         display: inherit; } }
-
-.navbar.collapsed {
-  background-color: khaki;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .navbar.collapsed .left {
-    background-color: lightblue;
-    align-self: flex-start; }
-  .navbar.collapsed .right {
+  .navbar.active .right {
+    position: absolute;
+    top: 8.2rem;
+    display: inherit;
     width: 100%;
-    background-color: lightcoral;
-    justify-content: flex-start; }
-    @media only screen and (max-width: 56.25em) {
-      .navbar.collapsed .right {
-        display: inherit; } }
-    .navbar.collapsed .right ul {
-      width: 100%;
+    background-color: white; }
+    @media only screen and (max-width: 25em) {
+      .navbar.active .right {
+        top: 8.2rem; } }
+    .navbar.active .right ul {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      margin-bottom: 0px;
-      padding-left: 0; }
-      .navbar.collapsed .right ul li {
-        background-color: white;
-        list-style-type: none;
-        width: 100%;
+      width: 100%; }
+      .navbar.active .right ul li {
         text-align: center; }
-        .navbar.collapsed .right ul li a {
-          padding: 2rem;
-          display: block; }
-  .navbar.collapsed .menu-button {
-    display: inherit;
-    position: relative;
-    margin-bottom: 0px;
-    cursor: pointer; }
 
 .services {
   background-color: white;
   padding: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  margin-bottom: 2rem; }
   .services .services-intro {
     text-align: center;
     margin-bottom: 2rem; }
@@ -588,7 +562,8 @@ a.button-hero {
 .team {
   background-color: var(--ghost-white);
   display: flex;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  margin-bottom: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .team {
       flex-direction: column;
@@ -627,7 +602,8 @@ a.button-hero {
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  margin-bottom: 2rem; }
   @media only screen and (max-width: 25em) {
     .testimonial {
       padding: 1rem 1rem; } }
@@ -694,9 +670,6 @@ a.button-hero {
 .content-container {
   max-width: 1140px; }
 
-.content-container > * {
-  margin-bottom: 2rem; }
-
 .archive {
   width: 100%;
   border-bottom-left-radius: 2rem;
@@ -706,8 +679,7 @@ a.button-hero {
     padding-top: 8rem;
     padding-bottom: 8rem;
     padding-left: 3rem;
-    padding-right: 3rem;
-    margin-top: 8rem; }
+    padding-right: 3rem; }
     .archive-banner h1 {
       display: inline;
       padding: 1rem;
@@ -764,7 +736,6 @@ a.button-hero {
     padding-bottom: 10rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    margin-top: 8rem;
     background-size: cover;
     background-position: center;
     margin-bottom: 0px; }

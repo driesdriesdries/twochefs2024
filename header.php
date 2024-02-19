@@ -38,38 +38,37 @@
 
 
 <script>
-	document.addEventListener('DOMContentLoaded', function() {
-    // Select the menu toggle button
-    const menuToggleButton = document.querySelector('.menu-toggle');
 
-    // Define the toggle function
-    function toggleMenu() {
-        // Select the navigation element
-        const navElement = document.querySelector('nav.navbar.content-container');
-        // Toggle the 'collapsed' class on the navigation element
-        navElement.classList.toggle('collapsed');
-    }
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all elements with the class 'menu-button'
+    var menuButtons = document.querySelectorAll('.menu-button');
 
-    // Add click event listener to the menu toggle button
-    menuToggleButton.addEventListener('click', toggleMenu);
+    // Add click event listener to each menu button
+    menuButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Select the nav element with class 'navbar content-container'
+            var navBar = document.querySelector('.navbar.content-container');
+            // Toggle the 'active' class on the navBar
+            navBar.classList.toggle('active');
+        });
+    });
 });
 
 </script>
-
-
-
 	<nav class="navbar content-container">
 		<div class="left">
-			<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo"></a>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="Logo">
 		</div>
 		<div class="right">
 			<ul>
-				<li><a href="#">Link</a></li>
+				<li><a href="<?php echo site_url(); ?>">Home</a></li>
 				<li><a href="#">Link</a></li>
 				<li><a href="#">Link</a></li>
 				<li><a href="#">Link</a></li>
 				<li><a href="#">Link</a></li>
 			</ul>
 		</div>
-		<div class="menu-button menu-toggle"><h1>x</h1></div>
+		<div class="menu-button menu-toggle"><span>&#9776;</span></div>
 	</nav>
+	
