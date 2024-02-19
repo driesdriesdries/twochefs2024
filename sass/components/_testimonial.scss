@@ -22,7 +22,7 @@
         .testimonial-box {
             background-color: var(--ghost-white);
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             border-bottom-left-radius: $border-radius-inner;
             border-bottom-right-radius: $border-radius-inner;
             padding-bottom: $padding-vertical;
@@ -32,7 +32,7 @@
             }
             .testimonial-instance {
                 background-color: white;
-                width: 45%;
+                width: 47%;
                 padding: $padding-horizontal;
                 border-radius: $border-radius-sharp;
                 box-shadow: $box-shadow;

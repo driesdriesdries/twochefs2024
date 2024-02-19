@@ -632,7 +632,7 @@ a.button-hero {
     .testimonial-inner .testimonial-box {
       background-color: var(--ghost-white);
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
       padding-bottom: 5rem; }
@@ -642,7 +642,7 @@ a.button-hero {
           align-items: center; } }
       .testimonial-inner .testimonial-box .testimonial-instance {
         background-color: white;
-        width: 45%;
+        width: 47%;
         padding: 3rem;
         border-radius: 0.5rem;
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
