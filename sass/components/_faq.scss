@@ -1,54 +1,56 @@
 .faq {
-  background-color: white;
-  border-radius: $border-radius;
   margin-bottom: 2rem;
-  .accordion-item {
-    //margin-bottom: 1rem;
-    overflow: hidden;
-    .heading {
-      //background-color: red;
-      color: var(--charcoal-dust);
-      padding: 0.5rem $padding-horizontal;
-      padding-top: 2rem;
+  border-radius: $border-radius; // Apply border-radius to the whole container
+  overflow: hidden; // Ensures the inner elements do not overflow the rounded corners
+  
+  &-toggle {
+    &:not(:checked) ~ .faq-instance-body {
+      display: none;
+    }
+
+    &:checked ~ .faq-instance-header .icon {
+      transform: rotate(45deg);
+    }
+
+    &:checked ~ .faq-instance-body {
+      display: block;
+    }
+  }
+
+  &-instance {
+    &-header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: $padding-horizontal;
       cursor: pointer;
-      user-select: none;
-      position: relative;
-      transition: background-color 0.3s;
       
-      h3 { // Ensure the heading <h3> also has the hotpink color
-        color: inherit;
-        text-transform: capitalize;
-        font-weight: 100;
-        font-size: 1.8rem;
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
       }
 
-      &:hover {
-        opacity: .5;
-      }
-
-      &::after {
-        content: "+"; 
-        position: absolute;
-        right: $padding-horizontal;
-        top: 50%;
-        transform: translateY(-50%) rotate(0deg);
+      .icon {
+        transition: transform 0.3s ease;
+        color: var(--brick-red);
         font-size: 3rem;
-        color: var(--brick-red); // Icon color
-        transition: transform 0.3s;
       }
-
-      &.active::after {
-        transform: translateY(-50%) rotate(45deg);
+      span {
+        font-size: 2rem;  
       }
     }
-    .body {
-      max-height: 0;
-      padding-left: $padding-horizontal;
-      padding-right: $padding-horizontal;
-      //background-color: lawngreen;
-      color: var(--charcoal-dust);
-      transition: max-height 0.5s ease, padding 0.5s ease;
-      //border: 1px solid var(--charcoal-dust); // Body border color
+
+    &-body {
+      //background-color: tomato;
+      background-color: white;
+      padding: $padding-horizontal;
+      padding-top: 1rem;
+      transition: max-height 0.3s ease;
+
+      &:last-child {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
     }
   }
 }

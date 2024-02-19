@@ -262,43 +262,38 @@ a.button-hero {
         margin-top: 2rem; }
 
 .faq {
-  background-color: white;
+  margin-bottom: 2rem;
   border-radius: 2rem;
-  margin-bottom: 2rem; }
-  .faq .accordion-item {
-    overflow: hidden; }
-    .faq .accordion-item .heading {
-      color: var(--charcoal-dust);
-      padding: 0.5rem 3rem;
-      padding-top: 2rem;
-      cursor: pointer;
-      user-select: none;
-      position: relative;
-      transition: background-color 0.3s; }
-      .faq .accordion-item .heading h3 {
-        color: inherit;
-        text-transform: capitalize;
-        font-weight: 100;
-        font-size: 1.8rem; }
-      .faq .accordion-item .heading:hover {
-        opacity: .5; }
-      .faq .accordion-item .heading::after {
-        content: "+";
-        position: absolute;
-        right: 3rem;
-        top: 50%;
-        transform: translateY(-50%) rotate(0deg);
-        font-size: 3rem;
-        color: var(--brick-red);
-        transition: transform 0.3s; }
-      .faq .accordion-item .heading.active::after {
-        transform: translateY(-50%) rotate(45deg); }
-    .faq .accordion-item .body {
-      max-height: 0;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      color: var(--charcoal-dust);
-      transition: max-height 0.5s ease, padding 0.5s ease; }
+  overflow: hidden; }
+  .faq-toggle:not(:checked) ~ .faq-instance-body {
+    display: none; }
+  .faq-toggle:checked ~ .faq-instance-header .icon {
+    transform: rotate(45deg); }
+  .faq-toggle:checked ~ .faq-instance-body {
+    display: block; }
+  .faq-instance-header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    cursor: pointer; }
+    .faq-instance-header:first-child {
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem; }
+    .faq-instance-header .icon {
+      transition: transform 0.3s ease;
+      color: var(--brick-red);
+      font-size: 3rem; }
+    .faq-instance-header span {
+      font-size: 2rem; }
+  .faq-instance-body {
+    background-color: white;
+    padding: 3rem;
+    padding-top: 1rem;
+    transition: max-height 0.3s ease; }
+    .faq-instance-body:last-child {
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem; }
 
 .featured {
   display: flex;
@@ -421,7 +416,7 @@ a.button-hero {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 15rem 5rem;
+  padding: 13rem 5rem;
   position: relative;
   margin-bottom: 2rem; }
   @media only screen and (max-width: 56.25em) {
@@ -532,7 +527,8 @@ a.button-hero {
   margin-bottom: 2rem; }
   .services .services-intro {
     text-align: center;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    padding-bottom: 1rem; }
 
 .services-grid {
   display: flex;
@@ -816,7 +812,9 @@ h6 {
   margin-bottom: .25rem; }
 
 * {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal; }
 
 p, li {
   font-size: 1.6rem;
