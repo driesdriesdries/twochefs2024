@@ -143,6 +143,7 @@ function twochefs2024_scripts() {
 
 	wp_enqueue_script( 'twochefs2024-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'twochefs2024-navbar', get_template_directory_uri() . '/js/navbar.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'twochefs2024-contact-modal', get_template_directory_uri() . '/js/contact-modal.js', array(), _S_VERSION, true );
 
 	// Enqueue the components.js script
 	wp_enqueue_script( 'twochefs2024-components', get_template_directory_uri() . '/js/components.js', array(), _S_VERSION, true );

@@ -11,77 +11,76 @@
 
 ?>
 
-<div class="footer content-container">
-	<div class="top">
-		<div class="left">
-		<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo"></a>
-		</div>
+	<div class="footer content-container">
+		<div class="top">
+			<div class="left">
+				<a href="<?php echo site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo"></a>
+			</div>
 
-		<div class="center">
-			<ul>
-				<li><a class="navigation" href="<?php echo site_url(); ?>">Home</a></li>
-				<li>
-				<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#services">Services</a>';
-					} else {
-						// Use home_url() to get the home URL and append the section ID.
-						echo '<a class="navigation" href="' . esc_url(home_url('/#services')) . '">Services</a>';
-					}
-					?>
-				</li>
-
-				<li>
+			<div class="center">
+				<ul>
+					<li><a class="navigation" href="<?php echo site_url(); ?>">Home</a></li>
+					<li>
 					<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#blog">Blog</a>';
-					} else {
-						// For the blog, it might be better to link directly to the blog page instead of a section.
-						// Assuming your blog page is the main posts page, you can link directly to it.
-						echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
-					}
-					?>
+						// Check if we are on the front page or home page.
+						if (is_front_page() || is_home()) {
+							echo '<a class="navigation" href="#services">Services</a>';
+						} else {
+							// Use home_url() to get the home URL and append the section ID.
+							echo '<a class="navigation" href="' . esc_url(home_url('/#services')) . '">Services</a>';
+						}
+						?>
 					</li>
-				<li>
-					<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#team">Team</a>';
-					} else {
-						// Use home_url() to get the home URL and append the section ID.
-						echo '<a class="navigation" href="' . esc_url(home_url('/#team')) . '">Team</a>';
-					}
-					?>
-				</li>
 
-				<li><a class="navigation openContactModal" href="#">Contact</a></li>
+					<li>
+						<?php
+						// Check if we are on the front page or home page.
+						if (is_front_page() || is_home()) {
+							echo '<a class="navigation" href="#blog">Blog</a>';
+						} else {
+							// For the blog, it might be better to link directly to the blog page instead of a section.
+							// Assuming your blog page is the main posts page, you can link directly to it.
+							echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
+						}
+						?>
+						</li>
+					<li>
+						<?php
+						// Check if we are on the front page or home page.
+						if (is_front_page() || is_home()) {
+							echo '<a class="navigation" href="#team">Team</a>';
+						} else {
+							// Use home_url() to get the home URL and append the section ID.
+							echo '<a class="navigation" href="' . esc_url(home_url('/#team')) . '">Team</a>';
+						}
+						?>
+					</li>
+
+					<li><a class="navigation openContactModal" href="#">Contact</a></li>
 
 
-			</ul>
-		</div>
+				</ul>
+			</div>
 
-		<div class="right">
-			<div class="social-icons">
-				<div class="facebook">
-					<a href="https://www.facebook.com/TwoChefs1"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Logo"></a>
-				</div>
-				<div class="instagram">
-					<a href="https://www.instagram.com/twochefs.catering/"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Logo"></a>
+			<div class="right">
+				<div class="social-icons">
+					<div class="facebook">
+						<a href="https://www.facebook.com/TwoChefs1"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Logo"></a>
+					</div>
+					<div class="instagram">
+						<a href="https://www.instagram.com/twochefs.catering/"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Logo"></a>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="bottom">
+			<p>© <?php echo date("Y"); ?> Two Chefs. All rights reserved.</p>
+		</div>
 	</div>
-	<div class="bottom">
-		<p>© <?php echo date("Y"); ?> Two Chefs. All rights reserved.</p>
-	</div>
-	
-</div>
 </div><!-- #page -->
 
-<?php get_template_part( 'template-parts/components/contact-modal' ); ?>
-<?php wp_footer(); ?>
+<?php get_template_part( 'template-parts/components/contact' ); ?>
 
+<?php wp_footer(); ?>
 </body>
 </html>
