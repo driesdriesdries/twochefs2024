@@ -1,61 +1,58 @@
 .contact-modal {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .5s ease, visibility 1s ease;
-  background-color: var(--ivory-mist);
-  border-radius: var(--border-radius);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: fixed;
-  top: 0;
-  left: 0; /* Ensure full width coverage */
-  width: 100%;
-  height: 100vh;
-
+  display: none;
   &.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .form-container {
-    background-color: white;
-    margin-top: 20rem;
-    padding: 5rem;
-    width: 70%;
-    @media only screen and (max-width: var(--bp-medium)) {
-      margin-top: 2rem;
-      width: 90%;
-      padding: 1rem;
-    }
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: var(--padding-horizontal);
-      padding-bottom: 1rem;
-      h3 {
-        text-transform: uppercase;
-        @media only screen and (max-width: var(--bp-medium)) {
-          font-size: 1.6rem;
+    background-color:var(--ivory-mist);
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    
+    .form-container {
+      background-color: white;
+      margin-top: 20rem;
+      padding: 5rem;
+      width: 70%;
+      @media only screen and (max-width: $bp-medium) {
+        margin-top: 2rem;
+        width: 90%;
+        padding: 1rem;
+      }
+      .top {
+        //background-color: tomato;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $padding-horizontal;
+        padding-bottom: 1rem;
+        h3 {
+          text-transform: uppercase;
+          @media only screen and (max-width: $bp-medium) {
+            font-size: 1.6rem;
+          }
+        }
+        span {
+          font-size: 2.8rem;
+          margin-top: -8px;
+          cursor: pointer;
+          @media only screen and (max-width: $bp-medium) {
+            font-size: 2rem;
+          }
         }
       }
-      span {
-        font-size: 2.8rem;
-        margin-top: -8px;
-        cursor: pointer;
-        @media only screen and (max-width: var(--bp-medium)) {
-          font-size: 2rem;
+      .bottom {
+        //background-color: indigo;
+        padding: $padding-horizontal;
+        input[type="submit"] {
+          background-color: var(--brick-red);
+          color: white;
+          text-transform: uppercase;
         }
-      }
-    }
-    .bottom {
-      padding: var(--padding-horizontal);
-      input[type="submit"] {
-        background-color: var(--brick-red);
-        color: white;
-        text-transform: uppercase;
       }
     }
   }
 }
+
