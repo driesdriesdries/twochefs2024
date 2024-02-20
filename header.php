@@ -25,9 +25,10 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -35,43 +36,6 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site page fadein">
 	
-
-
-<script>
-
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all elements with the class 'menu-button'
-    var menuButtons = document.querySelectorAll('.menu-button');
-
-    // Add click event listener to each menu button
-    menuButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            // Select the nav element with class 'navbar content-container'
-            var navBar = document.querySelector('.navbar.content-container');
-            // Toggle the 'active' class on the navBar
-            navBar.classList.toggle('active');
-        });
-    });
-
-    // Select all menu items within the navbar
-    var menuItems = document.querySelectorAll('.navbar.content-container a'); // Assuming menu items are <a> tags
-
-    // Add click event listener to each menu item to remove 'active' class from navbar
-    menuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            // Select the nav element with class 'navbar content-container'
-            var navBar = document.querySelector('.navbar.content-container');
-            // Remove the 'active' class from the navBar
-            if (navBar.classList.contains('active')) {
-                navBar.classList.remove('active');
-            }
-        });
-    });
-});
-
-
-</script>
 	<nav class="navbar content-container">
 		<div class="left">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="Logo">
