@@ -130,7 +130,8 @@ a.button-hero {
         bottom: 0; }
       .blog .instance-group .post-instance h5 {
         position: relative;
-        z-index: 1; }
+        z-index: 1;
+        color: white; }
     @media only screen and (max-width: 56.25em) {
       .blog .instance-group {
         flex-direction: column; }
