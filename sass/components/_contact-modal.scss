@@ -2,10 +2,9 @@
   display: none;
   &.active {
     background-color:var(--ivory-mist);
-    border-radius: $border-radius;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
@@ -13,21 +12,27 @@
     
     .form-container {
       background-color: white;
-      margin-top: 2rem;
-      padding: 5rem;
+      padding: 2rem;
       width: 70%;
+      border-radius: $border-radius;
+      @media only screen and (min-width: $bp-large) {
+        width: 70rem;
+      }
       @media only screen and (max-width: $bp-medium) {
         margin-top: 2rem;
         width: 90%;
         padding: 1rem;
       }
       .top {
-        //background-color: tomato;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: $padding-horizontal;
-        padding-bottom: 1rem;
+        padding-bottom: 0rem;
+        .close-modal:hover {
+          transform: rotate(90deg); /* Spin effect */
+          transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
         h3 {
           text-transform: uppercase;
           @media only screen and (max-width: $bp-medium) {
@@ -44,8 +49,8 @@
         }
       }
       .bottom {
-        //background-color: indigo;
         padding: $padding-horizontal;
+        padding-bottom: 0rem;
         input[type="submit"] {
           background-color: var(--brick-red);
           color: white;

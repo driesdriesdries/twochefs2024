@@ -208,19 +208,21 @@ a.button-hero {
   display: none; }
   .contact-modal.active {
     background-color: var(--ivory-mist);
-    border-radius: 2rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
     height: 100vh; }
     .contact-modal.active .form-container {
       background-color: white;
-      margin-top: 2rem;
-      padding: 5rem;
-      width: 70%; }
+      padding: 2rem;
+      width: 70%;
+      border-radius: 2rem; }
+      @media only screen and (min-width: 87.5em) {
+        .contact-modal.active .form-container {
+          width: 70rem; } }
       @media only screen and (max-width: 56.25em) {
         .contact-modal.active .form-container {
           margin-top: 2rem;
@@ -231,7 +233,12 @@ a.button-hero {
         justify-content: space-between;
         align-items: center;
         padding: 3rem;
-        padding-bottom: 1rem; }
+        padding-bottom: 0rem; }
+        .contact-modal.active .form-container .top .close-modal:hover {
+          transform: rotate(90deg);
+          /* Spin effect */
+          transition: transform 0.3s ease-in-out;
+          /* Smooth transition */ }
         .contact-modal.active .form-container .top h3 {
           text-transform: uppercase; }
           @media only screen and (max-width: 56.25em) {
@@ -245,7 +252,8 @@ a.button-hero {
             .contact-modal.active .form-container .top span {
               font-size: 2rem; } }
       .contact-modal.active .form-container .bottom {
-        padding: 3rem; }
+        padding: 3rem;
+        padding-bottom: 0rem; }
         .contact-modal.active .form-container .bottom input[type="submit"] {
           background-color: var(--brick-red);
           color: white;
