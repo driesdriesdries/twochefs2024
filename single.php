@@ -24,9 +24,10 @@ $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
 
     </div>
     <div class="breadcrumbs">
-        <span><a href="<?php echo site_url(); ?>">Home</a> > <a href="<?php echo esc_url($category_link); ?>"><?php echo esc_html($category_name); ?></a> > <span class="title"><?php the_title(); ?></span></span>
+        <span><a href="<?php echo site_url(); ?>">Home</a> > <a href="<?php echo esc_url($category_link); ?>"><?php echo esc_html($category_name); ?></a></span>
     </div>
     <div class="article-content">
+        <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
     </div>
 	<?php get_template_part( 'template-parts/components/callout' ); ?>

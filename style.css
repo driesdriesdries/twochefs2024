@@ -50,7 +50,7 @@ a {
     outline: none; }
 
 a.navigation {
-  color: var(--charcoal-dust);
+  color: #2f2f2f;
   font-size: 1.6rem;
   transition: color 0.3s ease; }
   a.navigation:hover, a.navigation:focus, a.navigation:active {
@@ -442,11 +442,13 @@ a.button-hero {
     margin-bottom: 2rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     animation: fadeIn 0.7s ease-out 0.1s forwards;
-    opacity: 0; }
+    opacity: 0;
+    color: white; }
   .hero p {
     margin-bottom: 3rem;
     animation: fadeIn 0.7s ease-out 0.8s forwards;
-    opacity: 0; }
+    opacity: 0;
+    color: white; }
   .hero .button {
     animation: fadeIn 0.7s ease-out 1.6s forwards;
     opacity: 0; }
@@ -481,7 +483,7 @@ a.button-hero {
     .navbar .right ul li {
       list-style-type: none;
       margin-bottom: 0px;
-      padding: 2rem 4rem; }
+      padding: 2rem 2.5rem; }
       .navbar .right ul li a {
         text-transform: uppercase;
         text-decoration: none;
@@ -739,8 +741,8 @@ a.button-hero {
   border-bottom-left-radius: 2rem; }
   .single-article .single-banner {
     width: 100%;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
     padding-left: 3rem;
     padding-right: 3rem;
     background-size: cover;
@@ -763,11 +765,10 @@ a.button-hero {
     width: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     margin-bottom: 0px; }
     .single-article .breadcrumbs .title {
-      font-weight: 600;
       font-style: italic; }
     .single-article .breadcrumbs span, .single-article .breadcrumbs a {
       font-size: 1.6rem; }
@@ -783,7 +784,10 @@ a.button-hero {
     margin-top: 2rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; }
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
 
 h1 {
   font-size: 4rem;
@@ -810,13 +814,14 @@ h6 {
   margin-bottom: .25rem; }
 
 * {
-  font-family: "Lora", serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal; }
 
 p, li {
   font-size: 1.6rem;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1.6rem;
+  color: #2f2f2f; }
 
 p {
   line-height: 2.6rem; }

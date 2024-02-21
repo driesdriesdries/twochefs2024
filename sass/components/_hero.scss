@@ -47,12 +47,14 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     animation: fadeIn 0.7s ease-out 0.1s forwards;
     opacity: 0;
+    color: white;
   }
   
   p {
     margin-bottom: 3rem;
     animation: fadeIn 0.7s ease-out 0.8s forwards;
     opacity: 0;
+    color: white;
   }
   
   .button {
