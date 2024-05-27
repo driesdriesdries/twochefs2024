@@ -1,8 +1,8 @@
 .testimonial {
     border-radius: $border-radius;
     background-color: white;
-    padding-left: $padding-horizontal;
-    padding-right: $padding-horizontal;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: $padding-vertical;
     padding-bottom: $padding-vertical;
     margin-bottom: 2rem;
@@ -22,6 +22,7 @@
         .testimonial-box {
             background-color: var(--ghost-white);
             display: flex;
+            gap: 2rem;
             justify-content: space-evenly;
             border-bottom-left-radius: $border-radius-inner;
             border-bottom-right-radius: $border-radius-inner;
@@ -32,7 +33,7 @@
             }
             .testimonial-instance {
                 background-color: white;
-                width: 47%;
+                width: 50%;
                 padding: $padding-horizontal;
                 border-radius: $border-radius-sharp;
                 box-shadow: $box-shadow;
@@ -47,12 +48,10 @@
                 .heading-block {
                     display: flex;
                     .portrait {
-                        background-color: palegreen;
                         width: 8rem;
                         height: 8rem;
                         border-radius: 50%;
                         margin-right: 1rem;
-                        background: url('https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg') center / cover no-repeat;
                     }
                     .description {
                         flex-grow: 1;
@@ -67,6 +66,9 @@
                     font-style: italic;
                     padding-top: 1rem;
                     padding-bottom: 1rem;
+                    p {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }

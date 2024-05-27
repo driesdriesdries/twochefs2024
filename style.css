@@ -609,8 +609,8 @@ a.button-hero {
 .testimonial {
   border-radius: 2rem;
   background-color: white;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   margin-bottom: 2rem; }
@@ -629,6 +629,7 @@ a.button-hero {
     .testimonial-inner .testimonial-box {
       background-color: var(--ghost-white);
       display: flex;
+      gap: 2rem;
       justify-content: space-evenly;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
@@ -639,7 +640,7 @@ a.button-hero {
           align-items: center; } }
       .testimonial-inner .testimonial-box .testimonial-instance {
         background-color: white;
-        width: 47%;
+        width: 50%;
         padding: 3rem;
         border-radius: 0.5rem;
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.05); }
@@ -654,12 +655,10 @@ a.button-hero {
         .testimonial-inner .testimonial-box .testimonial-instance .heading-block {
           display: flex; }
           .testimonial-inner .testimonial-box .testimonial-instance .heading-block .portrait {
-            background-color: palegreen;
             width: 8rem;
             height: 8rem;
             border-radius: 50%;
-            margin-right: 1rem;
-            background: url("https://i.ytimg.com/vi/AZ9NlOaS_3U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gYSgUMA8=&rs=AOn4CLDFhTyFQgOO9WnsGnia3XubygGwbg") center/cover no-repeat; }
+            margin-right: 1rem; }
           .testimonial-inner .testimonial-box .testimonial-instance .heading-block .description {
             flex-grow: 1;
             align-self: center; }
@@ -670,6 +669,8 @@ a.button-hero {
           font-style: italic;
           padding-top: 1rem;
           padding-bottom: 1rem; }
+          .testimonial-inner .testimonial-box .testimonial-instance .content-block p {
+            font-size: 1.4rem; }
 
 .page {
   background-color: var(--ivory-mist);
