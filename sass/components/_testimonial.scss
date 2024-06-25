@@ -1,0 +1,76 @@
+.testimonial {
+    border-radius: $border-radius;
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+    margin-bottom: 2rem;
+    @media only screen and (max-width:$bp-small) {
+        padding: 1rem 1rem;
+    }
+    &-inner {
+        background-color: white;
+        .section-heading-box {
+            background-color: var(--ghost-white);
+            text-align: center;
+            padding-top: $padding-horizontal;
+            padding-bottom: $padding-horizontal;
+            border-top-left-radius: $border-radius-inner;
+            border-top-right-radius: $border-radius-inner;
+        }
+        .testimonial-box {
+            background-color: var(--ghost-white);
+            display: flex;
+            gap: 2rem;
+            justify-content: space-evenly;
+            border-bottom-left-radius: $border-radius-inner;
+            border-bottom-right-radius: $border-radius-inner;
+            padding-bottom: $padding-vertical;
+            @media only screen and (max-width:$bp-medium) {
+                flex-direction: column;
+                align-items: center;
+            }
+            .testimonial-instance {
+                background-color: white;
+                width: 50%;
+                padding: $padding-horizontal;
+                border-radius: $border-radius-sharp;
+                box-shadow: $box-shadow;
+                @media only screen and (max-width:$bp-medium) {
+                    margin-top: 1rem;
+                    width: 75%;
+                }
+                @media only screen and (max-width:$bp-small) {
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+                .heading-block {
+                    display: flex;
+                    .portrait {
+                        width: 8rem;
+                        height: 8rem;
+                        border-radius: 50%;
+                        margin-right: 1rem;
+                    }
+                    .description {
+                        flex-grow: 1;
+                        align-self: center;
+                        p {
+                            color: #ACACAC;
+                            font-style: italic;
+                        }
+                    }
+                }
+                .content-block {
+                    font-style: italic;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    p {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

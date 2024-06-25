@@ -8,44 +8,119 @@
  */
 
 get_header();
+
+// Determine the term ID based on the type of archive
+$term_id = get_queried_object_id();
+$category_image = $term_id ? get_field('category_image', 'category_' . $term_id) : null;
+$background_image = $category_image ? $category_image['url'] : 'default-image-url.jpg';
 ?>
 
-	<main id="primary" class="site-main">
+<div class="content-container archive">
+    <div class="archive-banner" style="background-image: url('<?php echo esc_url($background_image); ?>'); background-size: cover; background-position: center;">
+        <h1>
+            <?php 
+            if (is_category()) {
+                single_cat_title();
+            }
+            ?>
+        </h1>
+    </div>
 
-		<?php if ( have_posts() ) : ?>
+    <div class="archive-main">
+        <div class="top">
+            <div class="category-description">
+                <?php echo category_description(); ?>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <?php
+                // Query for featured post in the current category
+                $featured_args = [
+                    'category__in' => [$term_id],
+                    'tag' => 'featured',
+                    'posts_per_page' => 1,
+                ];
+                $featured_post_query = new WP_Query($featured_args);
+                $featured_post_id = 0; // Default to no featured post
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+                if ($featured_post_query->have_posts()) {
+                    while ($featured_post_query->have_posts()) : $featured_post_query->the_post();
+                        $featured_post_id = get_the_ID(); // Capture the ID to exclude later
+                        $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'full');
+                        ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+                        <div class="card-featured" onclick="location.href='<?php echo esc_url(get_permalink()); ?>';" style="cursor: pointer;">
+                            <div class="card-featured-image" style="background: url('<?php echo esc_url($featured_image_url); ?>') center / cover no-repeat;"></div>
+                            <div class="card-featured-meta">
+                                <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+                            </div>
+                        </div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+                        <?php
+                    endwhile;
+                } else {
+                    // Fallback: Query for any post in the current category if no featured post is found
+                    $fallback_args = [
+                        'category__in' => [$term_id],
+                        'posts_per_page' => 1,
+                    ];
+                    $fallback_query = new WP_Query($fallback_args);
+                    if ($fallback_query->have_posts()) {
+                        while ($fallback_query->have_posts()) : $fallback_query->the_post();
+                            $featured_post_id = get_the_ID(); // This will now be the ID of the fallback post
+                            $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'full');
+                            ?>
 
-			endwhile;
+                            <div class="card-featured" onclick="location.href='<?php echo esc_url(get_permalink()); ?>';" style="cursor: pointer;">
+                                <div class="card-featured-image" style="background: url('<?php echo esc_url($featured_image_url); ?>') center / cover no-repeat;"></div>
+                                <div class="card-featured-meta">
+                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+                                </div>
+                            </div>
 
-			the_posts_navigation();
+                            <?php
+                        endwhile;
+                    }
+                }
+                wp_reset_postdata();
+                ?>
+            </div>
+            <div class="right">
+                <?php
+                // Query for posts in the current category, excluding the featured post
+                $args = [
+                    'category__in' => [$term_id],
+                    'posts_per_page' => 3,
+                    'post__not_in' => [$featured_post_id], // Exclude the featured post
+                ];
+                $posts_in_category = new WP_Query($args);
 
-		else :
+                if ($posts_in_category->have_posts()) : 
+                    while ($posts_in_category->have_posts()) : $posts_in_category->the_post();
+                        $post_url = get_permalink();
+                        ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+                        <div class="card" onclick="location.href='<?php echo esc_url($post_url); ?>';" style="cursor: pointer;">
+                            <div class="card-left" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"></div>
+                            <div class="card-right">
+                                <h5><?php the_title(); ?></h5>
+                                <p><?php echo wp_trim_words(get_the_excerpt(), 14, '...'); ?></p>
+                            </div>
+                        </div>
 
-		endif;
-		?>
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
+    <?php get_template_part( 'template-parts/components/callout' ); ?>
+    
+</div>
 
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

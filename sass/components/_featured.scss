@@ -1,0 +1,63 @@
+.featured {
+    display: flex;
+    margin-bottom: 2rem;
+    @media only screen and (max-width:$bp-medium) {
+        flex-direction: column;        
+    }
+    .left {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        background-color: white;
+        width: 40%;
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+        @media only screen and (max-width:$bp-medium) {
+            width: 100%;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: $border-radius;
+        }
+    }
+    .right {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        background-color: white;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width:$bp-medium) {
+            width: 100%;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .logo-box {
+            width: 80%;
+            //background-color: olivedrab;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap; // Allow items to wrap to the next line
+            padding-left: $padding-horizontal;
+            padding-right: $padding-horizontal;
+            @media only screen and (max-width:$bp-medium) {
+                width: 100%;
+                padding-bottom: $padding-horizontal;
+            }
+            img {
+            //border: 1px solid black;  
+            max-height: 8rem;
+            margin-left: 2rem;
+            @media only screen and (max-width:$bp-medium) {
+                max-height: 6rem;
+                &:first-child {
+                    margin-left: 0;
+                    }
+                }
+                @media only screen and (max-width:$bp-small) {
+                    max-height: 4rem;
+                }
+            }
+        }
+    }
+}

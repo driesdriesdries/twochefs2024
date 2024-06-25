@@ -1,30 +1,17 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package twochefs2024
- */
 
 get_header();
 ?>
-
-	<div class="hero">Hero Section</div>
-	<div class="logo-reel">Logo reel Section</div>
-	<div class="services">Services section</div>
-	<div class="featured">Featured Section</div>
-	<div class="blog">Blog Section</div>
-	<div class="team">Team Section</div>
-	<div class="testimonial">testimonial section</div>
-	<div class="faq">FAQs</div>
-	<div class="callout">Callout</div>
-
-
+	<div class="content-container fadein">
+		<?php get_template_part( 'template-parts/components/hero' ); ?>
+		<?php get_template_part( 'template-parts/components/logo-reel' ); ?>
+		<?php get_template_part( 'template-parts/components/services' ); ?>
+		<?php get_template_part( 'template-parts/components/featured' ); ?>
+		<?php get_template_part( 'template-parts/components/blog' ); ?>
+		<?php get_template_part( 'template-parts/components/team' ); ?>
+		<?php get_template_part( 'template-parts/components/faq' ); ?>
+		<?php get_template_part( 'template-parts/components/testimonial' ); ?>
+		<?php get_template_part( 'template-parts/components/callout' ); ?>
+	</div>
 <?php
 get_footer();

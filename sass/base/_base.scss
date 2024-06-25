@@ -1,0 +1,28 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width:$bp-small) {
+    font-size: 50%;
+}
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Class to apply the fade-in animation */
+.fadein {
+  animation: fadein .5s ease-in forwards;
+}

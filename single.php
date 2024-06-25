@@ -7,34 +7,32 @@
  * @package twochefs2024
  */
 
-get_header();
+get_header(); 
+
+// Get the categories of the post
+$categories = get_the_category();
+$category_link = !empty($categories) ? get_category_link($categories[0]->term_id) : '';
+$category_name = !empty($categories) ? $categories[0]->name : '';
+
+// Get the featured image URL with 'large' size
+$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main single-article content-container">
+    <div class="single-banner" style="background-image: url('<?php echo esc_url($featured_img_url); ?>');">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'twochefs2024' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'twochefs2024' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+    </div>
+    <div class="breadcrumbs">
+        <span><a href="<?php echo site_url(); ?>">Home</a> > <a href="<?php echo esc_url($category_link); ?>"><?php echo esc_html($category_name); ?></a></span>
+    </div>
+    <div class="article-content">
+        <h1><?php the_title(); ?></h1>
+        <?php the_content(); ?>
+    </div>
+	<?php get_template_part( 'template-parts/components/callout' ); ?>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
+?>

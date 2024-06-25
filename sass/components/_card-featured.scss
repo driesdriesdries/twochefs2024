@@ -1,0 +1,26 @@
+.card-featured {
+  transition: box-shadow 0.3s ease-in-out; // Transition for the box-shadow
+  cursor: pointer; // Change the cursor to indicate it's clickable
+  
+  &:hover {
+    box-shadow: $box-shadow; // Apply the box-shadow on hover
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-bottom: 2rem;
+  }
+
+  &-image {
+    height: 40rem;
+  }
+
+  &-meta {
+    background-color: white;
+    padding: 2rem;
+    a {
+      text-decoration: none;
+      color: inherit; // Ensures the link color is consistent
+      text-transform: uppercase;
+    }
+  }
+}

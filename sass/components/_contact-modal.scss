@@ -1,0 +1,62 @@
+.contact-modal {
+  display: none;
+  &.active {
+    background-color:var(--ivory-mist);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    
+    .form-container {
+      background-color: white;
+      padding: 2rem;
+      width: 70%;
+      border-radius: $border-radius;
+      @media only screen and (min-width: $bp-large) {
+        width: 70rem;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        margin-top: 2rem;
+        width: 90%;
+        padding: 1rem;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $padding-horizontal;
+        padding-bottom: 0rem;
+        .close-modal:hover {
+          transform: rotate(90deg); /* Spin effect */
+          transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+        h3 {
+          text-transform: uppercase;
+          @media only screen and (max-width: $bp-medium) {
+            font-size: 1.6rem;
+          }
+        }
+        span {
+          font-size: 2.8rem;
+          margin-top: -8px;
+          cursor: pointer;
+          @media only screen and (max-width: $bp-medium) {
+            font-size: 2rem;
+          }
+        }
+      }
+      .bottom {
+        padding: $padding-horizontal;
+        padding-bottom: 0rem;
+        input[type="submit"] {
+          background-color: var(--brick-red);
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

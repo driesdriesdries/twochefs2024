@@ -1,0 +1,56 @@
+.faq {
+  margin-bottom: 2rem;
+  border-radius: $border-radius; // Apply border-radius to the whole container
+  overflow: hidden; // Ensures the inner elements do not overflow the rounded corners
+  
+  &-toggle {
+    &:not(:checked) ~ .faq-instance-body {
+      display: none;
+    }
+
+    &:checked ~ .faq-instance-header .icon {
+      transform: rotate(45deg);
+    }
+
+    &:checked ~ .faq-instance-body {
+      display: block;
+    }
+  }
+
+  &-instance {
+    &-header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: $padding-horizontal;
+      cursor: pointer;
+      
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      .icon {
+        transition: transform 0.3s ease;
+        color: var(--brick-red);
+        font-size: 3rem;
+      }
+      span {
+        font-size: 2rem;  
+      }
+    }
+
+    &-body {
+      //background-color: tomato;
+      background-color: white;
+      padding: $padding-horizontal;
+      padding-top: 1rem;
+      transition: max-height 0.3s ease;
+
+      &:last-child {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
+  }
+}

@@ -142,6 +142,11 @@ function twochefs2024_scripts() {
 	wp_style_add_data( 'twochefs2024-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'twochefs2024-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'twochefs2024-navbar', get_template_directory_uri() . '/js/navbar.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'twochefs2024-contact-modal', get_template_directory_uri() . '/js/contact-modal.js', array(), _S_VERSION, true );
+
+	// Enqueue the components.js script
+	wp_enqueue_script( 'twochefs2024-components', get_template_directory_uri() . '/js/components.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -176,3 +181,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//Remove Gutenburg for the Home Page
+function disable_gutenberg_for_specific_page($is_enabled, $post) {
+    if ($post->ID == 8) { // Replace YOUR_PAGE_ID with the actual ID of your page
+        return false;
+    }
+    return $is_enabled;
+}
+add_filter('use_block_editor_for_post', 'disable_gutenberg_for_specific_page', 10, 2);

@@ -13,47 +13,75 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZEV3LYXR4"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-WZEV3LYXR4');
+	</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'twochefs2024' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+<div id="page" class="site page fadein">
+	
+	<nav class="navbar content-container">
+		<div class="left">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="Logo">
+		</div>
+		<div class="right">
+			<ul>
+			<li><a class="navigation" href="<?php echo site_url(); ?>">Home</a></li>
+				<li>
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$twochefs2024_description = get_bloginfo( 'description', 'display' );
-			if ( $twochefs2024_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $twochefs2024_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#services">Services</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#services')) . '">Services</a>';
+					}
+					?>
+				</li>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'twochefs2024' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+				<li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#blog">Blog</a>';
+					} else {
+						// For the blog, it might be better to link directly to the blog page instead of a section.
+						// Assuming your blog page is the main posts page, you can link directly to it.
+						echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
+					}
+					?>
+					</li>
+				<li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#team">Team</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#team')) . '">Team</a>';
+					}
+					?>
+				</li>
+
+				<li><a class="navigation openContactModal" href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu-button menu-toggle"><span>&#9776;</span></div>
+	</nav>
+	

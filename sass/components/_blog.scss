@@ -1,0 +1,53 @@
+.blog {
+    margin-bottom: 2rem;
+    .instance-group {
+      // background-color: red; Commented out as per your code
+      display: flex;
+      justify-content: space-between;
+  
+      .post-instance {
+        width: 32%;
+        height: 45rem;
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        position: relative; // Needed for absolute positioning of the child
+        padding: 2rem;
+        &:hover .background {
+          filter: blur(3px);
+        }
+  
+        .background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          
+        }
+  
+        h5 {
+          position: relative; // Ensure h5 is above the .background
+          z-index: 1;
+          // Other styling for h5 if needed
+          color: white
+        }
+      }
+      
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+  
+        .post-instance {
+          width: 100%;
+          margin-bottom: 1rem; // Default bottom margin for all but the last item
+  
+          &:last-child {
+            margin-bottom: 0; // Remove the bottom margin for the last item
+          }
+        }
+      }
+    }
+  }
+  

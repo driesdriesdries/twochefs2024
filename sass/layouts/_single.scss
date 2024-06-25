@@ -1,0 +1,56 @@
+.single-article {
+  width: 100%;
+  border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  
+  .single-banner {
+    width: 100%;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0px;
+    h1 {
+      margin-bottom: 0;
+      color: white; // Make the h1 text color white
+      background-color: #2f2f2f; // h1 background color
+      padding: 2rem; // h1 padding
+      display: inline;
+      border-radius: $border-radius;
+      font-size: 3rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 2rem;
+        line-height: 6.4rem;
+      }
+    }
+  }
+  .breadcrumbs {
+    background-color: white;
+    width: 100%;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 0px;
+    .title {
+      font-style: italic;
+    }
+    span, a {
+      font-size: 1.6rem; // Ensure all breadcrumb text is the same size
+    }
+  }
+  .article-content {
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+    background-color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+    border-radius: $border-radius;
+  }
+  .callout {
+    margin-top: 2rem;
+  }
+}
