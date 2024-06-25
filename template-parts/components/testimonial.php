@@ -27,7 +27,7 @@
                     <div class="testimonial-instance">
                         <div class="heading-block">
                             <?php if ($portrait) : ?>
-                                <div class="portrait" style="background-image: url('<?php echo esc_url($portrait['sizes']['thumbnail']); ?>');"></div>
+                                <div class="portrait" style="background-image: url('<?php echo esc_url($portrait['sizes']['thumbnail']); ?>'); background-size: contain;"></div>
                             <?php endif; ?>
                             <div class="description">
                                 <h5><?php echo esc_html($name); ?></h5>
