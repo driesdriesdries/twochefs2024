@@ -47,7 +47,7 @@ $background_image = $category_image ? wp_get_attachment_image_src($category_imag
                 if ($featured_post_query->have_posts()) {
                     while ($featured_post_query->have_posts()) : $featured_post_query->the_post();
                         $featured_post_id = get_the_ID(); // Capture the ID to exclude later
-                        $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'full');
+                        $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'large'); // Use 'large' size
                         ?>
 
                         <div class="card-featured" onclick="location.href='<?php echo esc_url(get_permalink()); ?>';" style="cursor: pointer;">
@@ -70,7 +70,7 @@ $background_image = $category_image ? wp_get_attachment_image_src($category_imag
                     if ($fallback_query->have_posts()) {
                         while ($fallback_query->have_posts()) : $fallback_query->the_post();
                             $featured_post_id = get_the_ID(); // This will now be the ID of the fallback post
-                            $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'full');
+                            $featured_image_url = get_the_post_thumbnail_url($featured_post_id, 'large'); // Use 'large' size
                             ?>
 
                             <div class="card-featured" onclick="location.href='<?php echo esc_url(get_permalink()); ?>';" style="cursor: pointer;">
@@ -101,10 +101,11 @@ $background_image = $category_image ? wp_get_attachment_image_src($category_imag
                 if ($posts_in_category->have_posts()) : 
                     while ($posts_in_category->have_posts()) : $posts_in_category->the_post();
                         $post_url = get_permalink();
+                        $card_image_url = get_the_post_thumbnail_url(get_the_ID(), 'services-card'); // Use 'services-card' size
                         ?>
 
                         <div class="card" onclick="location.href='<?php echo esc_url($post_url); ?>';" style="cursor: pointer;">
-                            <div class="card-left" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');"></div>
+                            <div class="card-left" style="background-image: url('<?php echo esc_url($card_image_url); ?>');"></div>
                             <div class="card-right">
                                 <h5><?php the_title(); ?></h5>
                                 <p><?php echo wp_trim_words(get_the_excerpt(), 14, '...'); ?></p>
@@ -118,6 +119,8 @@ $background_image = $category_image ? wp_get_attachment_image_src($category_imag
                 ?>
             </div>
         </div>
+
+
     </div>
     <?php get_template_part('template-parts/components/callout'); ?>
     
