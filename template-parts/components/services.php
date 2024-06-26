@@ -15,7 +15,7 @@
                 $trimmedDescription = implode(' ', $first15Words);
                 $categoryLink = get_category_link($category->term_id);
                 $categoryImage = get_field('category_image', 'category_' . $category->term_id);
-                $categoryImageURL = $categoryImage['sizes']['medium'];
+                $categoryImageURL = wp_get_attachment_image_src($categoryImage['ID'], 'services-card')[0];
         ?>
         <div class="services-card" onclick="window.location.href='<?php echo esc_url($categoryLink); ?>';" style="cursor: pointer;">
             <div class="services-card-image" style="background-image: url('<?php echo esc_url($categoryImageURL); ?>');"></div>

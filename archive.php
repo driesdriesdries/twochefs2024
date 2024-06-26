@@ -12,7 +12,7 @@ get_header();
 // Determine the term ID based on the type of archive
 $term_id = get_queried_object_id();
 $category_image = $term_id ? get_field('category_image', 'category_' . $term_id) : null;
-$background_image = $category_image ? $category_image['url'] : 'default-image-url.jpg';
+$background_image = $category_image ? wp_get_attachment_image_src($category_image['ID'], 'archive-banner')[0] : 'default-image-url.jpg';
 ?>
 
 <div class="content-container archive">
@@ -119,7 +119,7 @@ $background_image = $category_image ? $category_image['url'] : 'default-image-ur
             </div>
         </div>
     </div>
-    <?php get_template_part( 'template-parts/components/callout' ); ?>
+    <?php get_template_part('template-parts/components/callout'); ?>
     
 </div>
 
