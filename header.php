@@ -27,10 +27,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-	<?php wp_head(); ?>
-</head>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+		<?php wp_head(); ?>
+	</head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
@@ -38,7 +38,10 @@
 	
 	<nav class="navbar content-container">
 		<div class="left">
+		<a href="<?php echo site_url(); ?>">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="Logo">
+		</a>
+
 		</div>
 		<div class="right">
 			<ul>

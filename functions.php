@@ -189,3 +189,11 @@ function disable_gutenberg_for_specific_page($is_enabled, $post) {
     return $is_enabled;
 }
 add_filter('use_block_editor_for_post', 'disable_gutenberg_for_specific_page', 10, 2);
+
+function my_custom_image_sizes() {
+    add_image_size('hero-banner', 1200, 600, true); // 1200px wide, 600px tall, hard crop mode
+    add_image_size('services-card', 290, 150, true); // 290px wide, 150px tall, hard crop mode
+	add_image_size('archive-banner', 1200, 300, true); // 290px wide, 150px tall, hard crop mode
+}
+add_action('after_setup_theme', 'my_custom_image_sizes');
+
