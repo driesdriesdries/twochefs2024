@@ -41,6 +41,7 @@
 		<a href="<?php echo site_url(); ?>">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="Logo">
 		</a>
+		<h3>TwoChefs</h3>
 
 		</div>
 		<div class="right">
@@ -59,16 +60,16 @@
 				</li>
 
 				<li>
-    <?php
-    // Check if we are on the front page or home page.
-    if (is_front_page() || is_home()) {
-        echo '<a class="navigation" href="#blog">Blog</a>';
-    } else {
-        // Use home_url() to get the home URL and append the section ID.
-        echo '<a class="navigation" href="' . esc_url(home_url('/#blog')) . '">Blog</a>';
-    }
-    ?>
-</li>
+					<?php
+					// Check if we are on the front page or home page.
+					if (is_front_page() || is_home()) {
+						echo '<a class="navigation" href="#blog">Blog</a>';
+					} else {
+						// Use home_url() to get the home URL and append the section ID.
+						echo '<a class="navigation" href="' . esc_url(home_url('/#blog')) . '">Blog</a>';
+					}
+					?>
+				</li>
 				<li>
 					<?php
 					// Check if we are on the front page or home page.
