@@ -59,17 +59,16 @@
 				</li>
 
 				<li>
-					<?php
-					// Check if we are on the front page or home page.
-					if (is_front_page() || is_home()) {
-						echo '<a class="navigation" href="#blog">Blog</a>';
-					} else {
-						// For the blog, it might be better to link directly to the blog page instead of a section.
-						// Assuming your blog page is the main posts page, you can link directly to it.
-						echo '<a class="navigation" href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">Blog</a>';
-					}
-					?>
-					</li>
+    <?php
+    // Check if we are on the front page or home page.
+    if (is_front_page() || is_home()) {
+        echo '<a class="navigation" href="#blog">Blog</a>';
+    } else {
+        // Use home_url() to get the home URL and append the section ID.
+        echo '<a class="navigation" href="' . esc_url(home_url('/#blog')) . '">Blog</a>';
+    }
+    ?>
+</li>
 				<li>
 					<?php
 					// Check if we are on the front page or home page.
