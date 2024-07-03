@@ -41,7 +41,7 @@
 		<a href="<?php echo site_url(); ?>">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="Logo">
 		</a>
-		<h3>TwoChefs</h3>
+		<h3><a id="text-logo" href="<?php echo site_url(); ?>">TwoChefs</a></h3>
 
 		</div>
 		<div class="right">

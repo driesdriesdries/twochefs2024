@@ -74,7 +74,7 @@
 			</div>
 		</div>
 		<div class="bottom">
-			<p>© <?php echo date("Y"); ?> Two Chefs. All rights reserved.</p>
+			<p>© <?php echo date("Y"); ?> TwoChefs. All rights reserved.</p>
 		</div>
 	</div>
 </div><!-- #page -->
